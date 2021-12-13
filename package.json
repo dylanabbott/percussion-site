@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:eleventy": "npx @11ty/eleventy --serve --quiet",
-    "watch:sass": "sass --watch src/style:src/style",
+    "watch:sass": "sass -w src/style:src/style",
     "dev": "npm-run-all --parallel watch:*",
     "build": "npx @11ty/eleventy && sass src/style/style.scss src/style/style.css"
   },
