@@ -1,4 +1,13 @@
 ---
 label: Who Section
 hide_body: false
-fields: []
+fields:
+- name: who_section
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Who Section
