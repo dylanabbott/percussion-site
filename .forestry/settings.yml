@@ -3,7 +3,14 @@ new_page_extension: md
 auto_deploy: false
 admin_path: admin
 webhook_url: 
-sections: 
+sections:
+- type: directory
+  path: sections
+  label: Sections
+  create: all
+  match: "**/*"
+  templates:
+  - who-section
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
