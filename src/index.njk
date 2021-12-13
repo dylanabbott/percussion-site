@@ -11,6 +11,10 @@
     {% include 'header.njk' %}
     <main class="sitecontent">
         <h1>Hello</h1>
+        {%- for section in collections.section -%}
+        <h2>{{ section.data.title }}</h2>
+        <p>{{ section.templateContent | safe }}</p>
+        {%- endfor -%}
     </main>
     {% include 'footer.njk' %}
     <script src="js/main.js"></script>
