@@ -9,6 +9,7 @@ sections:
   label: Content
   create: all
   match: "**/*"
+  exclude: "*.json"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
