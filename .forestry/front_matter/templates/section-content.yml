@@ -9,7 +9,8 @@ fields:
   label: Section Title
 - name: tags
   type: tag_list
-  default: []
+  default:
+  - section
   label: Tags
   hidden: true
 - name: permalink
