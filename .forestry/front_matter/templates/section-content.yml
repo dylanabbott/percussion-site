@@ -17,6 +17,6 @@ fields:
   type: boolean
   label: Permalink
   hidden: true
-  default: true
+  default: false
 pages:
 - src/sections/blah.md
