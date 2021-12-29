@@ -2,20 +2,11 @@
 label: Section Content
 hide_body: false
 fields:
-- name: section_title
+- name: title
   type: text
   config:
     required: false
   label: Section Title
-- name: section_content
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Section Content
 - name: tags
   type: tag_list
   default: []
