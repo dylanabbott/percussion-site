@@ -17,4 +17,4 @@ fields:
       format: markdown
   label: Section Content
 pages:
-- sections/try-this-out.md
+- src/sections/try-this-out.md
