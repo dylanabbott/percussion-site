@@ -16,5 +16,17 @@ fields:
     schema:
       format: markdown
   label: Section Content
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  hidden: true
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Permalink
+  hidden: true
+  default: 'false'
 pages:
 - src/sections/try-this-out.md
