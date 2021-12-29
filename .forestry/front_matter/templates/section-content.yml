@@ -18,5 +18,3 @@ fields:
   label: Permalink
   hidden: true
   default: true
-pages:
-- src/sections/testing-again.md
