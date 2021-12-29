@@ -19,3 +19,5 @@ fields:
   label: Permalink
   hidden: true
   default: 'false'
+pages:
+- src/sections/try-this-out.md
