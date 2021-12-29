@@ -1,7 +1,5 @@
 ---
-tags:
-- section
-permalink: true
+
 title: Blah
 
 ---

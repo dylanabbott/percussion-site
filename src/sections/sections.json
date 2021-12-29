@@ -1,4 +1,4 @@
----
-permalink: false
-tags: section
----
+{
+    "permalink": false,
+    "tags": "section"
+}
