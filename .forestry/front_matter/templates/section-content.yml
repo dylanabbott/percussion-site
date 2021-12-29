@@ -16,3 +16,5 @@ fields:
     schema:
       format: markdown
   label: Section Content
+pages:
+- sections/try-this-out.md
