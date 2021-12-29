@@ -1,4 +1,4 @@
 ---
-title: test section 2
+title: Test Section 2
 ---
  Oh my god!

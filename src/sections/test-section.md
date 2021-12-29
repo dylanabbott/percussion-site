@@ -1,5 +1,5 @@
 ---
-title: test-section
+title: Test Section
 ---
 
 Hello!
