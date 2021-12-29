@@ -19,5 +19,4 @@ fields:
   hidden: true
   default: true
 pages:
-- src/sections/blah.md
 - src/sections/testing-again.md
