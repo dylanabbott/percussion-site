@@ -21,4 +21,5 @@ fields:
   hidden: true
   default: 'false'
 pages:
+- src/sections/blah.md
 - src/sections/testing-again.md
