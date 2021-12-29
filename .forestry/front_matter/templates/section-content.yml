@@ -14,12 +14,10 @@ fields:
   label: Tags
   hidden: true
 - name: permalink
-  type: text
-  config:
-    required: false
+  type: boolean
   label: Permalink
   hidden: true
-  default: 'false'
+  default: true
 pages:
 - src/sections/blah.md
 - src/sections/testing-again.md
