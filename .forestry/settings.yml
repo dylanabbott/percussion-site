@@ -5,6 +5,12 @@ admin_path: src/admin
 webhook_url: 
 sections:
 - type: directory
+  path: src/members
+  label: Members
+  create: all
+  match: "**/*"
+  exclude: "*.json"
+- type: directory
   path: src/sections
   label: Content
   create: all
