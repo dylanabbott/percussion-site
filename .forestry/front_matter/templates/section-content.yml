@@ -20,3 +20,4 @@ fields:
   default: false
 pages:
 - src/sections/blah.md
+- src/sections/why-we-work.md
