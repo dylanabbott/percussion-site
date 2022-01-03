@@ -31,3 +31,5 @@ fields:
   label: Permalink
   default: true
   hidden: true
+pages:
+- src/members/dylan-abbott.md
