@@ -29,7 +29,7 @@ fields:
 - name: permalink
   type: boolean
   label: Permalink
-  default: true
+  default: false
   hidden: true
 pages:
 - src/members/dylan-abbott.md
