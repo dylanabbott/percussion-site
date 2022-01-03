@@ -1,5 +1,8 @@
+<h1>Cases</h1>
 {%- for case in collections.cases -%}
 <h2>{{ case.data.title }}</h2>
+{%- if case.data.image -%}
 <img src="{{ case.data.image }}" width="200">
-<p>{{ templateContent | safe }}</p>
+{%- endif -%}
+<p>{{ case.templateContent | safe }}</p>
 {%- endfor -%}
