@@ -4,6 +4,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy('./src/js/*');
     eleventyConfig.addPassthroughCopy('./src/admin');
     eleventyConfig.addPassthroughCopy('./src/.forestry');
+    eleventyConfig.addPassthroughCopy('./uploads')
     return {
         markdownTemplateEngine: "njk",
         htmlTemplateEngine: "njk",
