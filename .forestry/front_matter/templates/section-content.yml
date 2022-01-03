@@ -19,6 +19,5 @@ fields:
   hidden: true
   default: false
 pages:
-- src/sections/blah.md
 - src/sections/how-we-work.md
 - src/sections/why-we-work.md
