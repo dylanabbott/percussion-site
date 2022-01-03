@@ -8,9 +8,11 @@ fields:
     required: false
   label: Name
 - name: roles
-  type: text
+  type: list
   config:
-    required: false
+    use_select: false
+    min: 
+    max: 
   label: Roles
 - name: portrait
   type: file
