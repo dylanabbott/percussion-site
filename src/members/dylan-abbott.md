@@ -1,5 +1,5 @@
 ---
-tags: []
+
 name: Dylan Abbott
 roles: Video Editing, Graphic Design, Web Design
 portrait: "/uploads/precussionheadshots-dylan010-800x1200.jpg"

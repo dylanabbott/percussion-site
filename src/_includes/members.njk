@@ -1,6 +1,6 @@
 {%- for member in collections.members -%}
 <h2>{{ member.data.name }}</h2>
-{{ member.data.roles }}
-{{ member.data.portrait }}
-{{ member.data.bio }}
+<p>{{ member.data.roles }}</p>
+<img src="{{ member.data.portrait }}">
+<p>{{ member.data.bio }}</p>
 {%- endfor -%}
