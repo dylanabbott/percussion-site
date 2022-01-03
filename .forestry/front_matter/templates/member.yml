@@ -31,5 +31,10 @@ fields:
   label: Permalink
   default: false
   hidden: true
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  hidden: true
 pages:
 - src/members/dylan-abbott.md
