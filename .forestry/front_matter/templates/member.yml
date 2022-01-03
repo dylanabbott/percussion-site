@@ -35,7 +35,8 @@ fields:
   hidden: true
 - name: tags
   type: tag_list
-  default: []
+  default:
+  - members
   label: Tags
   hidden: true
 pages:
