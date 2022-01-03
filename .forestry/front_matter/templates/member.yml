@@ -28,17 +28,6 @@ fields:
     schema:
       format: markdown
   label: Bio
-- name: permalink
-  type: boolean
-  label: Permalink
-  default: false
-  hidden: true
-- name: tags
-  type: tag_list
-  default:
-  - members
-  label: Tags
-  hidden: true
 pages:
 - src/members/dylan-abbott.md
 - src/members/katie-hewitt.md
