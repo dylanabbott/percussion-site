@@ -26,3 +26,8 @@ fields:
     schema:
       format: markdown
   label: Bio
+- name: permalink
+  type: boolean
+  label: Permalink
+  default: true
+  hidden: true
