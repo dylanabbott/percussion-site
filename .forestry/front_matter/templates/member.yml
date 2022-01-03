@@ -1,4 +1,28 @@
 ---
 label: Member
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: false
+  label: Name
+- name: roles
+  type: text
+  config:
+    required: false
+  label: Roles
+- name: portrait
+  type: file
+  config:
+    maxSize: 64
+  label: Portrait
+- name: bio
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Bio
