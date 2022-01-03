@@ -14,7 +14,7 @@
         <h1>Percussion</h1>
         {%- for section in collections.section -%}
         <h2>{{ section.data.title }}</h2>
-        <p>{{ section.templateContent | safe }}</p>
+        {{ section.templateContent | safe }}
         {%- endfor -%}
     </main>
     {% include 'footer.njk' %}
