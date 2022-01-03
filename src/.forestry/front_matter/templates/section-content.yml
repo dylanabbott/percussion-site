@@ -1,0 +1,23 @@
+---
+label: Section Content
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Section Title
+- name: tags
+  type: tag_list
+  default:
+  - section
+  label: Tags
+  hidden: true
+- name: permalink
+  type: boolean
+  label: Permalink
+  hidden: true
+  default: false
+pages:
+- src/sections/how-we-work.md
+- src/sections/why-we-work.md
