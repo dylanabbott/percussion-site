@@ -36,3 +36,5 @@ fields:
   default: []
   label: Tags
   hidden: true
+pages:
+- src/members/dylan-abbott.md
