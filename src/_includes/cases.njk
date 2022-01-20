@@ -4,5 +4,5 @@
 {%- if case.data.image -%}
 <img src="{{ case.data.image }}" width="200">
 {%- endif -%}
-<p>{{ case.templateContent | safe }}</p>
+{{ case.templateContent | safe }}
 {%- endfor -%}
