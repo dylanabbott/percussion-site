@@ -10,13 +10,14 @@
 </head>
 <body>
     {% include 'header.njk' %}
+    {% include 'navigation.njk' %}
     <main class="sitecontent">
         <h1>Percussion Strategic</h1>
         {%- for section in collections.section -%}
-        <h2>{{ section.data.title }}</h2>
+        <h2><a id="{{section.data.title | slug }}">{{ section.data.title }}</a></h2>
         {{ section.templateContent | safe }}
         {%- endfor -%}
-        {% include 'members.njk' %}
+        {# {% include 'members.njk' %} #}
         {% include 'cases.njk' %}
     </main>
     {% include 'footer.njk' %}

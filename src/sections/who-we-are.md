@@ -17,3 +17,5 @@ Looking for a specific skill set or just one service? Contact any one of us.
 Need multiple or wrap-around campaign services or have an RFP?
 
 Contact Percussion Strategic and we’ll put together an experienced, right-fit, team just for you
+
+{% include 'members.njk' %}
