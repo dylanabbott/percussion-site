@@ -1,1 +1,14 @@
 /* NAV */
+
+.nav {
+    > ul {
+        padding-inline-start: 0;
+    }    
+}
+
+.nav__item {
+    display: inline-block;
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+}

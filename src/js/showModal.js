@@ -1,7 +1,7 @@
 console.log('Modal code loaded');
 
-const showModalButton = document.getElementById('show-modal');
-const hideModalButton = document.getElementById('hide-modal');
+const showModalButton = document.getElementById('modal__open');
+const hideModalButton = document.getElementById('modal__close');
 const modal = document.getElementById('modal');
 
 showModalButton.addEventListener('click', () =>

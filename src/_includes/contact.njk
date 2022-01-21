@@ -1,8 +1,8 @@
-<div class="modal-overlay hidden" id="modal">
+<div class="modal__overlay hidden" id="modal">
 	<div class="modal">
-		<form class="modal-form">
-			<div class="modal-form-section">
-                <h2>Contact Form</h2>
+		<form class="contactform">
+			<div class="contactform__section">
+				<h2>Contact Form</h2>
 				<label for="name">Name:</label><br />
 				<input type="text" id="name" name="name" required /><br />
 				<label for="email">Email:</label><br />
@@ -11,11 +11,11 @@
 				<input type="tel" id="phone" name="phone" /><br />
 				<label for="org">Campaign or Organization:</label><br />
 				<input type="text" id="org" name="org" /><br />
-                <label for="deadline">Deadline:</label><br />
+				<label for="deadline">Deadline:</label><br />
 				<input type="date" id="deadline" name="deadline" /><br />
 			</div>
-			<div class="modal-form-section">
-                <a href="#" id="hide-modal" class="hide-modal">X</a><br />
+			<div class="contactform__section">
+				<a href="#" id="modal__close" class="modal__close">X</a><br />
 				<label for="project">Project Description:</label><br />
 				<textarea id="project" name="project" rows="10" cols="30"></textarea
 				><br />

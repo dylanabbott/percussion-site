@@ -80,22 +80,12 @@ body {
   transform: translateY(0);
   transition: 0.5s ease-out;
 }
-
-.modal-form {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+.modal__close {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
 }
-
-.hidden > .modal {
-  transform: translateY(150px);
-}
-
-.modal-form-section {
-  margin: 1rem 1rem;
-}
-
-.modal-overlay {
+.modal__overlay {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100vw;
   height: 100vh;
@@ -113,10 +103,17 @@ body {
   transition: 0.7s;
 }
 
-.hide-modal {
-  display: inline-block;
-  width: 100%;
-  text-align: right;
+.contactform {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.contactform__section {
+  margin: 1rem 1rem;
+}
+
+.hidden > .modal {
+  transform: translateY(150px);
 }
 
 .hidden {
@@ -125,6 +122,17 @@ body {
 }
 
 /* NAV */
+.nav > ul {
+  padding-inline-start: 0;
+}
+
+.nav__item {
+  display: inline-block;
+}
+.nav__item:not(:last-child) {
+  margin-right: 1rem;
+}
+
 /* SLIDER */
 /* MIXINS */
 
