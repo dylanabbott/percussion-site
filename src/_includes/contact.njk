@@ -1,19 +1,28 @@
-<h2>Contact Form</h2>
-
-<form>
-	<label for="name">Name:</label><br />
-	<input type="text" id="name" name="name" required /><br />
-	<label for="email">Email:</label><br />
-	<input type="email" id="email" name="email" /><br />
-	<label for="phone">Phone:</label><br />
-	<input type="tel" id="phone" name="phone" /><br />
-	<label for="org">Campaign or Organization:</label><br />
-	<input type="text" id="org" name="org" /><br />
-	<label for="project">Project Description:</label><br />
-	<textarea id="project" name="project" rows="10" cols="40"></textarea><br />
-	<label for="deadline">Deadline:</label><br />
-	<input type="date" id="deadline" name="deadline" /><br />
-	<label for="attachment">Attachment:</label><br />
-	<input type="file" id="attachment" name="attachment" multiple /><br />
-	<input type="submit" value="Submit" />
-</form>
+<div class="modal-overlay hidden" id="modal">
+	<div class="modal">
+		<form class="modal-form">
+			<div class="modal-form-section">
+                <h2>Contact Form</h2>
+				<label for="name">Name:</label><br />
+				<input type="text" id="name" name="name" required /><br />
+				<label for="email">Email:</label><br />
+				<input type="email" id="email" name="email" /><br />
+				<label for="phone">Phone:</label><br />
+				<input type="tel" id="phone" name="phone" /><br />
+				<label for="org">Campaign or Organization:</label><br />
+				<input type="text" id="org" name="org" /><br />
+                <label for="deadline">Deadline:</label><br />
+				<input type="date" id="deadline" name="deadline" /><br />
+			</div>
+			<div class="modal-form-section">
+                <a href="#" id="hide-modal" class="hide-modal">X</a><br />
+				<label for="project">Project Description:</label><br />
+				<textarea id="project" name="project" rows="10" cols="30"></textarea
+				><br />
+				<label for="attachment">Attachment:</label><br />
+				<input type="file" id="attachment" name="attachment" multiple /><br />
+				<input type="submit" value="Submit" />
+			</div>
+		</form>
+	</div>
+</div>
