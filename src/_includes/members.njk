@@ -6,6 +6,8 @@
     <li>{{ role }}</li>
 {%- endfor -%}
 </ul>
+{% if member.data.portrait %}
 <img src="{{ member.data.portrait }}" width="200">
+{% endif %}
 <p>{{ member.data.bio }}</p>
 {%- endfor -%}
