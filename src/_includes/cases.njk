@@ -1,8 +1,17 @@
 <h1>Cases</h1>
-{%- for case in collections.cases -%}
-<h2>{{ case.data.title }}</h2>
-{%- if case.data.image -%}
-<img src="{{ case.data.image }}" width="200">
-{%- endif -%}
-{{ case.templateContent | safe }}
-{%- endfor -%}
+    <div class="carousel__container">
+        <ul class="carousel__items" id="carousel-items">
+            {%- for case in collections.cases -%}
+            <li class="carousel__item carousel__item--current">
+                <h2>{{ case.data.title }}</h2>
+                {%- if case.data.image -%}
+                    <img src="{{ case.data.image }}" width="200">
+                {%- endif -%}
+                {{ case.templateContent | safe }}
+            {%- endfor -%}    
+        </ul>   
+        <div class="carousel__controls">
+            <button class="carousel__btn" id="btn-left">&lt;</button>
+            <button class="carousel__btn" id="btn-right">&gt;</button>
+        </div>
+    </div>
