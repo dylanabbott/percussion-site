@@ -1,8 +1,12 @@
 <nav class="nav">
     <ul>
-        {%- for section in collections.section -%}
-        <li class="nav__item"><a href="#{{section.data.title | slug }}">{{ section.data.title }}</a></li>
-        {%- endfor -%}
-        <li class="nav__item"><a href="#" id="modal__open">Contact</a></li>
+        {% for section in collections.section %}
+            <li class="nav__item">
+                <a href="#{{ section.data.title | slug }}">{{ section.data.title }}</a>
+            </li>
+        {% endfor %}
+        <li class="nav__item">
+            <a href="#" id="modal__open">Contact</a>
+        </li>
     </ul>
 </nav>

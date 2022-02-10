@@ -1,13 +1,13 @@
 <h1>Members</h1>
 {%- for member in collections.members -%}
-<h2>{{ member.data.name }}</h2>
-<ul>
-{%- for role in member.data.roles -%}
-    <li>{{ role }}</li>
-{%- endfor -%}
-</ul>
-{% if member.data.portrait %}
-<img src="{{ member.data.portrait }}" width="200">
-{% endif %}
-<p>{{ member.data.bio }}</p>
-{%- endfor -%}
+    <h2>{{ member.data.name }}</h2>
+    <ul>
+        {% for role in member.data.roles %}
+            <li>{{ role }}</li>
+        {% endfor %}
+    </ul>
+    {% if member.data.portrait %}
+        <img src="{{ member.data.portrait }}" width="200">
+        {% endif %}
+        <p>{{ member.data.bio }}</p>
+    {%- endfor -%}

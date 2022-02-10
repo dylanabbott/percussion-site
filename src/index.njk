@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% include 'fonts.njk' %}
-    <link rel="stylesheet" href="style/style.css">
-    <title>Percussion Strategic</title>
-</head>
-<body>
-    {% include 'header.njk' %}
-    {% include 'navigation.njk' %}
-    <main class="sitecontent">
-        <h1>Percussion Strategic</h1>
-        {%- for section in collections.section -%}
-        <h2><a id="{{section.data.title | slug }}">{{ section.data.title }}</a></h2>
-        {{ section.templateContent | safe }}
-        {%- endfor -%}
-        {# {% include 'members.njk' %} #}
-        {% include 'cases.njk' %}
-        {% include 'contact.njk' %}
-    </main>
-    {% include 'footer.njk' %}
-    <script src="js/main.js"></script>
-    <script src="js/showModal.js"></script>
-    <script src="js/carousel.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% include 'fonts.njk' %} <link rel="stylesheet" href="style/style.css">
+        <title>Percussion Strategic</title>
+    </head>
+    <body>
+        {% include 'header.njk' %}
+        {% include 'navigation.njk' %}
+        <main class="sitecontent">
+            <h1>Percussion Strategic</h1>
+            {% for section in collections.section %}
+                <h2>
+                    <a id="{{ section.data.title | slug }}">{{ section.data.title }}</a>
+                </h2>
+                {{ section.templateContent | safe }}
+            {%- endfor -%}
+            {# {% include 'members.njk' %} #}
+            {% include 'cases.njk' %}
+            {% include 'contact.njk' %}
+        </main>
+        {% include 'footer.njk' %}
+        <script src="js/main.js"></script>
+        <script src="js/showModal.js"></script>
+        <script src="js/carousel.js"></script>
+    </body>
 </html>
