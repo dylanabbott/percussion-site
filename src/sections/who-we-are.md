@@ -18,4 +18,4 @@ Need multiple or wrap-around campaign services or have an RFP?
 
 Contact Percussion Strategic and we’ll put together an experienced, right-fit, team just for you.
 
-{% include 'members.njk' | safe %}
+{% include 'members.njk' %}
