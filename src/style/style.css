@@ -60,7 +60,14 @@ h1, h2, h3, h4, h5, h6 {
 body {
   padding: 2rem 20%;
 }
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0.5rem 5%;
+  }
+}
 
+/* MIXINS */
+/* Breakpoints */
 /* CARD */
 /* DIVIDER */
 /* FOOTER */
@@ -69,9 +76,14 @@ body {
 }
 
 /* FORMS */
+input[type=file] {
+  width: 200px;
+}
+
 /* HERO */
 /* MODAL */
 .modal {
+  position: relative;
   background-color: #ffffff;
   opacity: 1;
   z-index: 20;
@@ -82,8 +94,9 @@ body {
 }
 .modal__close {
   display: inline-block;
-  width: 100%;
-  text-align: right;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 .modal__overlay {
   background-color: rgba(0, 0, 0, 0.8);
@@ -102,14 +115,32 @@ body {
   opacity: 1;
   transition: 0.7s;
 }
+@media screen and (max-width: 768px) {
+  .modal {
+    padding: 1rem;
+  }
+}
 
 .contactform {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-top: 0;
 }
 .contactform__section {
-  margin: 1rem 1rem;
+  margin: 1rem;
+  flex-basis: 50%;
+}
+@media screen and (max-width: 768px) {
+  .contactform__section {
+    margin: 0.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactform {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .hidden > .modal {
@@ -135,11 +166,9 @@ body {
 
 /* CAROUSEL */
 .carousel__container {
-  border: 1px solid #000000;
   border-radius: 3px;
-  width: 500px;
+  width: 100%;
   overflow: hidden;
-  margin: 1em;
 }
 
 .carousel__items {
@@ -154,15 +183,16 @@ body {
   gap: 1em;
   position: relative;
   left: 0px;
-  transition: left 0.7s ease-in-out;
+  transition: left 0.5s ease-in-out;
 }
 
 .carousel__item {
   display: block;
-  min-width: 500px;
+  min-width: 100%;
   padding: 1em;
+  margin-top: 0;
   opacity: 0.3;
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.3s ease;
 }
 .carousel__item--current {
   opacity: 1;
@@ -176,11 +206,11 @@ body {
   -webkit-appearance: none;
   appearance: none;
   border: 1px solid #777777;
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: #000000;
   color: #ffffff;
   font-size: 24px;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   margin: 1rem;
 }
 .carousel__btn[disabled] {
@@ -190,7 +220,5 @@ body {
 .carousel__btn:hover {
   background-color: #666666;
 }
-
-/* MIXINS */
 
 /*# sourceMappingURL=style.css.map */

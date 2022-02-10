@@ -26,7 +26,7 @@ function cslShift(e) {
 		cslIndex--;
 		cslCurrentItem[cslIndex].classList.add('carousel__item--current');
 		//and change position ( shift the left position, calc adds space for margins from preceding items)
-		cslItems.style.left = `calc(${cslIndex * -500}px - ${cslIndex}em)`;
+		cslItems.style.left = `calc(${cslIndex * -100}% - ${cslIndex}em)`;
 		if (cslIndex === 0) {
 			//after decrementing the index to 0, disable the left button
 			btnLeft.setAttribute('disabled', '');
@@ -37,7 +37,7 @@ function cslShift(e) {
 		cslIndex++;
 		cslCurrentItem[cslIndex].classList.add('carousel__item--current');
 		//and change position
-		cslItems.style.left = `calc(${cslIndex * -500}px - ${cslIndex}em)`;
+		cslItems.style.left = `calc(${cslIndex * -100}% - ${cslIndex}em)`;
 		//Disable the right button when reaching the last item
 		if (cslIndex === cslLength - 1) {
 			btnRight.setAttribute('disabled', '');
