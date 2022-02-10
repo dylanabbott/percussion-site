@@ -1,4 +1,4 @@
-//console.log('hello!');
+console.log('Carousel Code loaded!');
 
 const btnLeft = document.getElementById('btn-left');
 const btnRight = document.getElementById('btn-right');
@@ -9,7 +9,7 @@ const cslLength = document.querySelectorAll('.carousel__item').length;
 let cslIndex = 0;
 
 let cslCurrentItem = document.querySelectorAll('.carousel__item');
-console.log(cslCurrentItem[cslIndex]);
+//console.log(cslCurrentItem[cslIndex]);
 
 //Disabled the left button initially
 btnLeft.setAttribute('disabled', 'disabled');

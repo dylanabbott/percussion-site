@@ -8,10 +8,12 @@
                     <img src="{{ case.data.image }}" width="200">
                     {% endif %}
                     {{ case.templateContent | safe }}
-                {% endfor %}
-            </ul>
-            <div class="carousel__controls">
-                <button class="carousel__btn" id="btn-left">&lt;</button>
-                <button class="carousel__btn" id="btn-right">&gt;</button>
-            </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="carousel__controls">
+            <button class="carousel__btn" id="btn-left">&lt;</button>
+            <button class="carousel__btn" id="btn-right">&gt;</button>
         </div>
+    </div>
+    
