@@ -1,4 +1,5 @@
 /* FORMS */
+@use '../utils' as *;
 
 input[type="file"] {
     width: 200px;
