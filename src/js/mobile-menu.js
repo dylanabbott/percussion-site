@@ -1,0 +1,12 @@
+console.log("Mobile Menu code loaded");
+
+const btnMenu = document.getElementById("menu-button");
+const mobileMenu = document.getElementById("nav");
+
+function toggleMenu() {
+    btnMenu.classList.toggle("rotated");
+    mobileMenu.classList.toggle("nav--hidden");
+}
+
+btnMenu.addEventListener('click', toggleMenu);
+mobileMenu.addEventListener('click', toggleMenu);
