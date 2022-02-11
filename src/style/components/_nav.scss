@@ -4,7 +4,26 @@
 .nav {
     > ul {
         padding-inline-start: 0;
+        margin-top: 0;
     }    
+    @include medium {
+        position: absolute;
+        right: 2%;
+        top: 5%;
+        width: 96%;
+        border: 1px solid #000000;
+        border-radius: 4px;
+        padding: 1rem;
+        transition: right 0.3s ease-in-out;
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(3px);
+        z-index: 10;
+    }
+    &--hidden {
+        @include medium {
+            right: -200%;
+        }
+    }
 }
 
 .nav__item {
@@ -12,4 +31,42 @@
     &:not(:last-child) {
         margin-right: 1rem;
     }
+    @include medium {
+        display: list-item;
+        list-style-type: none;
+        text-align: right;
+        margin-right: 1rem;
+    }
+}
+
+.nav__toggle {
+    display: none;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #000000;
+    & a:link, a:visited, a:active, a:hover {
+        color: #000000;
+        text-decoration: none;
+    }
+    @include medium {
+        margin: 0;
+        height: 0;
+        z-index: 30;
+        overflow: visible;
+        display: block;
+        position: sticky;
+        width: 100%;
+        text-align: right;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+#menu-button {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotated {
+    transform: rotate(405deg);
 }
