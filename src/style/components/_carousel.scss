@@ -1,19 +1,6 @@
 /* CAROUSEL */
 @use '../utils' as *;
 
-// html {
-//     box-sizing: border-box;
-//     font-family: sans-serif;
-// }
-
-// body {
-//     /* For centering the demo in the page */
-//     height: 100vh;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-
 .carousel__container {
 	//border: 1px solid #000000;
 	border-radius: 3px;
@@ -34,7 +21,7 @@
 	gap: 1em;
 	position: relative;
 	left: 0px;
-	transition: left 0.5s ease-in-out;
+	transition: left 0.3s ease-in-out;
 }
 
 .carousel__item {
@@ -43,7 +30,7 @@
 	padding: 1em;
 	margin-top: 0;
 	opacity: 0.3;
-	transition: opacity 0.3s ease;
+	transition: opacity 0.5s ease-in-out;
 	&--current {
 		opacity: 1;
 	}

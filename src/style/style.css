@@ -52,6 +52,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* COLORS */
+/* VARIABLES */
+/* MIXINS */
 /* LAYOUT */
 /* temporary spacing hack for early dev, remove this later */
 * + * {
@@ -64,7 +66,7 @@ html {
 }
 
 body {
-  padding: 2rem 20%;
+  padding: 2rem 10%;
 }
 @media screen and (max-width: 768px) {
   body {
@@ -72,8 +74,6 @@ body {
   }
 }
 
-/* VARIABLES */
-/* MIXINS */
 /* CARD */
 .members {
   display: flex;
@@ -83,39 +83,53 @@ body {
 
 .member-card {
   /* temp border */
-  width: clamp(450px, 50%, 600px);
-  margin: 0 2rem 2rem 0;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  margin: 0 0 2rem 0;
   padding: 1rem;
   flex-grow: 2;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: flex-start;
+  align-items: center;
 }
 .member-card__portrait {
-  min-width: 200px;
-  min-height: 200px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 100%;
   margin: 1rem 2rem 1rem 0;
 }
+@media screen and (max-width: 768px) {
+  .member-card__portrait {
+    width: 150px;
+    height: 150px;
+  }
+}
 .member-card__info {
-  flex-grow: 2;
+  width: calc(100% - (200px + 2rem));
+}
+@media screen and (max-width: 768px) {
+  .member-card__info {
+    width: calc(100% - (150px + 2rem));
+  }
 }
 .member-card__list {
   padding-inline-start: 0;
 }
 .member-card__role {
+  display: inline-block;
   list-style-type: none;
   margin-top: 0;
 }
+.member-card__role:not(:last-of-type)::after {
+  content: ", ";
+  margin-right: 1ch;
+}
 .member-card__bio {
   flex-grow: 1;
-}
-@media screen and (min-width: 1025px) {
-  .member-card {
-    flex-wrap: none;
-  }
+  width: 30%;
 }
 
 /* DIVIDER */
@@ -295,7 +309,7 @@ input[type=file] {
   gap: 1em;
   position: relative;
   left: 0px;
-  transition: left 0.5s ease-in-out;
+  transition: left 0.3s ease-in-out;
 }
 
 .carousel__item {
@@ -304,7 +318,7 @@ input[type=file] {
   padding: 1em;
   margin-top: 0;
   opacity: 0.3;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease-in-out;
 }
 .carousel__item--current {
   opacity: 1;

@@ -1,9 +1,9 @@
-<h1>Cases</h1>
 <section class="cases">
+    <h2>Cases</h2>
     <div class="carousel__container">
         <ul class="carousel__items" id="carousel-items">
             {% for case in collections.cases %}
-                <li class="carousel__item carousel__item--current">
+                <li class="carousel__item">
                     <h2>{{ case.data.title }}</h2>
                     {% if case.data.image %}
                         <img src="{{ case.data.image }}" width="200">

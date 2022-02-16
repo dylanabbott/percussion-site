@@ -9,41 +9,52 @@
 
 .member-card {
     /* temp border */
-    //border: 1px solid #000000;
+    border: 1px solid #000000;
+    border-radius: 4px;
 
-
-    width: clamp(450px, 50%, 600px);
-	margin: 0 2rem 2rem 0;
+    //width: clamp(450px, 50%, 600px);
+	margin: 0 0 2rem 0;
     padding: 1rem;
     flex-grow: 2;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: flex-start;
+    align-items: center;
 
 	&__portrait {
-		min-width: 200px;
-		min-height: 200px;
+		width: 200px;
+		height: 200px;
 		object-fit: cover;
 		border-radius: 100%;
         margin: 1rem 2rem 1rem 0;
+
+        @include medium {
+            width: 150px;
+            height: 150px;
+        }
 	}
     &__info {
-        flex-grow: 2;
+        width: calc(100% - (200px + 2rem));
+
+        @include medium {
+            width: calc(100% - (150px + 2rem));
+        }
     }
     &__list {
         padding-inline-start: 0;
     }
     &__role {
-        //display: inline-block;
+        display: inline-block;
         list-style-type: none;
         margin-top: 0;
+        &:not(:last-of-type)::after {
+            content: ", ";
+            margin-right: 1ch;
+        }
     }
     &__bio {
         flex-grow: 1;
-    }
-
-     @include xlarge {
-        flex-wrap: none;
+        width: 30%;
     }
 }

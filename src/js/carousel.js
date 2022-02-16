@@ -10,6 +10,7 @@ let cslIndex = 0;
 
 let cslCurrentItem = document.querySelectorAll('.carousel__item');
 //console.log(cslCurrentItem[cslIndex]);
+cslCurrentItem[cslIndex].classList.toggle('carousel__item--current');
 
 //Disabled the left button initially
 btnLeft.setAttribute('disabled', 'disabled');
@@ -21,10 +22,10 @@ function cslShift(e) {
 		if (cslIndex === cslLength - 1) {
 			btnRight.removeAttribute('disabled');
 		}
-		cslCurrentItem[cslIndex].classList.remove('carousel__item--current');
+		cslCurrentItem[cslIndex].classList.toggle('carousel__item--current');
 		// decrement the index
 		cslIndex--;
-		cslCurrentItem[cslIndex].classList.add('carousel__item--current');
+		cslCurrentItem[cslIndex].classList.toggle('carousel__item--current');
 		//and change position ( shift the left position, calc adds space for margins from preceding items)
 		cslItems.style.left = `calc(${cslIndex * -100}% - ${cslIndex}em)`;
 		if (cslIndex === 0) {
