@@ -9,16 +9,17 @@
         <title>Percussion Strategic</title>
     </head>
     <body>
-        <div class="nav__toggle"><a href="#" id="menu-button">+</a></div>
-        {% include 'header.njk' %}
         {% include 'navigation.njk' %}
+        {% include 'header.njk' %}
         <main class="sitecontent">
             <h1>Percussion Strategic</h1>
             {% for section in collections.section %}
+            <section class="{{ section.data.title | slug }}">
                 <h2>
                     <a id="{{ section.data.title | slug }}">{{ section.data.title }}</a>
                 </h2>
                 {{ section.templateContent | safe }}
+            </section>    
             {%- endfor -%}
             {# {% include 'members.njk' %} #}
             {% include 'cases.njk' %}

@@ -1,13 +1,23 @@
 <h1>Members</h1>
+<section class="members">
 {%- for member in collections.members -%}
-    <h2>{{ member.data.name }}</h2>
-    <ul>
-        {%- for role in member.data.roles -%}
-            <li>{{ role }}</li>
-        {%- endfor -%}
-    </ul>
-    {%- if member.data.portrait -%}
-        <img src="{{ member.data.portrait }}" width="200">
-    {%- endif -%}
-    <p>{{ member.data.bio }}</p>
+    <div class="member-card">
+        {%- if member.data.portrait -%}
+            <img src="{{ member.data.portrait }}" width="200" height="200" class="member-card__portrait">
+        {%- else -%}
+            <img src="img/placeholder-portrait.png" width="200" height="200" class="member-card__portrait">
+        {%- endif -%}
+        <div class="member-card__info">
+            <h2>{{ member.data.name }}</h2>
+            <ul class="member-card__list">
+                {%- for role in member.data.roles -%}
+                    <li class="member-card__role">{{ role }}</li>
+                {%- endfor -%}
+            </ul>
+        </div>
+        <div class="member-card__bio">
+            <p>{{ member.data.bio }}</p>
+        </div>
+    </div>
 {%- endfor -%}
+</section>

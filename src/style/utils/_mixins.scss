@@ -8,3 +8,11 @@
 @mixin medium {
     @media screen and (max-width: $md) { @content };
 }
+
+@mixin large {
+    @media screen and (max-width: $lg) { @content };
+}
+
+@mixin xlarge {
+    @media screen and (min-width: $xlg) { @content };
+}
