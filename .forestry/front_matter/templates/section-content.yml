@@ -7,6 +7,11 @@ fields:
   config:
     required: false
   label: Section Title
+- name: pull_quote
+  type: text
+  config:
+    required: false
+  label: Pull Quote
 - name: tags
   type: tag_list
   default:
