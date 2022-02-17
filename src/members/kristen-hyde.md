@@ -12,5 +12,7 @@ bio: 30 years of experience with political and policy advocacy change initiative
   and campaigns, known for my ability to see the big picture, counter opposition,
   develop effective messages and bring compelling voices into the spotlight at just
   the right moment to make an impact.
+email: kristin@kristinhyde.com
+website: kristinhyde.com
 
 ---
