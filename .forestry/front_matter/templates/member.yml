@@ -28,6 +28,16 @@ fields:
     schema:
       format: markdown
   label: Bio
+- name: email
+  type: text
+  config:
+    required: false
+  label: Email
+- name: website
+  type: text
+  config:
+    required: false
+  label: Website
 pages:
 - src/members/dylan-abbott.md
 - src/members/heather-weiner.md
