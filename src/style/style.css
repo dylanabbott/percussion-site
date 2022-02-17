@@ -66,7 +66,7 @@ html {
 }
 
 body {
-  padding: 2rem 10%;
+  padding: 2rem 20%;
 }
 @media screen and (max-width: 768px) {
   body {
@@ -113,6 +113,11 @@ body {
 @media screen and (max-width: 768px) {
   .member-card__info {
     width: calc(100% - (150px + 2rem));
+  }
+}
+@media screen and (min-width: 1025px) {
+  .member-card__info {
+    width: 40ch;
   }
 }
 .member-card__list {

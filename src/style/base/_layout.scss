@@ -12,9 +12,10 @@ html {
 }
 
 body {
-    padding: 2rem 10%;
+    padding: 2rem 20%;
 
-    @media screen and (max-width: 768px) {
+    
+    @include medium {
         padding: 0.5rem 5%;
     }
 }

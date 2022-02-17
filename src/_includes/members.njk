@@ -1,7 +1,7 @@
 <section>
     <h2>Members</h2>
     <div class="members">
-        {%- for member in collections.members -%}
+        {%- for member in collections.membersSorted -%}
             <div class="member-card">
                 {%- if member.data.portrait -%}
                     <img src="{{ member.data.portrait }}" width="200" height="200" class="member-card__portrait">
@@ -15,6 +15,16 @@
                             <li class="member-card__role">{{ role }}</li>
                         {%- endfor -%}
                     </ul>
+                    {%- if member.data.email or member.data.website -%}
+                    <ul class="member-card__links">
+                        {%- if member.data.email -%}
+                            <li class="member-card__email">{{ member.data.email }}</li>
+                        {%- endif -%}
+                        {%- if member.data.website -%}
+                            <li class="member-card__link">{{ member.data.website }}</li>
+                        {%- endif -%}
+                    </ul>
+                    {%- endif -%}
                 </div>
                 <div class="member-card__bio">
                     <p>{{ member.data.bio }}</p>

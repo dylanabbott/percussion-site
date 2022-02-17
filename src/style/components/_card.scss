@@ -40,6 +40,10 @@
         @include medium {
             width: calc(100% - (150px + 2rem));
         }
+
+        @include xlarge {
+            width: 40ch;
+        }
     }
     &__list {
         padding-inline-start: 0;
