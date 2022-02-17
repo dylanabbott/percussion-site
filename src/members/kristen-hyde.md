@@ -14,5 +14,6 @@ bio: 30 years of experience with political and policy advocacy change initiative
   the right moment to make an impact.
 email: kristin@kristinhyde.com
 website: kristinhyde.com
+order: 3
 
 ---
