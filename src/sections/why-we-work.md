@@ -3,6 +3,7 @@ tags:
 - section
 title: Why We Work
 permalink: false
+pull_quote: Blah Blah Blah Pull Quote
 
 ---
 Our core values are:
