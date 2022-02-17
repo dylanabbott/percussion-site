@@ -46,9 +46,48 @@ html {
   font-size: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+body {
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5 {
   font-family: "Big Shoulders Display", sans-serif;
   font-weight: 900;
+  margin: 3rem 0 1.38rem;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 4.209rem;
+}
+
+h2 {
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+}
+
+small, .text_small {
+  font-size: 0.75rem;
+}
+
+p, ul {
+  margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: 600;
 }
 
 /* COLORS */
@@ -56,28 +95,30 @@ h1, h2, h3, h4, h5, h6 {
 /* MIXINS */
 /* LAYOUT */
 /* temporary spacing hack for early dev, remove this later */
-* + * {
-  margin-top: 1rem;
-}
-
 html {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-body {
-  padding: 2rem 20%;
+/* Temporary outlines */
+.nav {
+  border: 1px solid #999999;
 }
-@media screen and (max-width: 768px) {
-  body {
-    padding: 0.5rem 5%;
-  }
+
+.site-header {
+  border: 1px solid #999999;
+}
+
+.site-content {
+  border: 1px solid #999999;
+}
+
+.section-layout, .site-footer, .site-header {
+  border: 1px solid #999999;
 }
 
 /* CARD */
 .members {
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -87,12 +128,9 @@ body {
   border-radius: 4px;
   margin: 0 0 2rem 0;
   padding: 1rem;
-  flex-grow: 2;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: flex-start;
-  align-items: center;
+}
+.member-card ul, .member-card li {
+  margin-top: 0;
 }
 .member-card__portrait {
   width: 200px;
@@ -101,40 +139,32 @@ body {
   border-radius: 100%;
   margin: 1rem 2rem 1rem 0;
 }
-@media screen and (max-width: 768px) {
-  .member-card__portrait {
-    width: 150px;
-    height: 150px;
-  }
-}
-.member-card__info {
-  width: calc(100% - (200px + 2rem));
-}
-@media screen and (max-width: 768px) {
-  .member-card__info {
-    width: calc(100% - (150px + 2rem));
-  }
-}
-@media screen and (min-width: 1025px) {
-  .member-card__info {
-    width: 40ch;
-  }
-}
 .member-card__list {
   padding-inline-start: 0;
 }
 .member-card__role {
   display: inline-block;
   list-style-type: none;
-  margin-top: 0;
 }
 .member-card__role:not(:last-of-type)::after {
   content: ", ";
   margin-right: 1ch;
 }
-.member-card__bio {
-  flex-grow: 1;
-  width: 30%;
+.member-card__links {
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+.member-card__email {
+  display: block;
+}
+.member-card__email::before {
+  content: "EMAIL: ";
+}
+.member-card__link {
+  display: block;
+}
+.member-card__link::before {
+  content: "WEB: ";
 }
 
 /* DIVIDER */

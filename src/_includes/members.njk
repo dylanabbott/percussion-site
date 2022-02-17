@@ -4,12 +4,12 @@
         {%- for member in collections.membersSorted -%}
             <div class="member-card">
                 {%- if member.data.portrait -%}
-                    <img src="{{ member.data.portrait }}" width="200" height="200" class="member-card__portrait">
+                    <img src="{{ member.data.portrait }}" width="200" height="200" class="member-card__portrait" alt="Photo of {{ member.data.name }}">
                 {%- else -%}
-                    <img src="img/placeholder-portrait.png" width="200" height="200" class="member-card__portrait">
+                    <img src="img/placeholder-portrait.png" width="200" height="200" class="member-card__portrait" alt="Placeholder Photo">
                 {%- endif -%}
                 <div class="member-card__info">
-                    <h2>{{ member.data.name }}</h2>
+                    <h3>{{ member.data.name }}</h3>
                     <ul class="member-card__list">
                         {%- for role in member.data.roles -%}
                             <li class="member-card__role">{{ role }}</li>

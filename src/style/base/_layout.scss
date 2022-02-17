@@ -2,9 +2,9 @@
 @use '../utils' as *;
 
 /* temporary spacing hack for early dev, remove this later */
-* + * {
-    margin-top: 1rem;
-}
+// * + * {
+//     margin-top: 1rem;
+// }
 
 html {
     max-width: 100%;
@@ -12,10 +12,39 @@ html {
 }
 
 body {
-    padding: 2rem 20%;
+    // padding: 2rem 20%;
 
     
-    @include medium {
-        padding: 0.5rem 5%;
-    }
+    // @include medium {
+    //     padding: 0.5rem 5%;
+    // }
+}
+
+/* Temporary outlines */
+.nav {
+    border: 1px solid #999999;
+}
+
+.site-header {
+    border: 1px solid #999999;
+}
+
+.site-content {
+    border: 1px solid #999999;
+}
+
+.section-layout, .site-footer, .site-header {
+    border: 1px solid #999999;
+}
+
+.section__heading {
+
+}
+
+.section__pullquote {
+
+}
+
+.section__content {
+
 }

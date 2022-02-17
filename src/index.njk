@@ -11,13 +11,16 @@
     <body>
         {% include 'navigation.njk' %}
         {% include 'header.njk' %}
-        <main class="sitecontent">
+        <main class="site-content">
             <h1>Percussion Strategic</h1>
             {% for section in collections.section %}
-            <section class="{{ section.data.title | slug }}">
-                <h2>
+            <section class="{{ section.data.title | slug }} section-layout">
+                <h2 class="section__heading">
                     <a id="{{ section.data.title | slug }}">{{ section.data.title }}</a>
                 </h2>
+                {%- if section.data.pullquote -%}
+                <h3 class="section__pullquote">Pullquote</h3>
+                {%- endif -%}
                 {{ section.templateContent | safe }}
             </section>    
             {%- endfor -%}
