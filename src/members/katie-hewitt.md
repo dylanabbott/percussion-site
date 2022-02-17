@@ -13,5 +13,6 @@ bio: Katie is rad at everything. Cras dolor tellus, suscipit in arcu ac, blandit
   eget magna eget est fringilla egestas.
 email: katie@kmhewitt.com
 website: www.kmhewitt.com
+order: 2
 
 ---
