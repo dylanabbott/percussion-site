@@ -2,6 +2,13 @@
 @use '../utils' as *;
 
 .members {
+    // @include large {
+    //     padding-left: 2rem;
+    //     padding-right: 2rem;
+    // }
+}
+
+.members-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -13,9 +20,9 @@
     border: 1px solid #000000;
     border-radius: 4px;
 
-    width: max(30%,300px);
-	margin: 1rem;
-    padding: 1rem;
+    width: max(100%,300px);
+	margin: 1rem 0;
+    padding: 1.5rem;
     // flex-grow: 2;
     // display: flex;
     // flex-wrap: wrap;
@@ -23,40 +30,88 @@
     // align-content: flex-start;
     // align-items: center;
 
+    @include medium {
+        width: min(100%, 540px);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: center;
+    }
+
+    @include large {
+        width: min(100%, 700px);
+        align-items: flex-start;
+    }
+
+    @include xlarge {
+        width: min(48%, 480px);
+    }
+
     & ul, li {
         margin-top: 0;
     }
 
-    & h3 {
+    & h4 {
         font-family: Inter, sans-serif;
         font-weight: 600;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 0;
+
+        @include medium {
+            text-align: left;
+        }
+
+        @include large {
+            text-align: left;
+        }
+
+        @include xlarge {
+            text-align: center;
+        }
     }
 
 	&__portrait {
-		width: 200px;
-		height: 200px;
+		width: 150px;
+		height: 150px;
 		object-fit: cover;
 		border-radius: 100%;
         margin: 0 auto;
 
-        // @include medium {
-        //     width: 150px;
-        //     height: 150px;
-        // }
+        @include medium {
+            margin: 0 2rem 0 0;
+        }
+
+        @include large {
+            width: 200px;
+            height: 200px;
+            margin: 0 2rem 0 0;
+        }
+
+        @include xlarge {
+            margin: 0 auto;
+        }
 	}
+
     &__info {
-        //width: calc(100% - (200px + 2rem));
+        width: calc(100% - (150px + 2rem));
 
         // @include medium {
         //     width: calc(100% - (150px + 2rem));
         // }
 
-        // @include xlarge {
-        //     width: 40ch;
-        // }
-        & h3 {
+        @include large {
+            width: calc(100% - (200px + 2rem));
+        }
+
+        @include xlarge {
+            width: 100%;
             text-align: center;
         }
+
+        // & h3 {
+        //     text-align: center;
+        // }
     }
     &__list {
         padding-inline-start: 0;
@@ -72,6 +127,18 @@
     &__bio {
         // flex-grow: 1;
         //width: 30%;
+        & p { 
+            margin-bottom: 0;
+        }
+
+        @include medium {
+            margin-top: 2rem;
+            min-width: 100%;
+        }
+
+        @include xlarge {
+            margin-top: 1rem;
+        }
     }
     &__links {
         padding-inline-start: 0;

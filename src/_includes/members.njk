@@ -1,6 +1,6 @@
 </section>
-<section class="section-layout">
-    <div class="members section__col3-3">
+<section class="members section-layout">
+    <div class="members-container section__col3-3">
         {%- for member in collections.membersSorted -%}
             <div class="member-card">
                 {%- if member.data.portrait -%}
@@ -9,7 +9,7 @@
                     <img src="img/placeholder-portrait.png" width="200" height="200" class="member-card__portrait" alt="Placeholder Photo">
                 {%- endif -%}
                 <div class="member-card__info">
-                    <h3>{{ member.data.name }}</h3>
+                    <h4>{{ member.data.name }}</h4>
                     <ul class="member-card__list">
                         {%- for role in member.data.roles -%}
                             <li class="member-card__role">{{ role }}</li>
