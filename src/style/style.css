@@ -235,7 +235,14 @@ html {
   }
 }
 .member-card__info {
-  width: calc(100% - (150px + 2rem));
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 576px) {
+  .member-card__info {
+    width: calc(100% - (150px + 2rem));
+    text-align: left;
+  }
 }
 @media screen and (min-width: 768px) {
   .member-card__info {

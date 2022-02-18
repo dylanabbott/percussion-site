@@ -94,11 +94,17 @@
 	}
 
     &__info {
-        width: calc(100% - (150px + 2rem));
+        width: 100%;
+        text-align: center;
 
         // @include medium {
         //     width: calc(100% - (150px + 2rem));
         // }
+
+        @include medium {
+            width: calc(100% - (150px + 2rem));
+            text-align: left;
+        }
 
         @include large {
             width: calc(100% - (200px + 2rem));
