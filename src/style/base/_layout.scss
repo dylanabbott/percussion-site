@@ -36,17 +36,27 @@ body {
 .site-footer,
 .site-header {
 	//border: 1px solid #999999;
-	padding: 0 1rem;
-	@media screen and (min-width: 576px) {
-        padding: 0 10%;
+	padding: 2rem 1rem;
+
+	@include medium {
+		padding: 2rem;
+	}
+
+	@media screen and (min-width: 768px) {
+        padding: 2rem 10%;
 		display: flex;
 		align-items: flex-start;
         max-width: 1400px;
         margin: 0 auto;
 	}
+
+	@media screen and (min-width: 1400px) {
+		max-width: 100%;
+		padding: 2rem calc(10% + (50% - 700px));
+	}
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
 	.section {
 		&__col1-3 {
 			width: 33%;

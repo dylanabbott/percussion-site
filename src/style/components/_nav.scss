@@ -2,6 +2,7 @@
 @use '../utils' as *;
 
 .nav {
+    justify-content: flex-end;
     > ul {
         padding-inline-start: 0;
         margin-top: 0;
@@ -57,14 +58,15 @@
         position: sticky;
         width: 100%;
         text-align: right;
-        top: 1rem;
-        right: 1rem;
+        top: 0;
+        right: 2rem;
     }
 }
 
 #menu-button {
     display: inline-block;
     transition: transform 0.3s ease-in-out;
+    margin-right: 1rem;
 }
 
 .rotated {

@@ -1,12 +1,12 @@
 /* MIXINS */
 @use 'vars' as *;
 
-@mixin  small {
-    @media screen and (max-width: $sm) { @content };
-}
+// @mixin  small {
+//     @media screen and (max-width: $sm) { @content };
+// }
 
 @mixin medium {
-    @media screen and (max-width: $md) { @content };
+    @media screen and (min-width: 576px) { @content };
 }
 
 @mixin large {

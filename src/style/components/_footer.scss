@@ -1,6 +1,43 @@
 /* FOOTER */
 @use '../utils' as *;
 
-.sitefooter {
+.site-footer {
     margin-top: 1rem;
+    padding-bottom: 3rem;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer {
+    
+    &__logo {
+    margin: 0 auto;
+    }
+
+    &__social-list {
+        list-style-type: none;
+        padding-inline-start: 0;
+        text-align: left;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    &__social-item {
+        display: block;
+
+        @include medium {
+            display: block;        
+        }
+        & a:link, a:hover, a:visited, a:active {
+            color: #ffffff;
+        }
+    }
+
+    &__social-icon {
+        display: inline-block;
+        margin-right: 1ch;
+        position: relative;
+        top: 8px;
+        }
 }

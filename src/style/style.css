@@ -109,21 +109,36 @@ html {
 .section-layout,
 .site-footer,
 .site-header {
-  padding: 0 1rem;
+  padding: 2rem 1rem;
 }
 @media screen and (min-width: 576px) {
   .section-layout,
 .site-footer,
 .site-header {
-    padding: 0 10%;
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-layout,
+.site-footer,
+.site-header {
+    padding: 2rem 10%;
     display: flex;
     align-items: flex-start;
     max-width: 1400px;
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 1400px) {
+  .section-layout,
+.site-footer,
+.site-header {
+    max-width: 100%;
+    padding: 2rem calc(10% + 50% - 700px);
+  }
+}
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .section__col1-3 {
     width: 33%;
   }
@@ -146,23 +161,47 @@ html {
   /* temp border */
   border: 1px solid #000000;
   border-radius: 4px;
-  width: max(30%, 300px);
-  margin: 1rem;
-  padding: 1rem;
+  width: max(100%, 300px);
+  margin: 1rem 0;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 576px) {
+  .member-card {
+    width: min(100%, 540px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 .member-card ul, .member-card li {
   margin-top: 0;
 }
-.member-card h3 {
+.member-card h4 {
   font-family: Inter, sans-serif;
   font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 576px) {
+  .member-card h4 {
+    text-align: left;
+  }
 }
 .member-card__portrait {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 100%;
   margin: 0 auto;
+}
+@media screen and (min-width: 576px) {
+  .member-card__portrait {
+    margin: 0 2rem 0 0;
+  }
+}
+.member-card__info {
+  width: calc(100% - (150px + 2rem));
 }
 .member-card__info h3 {
   text-align: center;
@@ -177,6 +216,15 @@ html {
 .member-card__role:not(:last-of-type)::after {
   content: ", ";
   margin-right: 1ch;
+}
+.member-card__bio p {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 576px) {
+  .member-card__bio {
+    margin-top: 2rem;
+    min-width: 100%;
+  }
 }
 .member-card__links {
   padding-inline-start: 0;
@@ -197,8 +245,40 @@ html {
 
 /* DIVIDER */
 /* FOOTER */
-.sitefooter {
+.site-footer {
   margin-top: 1rem;
+  padding-bottom: 3rem;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer__logo {
+  margin: 0 auto;
+}
+.footer__social-list {
+  list-style-type: none;
+  padding-inline-start: 0;
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto;
+}
+.footer__social-item {
+  display: block;
+}
+@media screen and (min-width: 576px) {
+  .footer__social-item {
+    display: block;
+  }
+}
+.footer__social-item a:link, .footer__social-item a:hover, .footer__social-item a:visited, .footer__social-item a:active {
+  color: #ffffff;
+}
+.footer__social-icon {
+  display: inline-block;
+  margin-right: 1ch;
+  position: relative;
+  top: 8px;
 }
 
 /* FORMS */
@@ -208,7 +288,7 @@ input[type=file] {
 
 /* HERO */
 .hero {
-  min-height: 30vh;
+  min-height: 40vh;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -251,7 +331,7 @@ input[type=file] {
   opacity: 1;
   transition: opacity 0.7s;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 576px) {
   .modal {
     padding: 1rem;
   }
@@ -267,12 +347,12 @@ input[type=file] {
   margin: 1rem;
   flex-basis: 50%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 576px) {
   .contactform__section {
     margin: 0.5rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 576px) {
   .contactform {
     flex-direction: column;
     justify-content: center;
@@ -289,11 +369,14 @@ input[type=file] {
 }
 
 /* NAV */
+.nav {
+  justify-content: flex-end;
+}
 .nav > ul {
   padding-inline-start: 0;
   margin-top: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 576px) {
   .nav {
     position: fixed;
     right: 2%;
@@ -308,7 +391,7 @@ input[type=file] {
     z-index: 10;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 576px) {
   .nav--hidden {
     right: -200%;
   }
@@ -320,7 +403,7 @@ input[type=file] {
 .nav__item:not(:last-child) {
   margin-right: 1rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 576px) {
   .nav__item {
     display: list-item;
     list-style-type: none;
@@ -339,7 +422,7 @@ input[type=file] {
   color: #000000;
   text-decoration: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 576px) {
   .nav__toggle {
     margin: 0;
     height: 0;
@@ -349,14 +432,15 @@ input[type=file] {
     position: sticky;
     width: 100%;
     text-align: right;
-    top: 1rem;
-    right: 1rem;
+    top: 0;
+    right: 2rem;
   }
 }
 
 #menu-button {
   display: inline-block;
   transition: transform 0.3s ease-in-out;
+  margin-right: 1rem;
 }
 
 .rotated {
@@ -402,6 +486,8 @@ input[type=file] {
   opacity: 1;
 }
 .carousel__item h3 {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
   margin-top: 1rem;
 }
 
