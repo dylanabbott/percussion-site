@@ -2,6 +2,13 @@
 @use '../utils' as *;
 
 .members {
+    // @include large {
+    //     padding-left: 2rem;
+    //     padding-right: 2rem;
+    // }
+}
+
+.members-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -27,7 +34,17 @@
         width: min(100%, 540px);
         display: flex;
         flex-wrap: wrap;
+        align-content: flex-start;
         align-items: center;
+    }
+
+    @include large {
+        width: min(100%, 700px);
+        align-items: flex-start;
+    }
+
+    @include xlarge {
+        width: min(48%, 480px);
     }
 
     & ul, li {
@@ -44,6 +61,14 @@
         @include medium {
             text-align: left;
         }
+
+        @include large {
+            text-align: left;
+        }
+
+        @include xlarge {
+            text-align: center;
+        }
     }
 
 	&__portrait {
@@ -56,7 +81,18 @@
         @include medium {
             margin: 0 2rem 0 0;
         }
+
+        @include large {
+            width: 200px;
+            height: 200px;
+            margin: 0 2rem 0 0;
+        }
+
+        @include xlarge {
+            margin: 0 auto;
+        }
 	}
+
     &__info {
         width: calc(100% - (150px + 2rem));
 
@@ -64,12 +100,18 @@
         //     width: calc(100% - (150px + 2rem));
         // }
 
-        // @include xlarge {
-        //     width: 40ch;
-        // }
-        & h3 {
+        @include large {
+            width: calc(100% - (200px + 2rem));
+        }
+
+        @include xlarge {
+            width: 100%;
             text-align: center;
         }
+
+        // & h3 {
+        //     text-align: center;
+        // }
     }
     &__list {
         padding-inline-start: 0;
@@ -92,6 +134,10 @@
         @include medium {
             margin-top: 2rem;
             min-width: 100%;
+        }
+
+        @include xlarge {
+            margin-top: 1rem;
         }
     }
     &__links {
