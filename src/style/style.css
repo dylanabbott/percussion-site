@@ -365,9 +365,14 @@ input[type=file] {
 
 /* CAROUSEL */
 .carousel__container {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  position: relative;
   border-radius: 3px;
   width: 100%;
-  overflow: hidden;
+  max-height: 75vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .carousel__items {
@@ -388,7 +393,7 @@ input[type=file] {
 .carousel__item {
   display: block;
   min-width: 100%;
-  padding: 1em;
+  padding: 1rem;
   margin-top: 0;
   opacity: 0.3;
   transition: opacity 0.5s ease-in-out;
@@ -396,9 +401,16 @@ input[type=file] {
 .carousel__item--current {
   opacity: 1;
 }
+.carousel__item h3 {
+  margin-top: 1rem;
+}
 
 .carousel__controls {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid #cccccc;
   text-align: center;
+  position: sticky;
+  bottom: 0;
 }
 
 .carousel__btn {
