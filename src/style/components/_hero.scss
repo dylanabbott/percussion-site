@@ -1,2 +1,12 @@
 /* HERO */
 @use '../utils' as *;
+
+.hero {
+    min-height: 30vh;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.brand {
+    object-fit : contain;
+}

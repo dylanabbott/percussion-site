@@ -1,5 +1,8 @@
 <section class="cases section-layout">
-    <h2>Cases</h2>
+    <div class="section__col1-3">
+        <h2>Cases</h2>
+    </div>
+    <div class="section__col2-3">
     <div class="carousel__container">
         <ul class="carousel__items" id="carousel-items">
             {% for case in collections.cases %}
@@ -16,5 +19,6 @@
                 <button class="carousel__btn" id="btn-left">&lt;</button>
                 <button class="carousel__btn" id="btn-right">&gt;</button>
             </div>
+        </div>
         </div>
     </section>
