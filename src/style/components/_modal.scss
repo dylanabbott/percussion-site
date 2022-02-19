@@ -2,68 +2,78 @@
 @use '../utils' as *;
 
 .modal {
-    position: relative;
+    padding: 1rem;
+	position: relative;
 	background-color: #ffffff;
 	opacity: 1;
 	z-index: 20;
-	padding: 2rem;
+    max-width: 96vw;
 	// width: 60vw;
 	// height: 60vw;
 	border-radius: 1rem;
 	transform: translateY(0);
 	transition: 0.5s ease-out;
 
-        &__close {
-        display: inline-block;
-        //width: 100%;
-        //text-align: right;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-    }
+	&__close {
+		display: inline-block;
+		//width: 100%;
+		//text-align: right;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+	}
 
-        &__overlay {
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 100vw;
-        height: 100vh;
-        margin-top: 0;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 10;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 1;
-        transition: opacity 0.7s;
-    }
+	&__overlay {
+		background-color: rgba(0, 0, 0, 0.8);
+		width: 100vw;
+		height: 100vh;
+		margin-top: 0;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 10;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 1;
+		transition: opacity 0.7s;
+	}
 
     @include medium {
-    padding: 1rem;
+        min-width: 70vw;
+    }
+
+	@include large {
+		padding: 2rem;
+	}
+
+    @include xlarge {
+        padding: 3rem;
     }
 }
 
 .contactform {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-    margin-top: 0;
+	flex-direction: column;
+	justify-content: center;
+    gap: 2rem;
 
-        &__section {
-        margin: 1rem;
-        flex-basis: 50%;
+	&__section {
+		//margin: 0.5rem;
 
-        @include medium {
-            margin: 0.5rem;
-        }
-    }
+		@include medium {
+			//margin: 1rem;
+			flex-basis: 50%;
+		}
+	}
 
-        @include medium {
-     flex-direction: column;  
-     justify-content: center;
-    }
+	@include large {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 0;
+	}
 }
 
 .hidden > .modal {

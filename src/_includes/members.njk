@@ -18,10 +18,10 @@
                     {%- if member.data.email or member.data.website -%}
                     <ul class="member-card__links">
                         {%- if member.data.email -%}
-                            <li class="member-card__email">{{ member.data.email }}</li>
+                            <li class="member-card__email"><img src="../img/letter.svg" alt="email" width="24" height="24" class="member-card__icon"><a href="mailto:{{ member.data.email }}">{{ member.data.email }}</a></li>
                         {%- endif -%}
                         {%- if member.data.website -%}
-                            <li class="member-card__link">{{ member.data.website }}</li>
+                            <li class="member-card__link"><li class="member-card__email"><img src="../img/browser.svg" alt="url" width="24" height="24" class="member-card__icon"><a href="http://{{ member.data.website }}">{{ member.data.website }}</a></li>
                         {%- endif -%}
                     </ul>
                     {%- endif -%}
