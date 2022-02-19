@@ -402,6 +402,9 @@ label {
 
 /* HERO */
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 40vh;
   padding-top: 1rem;
   padding-bottom: 1rem;
