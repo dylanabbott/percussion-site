@@ -99,6 +99,18 @@ strong {
 /* Color Variables */
 /* Color Table Lookup Function */
 /* Semantic Color Assignments */
+html {
+  --nav-bg: #004d5c;
+  --nav-text: white;
+  --hero-bg: white;
+  --hero-tagline: black;
+  --footer-bg: #004d5c;
+  --footer-text: white;
+  --social-item: white;
+  --social-item--hover: #ff8000;
+  --social-icon--hover: #ff8000;
+}
+
 /* VARIABLES */
 /* MIXINS */
 /* LAYOUT */
@@ -297,8 +309,8 @@ html {
 .site-footer {
   margin-top: 1rem;
   padding-bottom: 3rem;
-  background-color: #333333;
-  color: #ffffff;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   text-align: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -340,8 +352,14 @@ html {
     display: block;
   }
 }
-.footer__social-item a:link, .footer__social-item a:hover, .footer__social-item a:visited, .footer__social-item a:active {
-  color: #ffffff;
+.footer__social-item a:link, .footer__social-item a:visited {
+  color: var(--social-item);
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+.footer__social-item a:hover, .footer__social-item a:active {
+  text-decoration: underline;
+  color: var(--social-item--hover);
 }
 .footer__social-icon {
   display: inline-block;
@@ -412,9 +430,11 @@ label {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
-.brand {
+.hero__brand {
   object-fit: contain;
+}
+.hero__tagline {
+  color: var(--hero-tagline);
 }
 
 /* MODAL */
@@ -498,11 +518,16 @@ label {
 
 /* NAV */
 .nav {
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
   justify-content: flex-end;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .nav > ul {
   padding-inline-start: 0;
   margin-top: 0;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
   .nav {
@@ -530,6 +555,15 @@ label {
 }
 .nav__item:not(:last-child) {
   margin-right: 1rem;
+}
+.nav__item a:link, .nav__item a:visited {
+  text-decoration: none;
+  color: var(--social-item);
+  transition: color 0.2s ease-in;
+}
+.nav__item a:hover, .nav__item a:active {
+  text-decoration: underline;
+  color: var(--social-item--hover);
 }
 @media screen and (max-width: 768px) {
   .nav__item {

@@ -4,8 +4,8 @@
 .site-footer {
     margin-top: 1rem;
     padding-bottom: 3rem;
-    background-color: #333333;
-    color: #ffffff;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     text-align: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -57,8 +57,14 @@
         @include large {
             display: block;        
         }
-        & a:link, a:hover, a:visited, a:active {
-            color: #ffffff;
+        & a:link, a:visited {
+            color: var(--social-item);
+            text-decoration: none;
+            transition: color 0.2s ease-in;
+        }
+        & a:hover, a:active {
+            text-decoration: underline;
+            color: var(--social-item--hover);
         }
     }
 

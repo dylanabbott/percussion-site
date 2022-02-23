@@ -8,8 +8,10 @@
     min-height: 40vh;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-
-.brand {
-    object-fit : contain;
+    &__brand {
+       object-fit: contain;
+    }
+    &__tagline{
+        color: var(--hero-tagline);
+    }
 }
