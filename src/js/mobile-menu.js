@@ -6,7 +6,7 @@ const mobileMenu = document.getElementById("nav");
 function toggleMenu(e) {
     e.preventDefault();
     btnMenu.classList.toggle("rotated");
-    mobileMenu.classList.toggle("nav--hidden");
+    mobileMenu.classList.toggle("nav--hidden-on-mobile");
 }
 
 btnMenu.addEventListener('click', toggleMenu);

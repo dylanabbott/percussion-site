@@ -3,52 +3,54 @@
 /* Color Variables */
 
 $colors: (
-    dark-blue: (
-        0: hsl(190,100%,18%),
-    ),
-    light-blue: (
-        0: hsl(190, 100%, 38%),
-    ),
-    teal: (
-        0: hsl(182,100%,21%),
-    ),
-    dark-orange: (
-        0: hsl(10,100%,55%),
-    ),
-    light-orange: (
-        0: hsl(30,100%,50%),
-    ),
-    neutral: (
-        0: hsl(0,0%,0%),
-        1: hsl(0,0%,25%),
-        2: hsl(0,0%,50%),
-        3: hsl(0,0%,75%),
-        4: hsl(0,0%,100%),
-    ),
+	dark-blue: (
+		0: hsl(190, 100%, 18%),
+	),
+	light-blue: (
+		0: hsl(190, 100%, 38%),
+	),
+	teal: (
+		0: hsl(182, 100%, 21%),
+	),
+	dark-orange: (
+		0: hsl(10, 100%, 55%),
+	),
+	light-orange: (
+		0: hsl(30, 100%, 50%),
+	),
+	neutral: (
+		0: hsl(0, 0%, 0%),
+		1: hsl(0, 0%, 25%),
+		2: hsl(0, 0%, 50%),
+		3: hsl(0, 0%, 75%),
+		4: hsl(0, 0%, 100%),
+	),
 );
 
 /* Color Table Lookup Function */
 
-@function getcolor($color, $value:0) {
-    @return map-get(map-get($colors, $color), $value);
+@function getcolor($color, $value: 0) {
+	@return map-get(map-get($colors, $color), $value);
 }
 
 /* Semantic Color Assignments */
 
 html {
-    // Nav
-    --nav-bg: #{getcolor(dark-blue,0)};
-    --nav-text: #{getcolor(neutral,0)};
+	// Nav
+	--nav-bg: #{getcolor(dark-blue, 0)};
+	--nav-text: #{getcolor(neutral, 0)};
+    --nav-bg-mobile: transparentize(#{getcolor(dark-blue,0)}, 0.3);
+    --nav-text-mobile: #{getcolor(neutral,4)};
+    --nav-toggle: #{getcolor(neutral,4)};
 
-    // Hero
-    --hero-bg: #{getcolor(light-orange,0)};
-    --hero-tagline: #{getcolor(neutral,4)};
+	// Hero
+	--hero-bg: #{getcolor(light-blue, 0)};
+	--hero-tagline: #{getcolor(neutral, 4)};
 
-    // Footer
-    --footer-bg: #{getcolor(dark-blue,0)};
-    --footer-text: #{getcolor(neutral,4)};
-    --social-item: #{getcolor(neutral,4)};
-    --social-item--hover: #{getcolor(light-orange,0)};
-    --social-icon--hover: #{getcolor(light-orange,0)};
-
+	// Footer
+	--footer-bg: #{getcolor(dark-blue, 0)};
+	--footer-text: #{getcolor(neutral, 4)};
+	--social-item: #{getcolor(neutral, 4)};
+	--social-item--hover: #{getcolor(light-orange, 0)};
+	--social-icon--hover: #{getcolor(light-orange, 0)};
 }

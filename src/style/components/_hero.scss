@@ -5,19 +5,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     min-height: 50vh;
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: var(--hero-bg);
     &__brand {
-       object-fit: contain;
+        width: 75%;
+        object-fit: contain;
     }
-    &__tagline{
+    &__tagline {
         color: var(--hero-tagline);
+        font-weight: 400;
+        //margin: 3rem;
+        max-width: 60%;
+        text-align: center;
     }
 
     @include large {
+        min-height: 60vh;
         flex-direction: row;
+        &__brand {
+            width: 50%;
+        }
+        &__tagline {
+            //margin: 2rem;
+            text-align: left;
+            max-width: 30%;
+        }
     }
 }

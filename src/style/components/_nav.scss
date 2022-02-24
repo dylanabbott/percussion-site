@@ -2,87 +2,117 @@
 @use '../utils' as *;
 
 .nav {
-    background-color: var(--nav-bg);
-    color: var(--nav-text);
-    justify-content: flex-end;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    > ul {
-        padding-inline-start: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-    }    
-    @media screen and (max-width: 768px) {
-        position: fixed;
-        right: 2%;
-        top: 5%;
-        width: 96%;
-        border: 1px solid #000000;
-        border-radius: 4px;
-        padding: 1rem;
-        transition: right 0.3s ease-in-out;
-        background-color: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(3px);
-        z-index: 10;
-    }
-    &--hidden {
-        @media screen and (max-width: 768px) {
-            right: -200%;
-        }
-    }
+	position: fixed;
+	right: 2%;
+	top: 5%;
+	width: 96%;
+	//border: 1px solid #000000;
+	//border-radius: 4px;
+	padding: 1rem;
+	transition: right 0.3s ease-in-out;
+	background-color: var(--nav-bg-mobile);
+	color: var(--nav-text-mobile);
+	backdrop-filter: blur(3px);
+	z-index: 10;
+	&--hidden-on-mobile {
+		right: -200%;
+	}
+	// @media screen and (max-width: 768px) {
+
+	// }
+
+	@include large {
+		width: 100%;
+		top: initial;
+		right: initial;
+		background-color: var(--nav-bg);
+		color: var(--nav-text);
+		justify-content: flex-end;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		border: 0;
+		border-radius: 0;
+		> ul {
+			padding-inline-start: 0;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		&--hidden-on-mobile {
+			// right: initial;
+		}
+	}
+
+	//  {
+	//     // @media screen and (max-width: 768px) {
+	//     //     right: -200%;
+	//     // }
+	// }
 }
 
 .nav__item {
-    display: inline-block;
-    &:not(:last-child) {
-        margin-right: 1rem;
-    }
-    & a:link, a:visited {
-            text-decoration: none;
-            color: var(--social-item);
-            transition: color 0.2s ease-in;
-        }
-        & a:hover, a:active {
-            text-decoration: underline;
-            color: var(--social-item--hover);
-        }
-    @media screen and (max-width: 768px) {
-        display: list-item;
-        list-style-type: none;
-        text-align: right;
-        margin-right: 1rem;
-    }
+	display: list-item;
+	list-style-type: none;
+	text-align: right;
+	margin-right: 1rem;
+	&:not(:last-child) {
+		margin-right: 1rem;
+	}
+	& a:link,
+	a:visited {
+		text-decoration: none;
+		color: var(--social-item);
+		transition: color 0.2s ease-in;
+	}
+	& a:hover,
+	a:active {
+		text-decoration: underline;
+		color: var(--social-item--hover);
+	}
+	// @media screen and (max-width: 768px) {
+
+	// }
+
+	@include large {
+		display: inline-block;
+	}
 }
 
 .nav__toggle {
-    display: none;
-    font-weight: 900;
-    font-size: 2rem;
-    color: #000000;
-    & a:link, a:visited, a:active, a:hover {
-        color: #000000;
-        text-decoration: none;
-    }
-    @media screen and (max-width: 768px) {
-        margin: 0;
-        height: 0;
-        z-index: 30;
-        overflow: visible;
-        display: block;
-        position: sticky;
-        width: 100%;
-        text-align: right;
-        top: 0;
-        right: 2rem;
-    }
+	margin: 0;
+	height: 0;
+	z-index: 30;
+	overflow: visible;
+	display: block;
+	position: sticky;
+	width: 100%;
+	text-align: right;
+	top: 0;
+	right: 2rem;
+	font-weight: 900;
+	font-size: 2rem;
+	color: var(--nav-toggle);
+	& a:link,
+	a:visited,
+	a:active,
+	a:hover {
+		color: var(--nav-toggle);
+		text-decoration: none;
+	}
+	// @media screen and (max-width: 768px) {
+
+	// }
+
+	@include large {
+		display: none;
+	}
 }
 
 #menu-button {
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-    margin-right: 1rem;
+	display: inline-block;
+	transition: transform 0.3s ease-in-out;
+	margin-right: 1rem;
 }
 
 .rotated {
-    transform: rotate(405deg);
+	transform: rotate(405deg);
 }
