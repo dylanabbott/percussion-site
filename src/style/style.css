@@ -168,6 +168,14 @@ html {
   .section__col3-3 {
     width: 100%;
   }
+  .section__heading {
+    text-align: right;
+    padding-right: 3rem;
+  }
+  .section__pullquote {
+    text-align: right;
+    padding-right: 3rem;
+  }
 }
 /* CARD */
 .members-container {
@@ -559,6 +567,9 @@ label {
 .nav--hidden-on-mobile {
   right: -200%;
 }
+.nav__brand {
+  display: none;
+}
 .nav > ul {
   padding-inline-start: 0;
   margin-top: 0;
@@ -571,7 +582,8 @@ label {
     right: initial;
     background-color: var(--nav-bg);
     color: var(--nav-text);
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border: 0;
@@ -579,6 +591,9 @@ label {
   }
   .nav--hidden-on-mobile {
     right: initial;
+  }
+  .nav__brand {
+    display: inline-block;
   }
 }
 

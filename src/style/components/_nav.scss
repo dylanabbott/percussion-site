@@ -18,6 +18,9 @@
 	&--hidden-on-mobile {
 		right: -200%;
 	}
+    &__brand {
+        display: none;
+    }
 	> ul {
 		padding-inline-start: 0;
 		margin-top: 0;
@@ -33,7 +36,8 @@
 		right: initial;
 		background-color: var(--nav-bg);
 		color: var(--nav-text);
-		justify-content: flex-end;
+        align-items: center;
+		justify-content: space-between;
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		border: 0;
@@ -41,6 +45,9 @@
 		&--hidden-on-mobile {
 			right: initial;
 		}
+        &__brand {
+            display: inline-block;
+        }
 	}
 
 	//  {

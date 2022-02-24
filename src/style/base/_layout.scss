@@ -67,11 +67,14 @@ html {
 		&__col3-3 {
 			width: 100%;
 		}
-		// &__heading {
-		// }
-
-		// &__pullquote {
-		// }
+		&__heading {
+			text-align: right;
+			padding-right: 3rem;
+		}
+		&__pullquote {
+			text-align: right;
+			padding-right: 3rem;
+		}
 
 		// &__content {
 		// }
