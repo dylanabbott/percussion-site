@@ -80,3 +80,34 @@ html {
 		// }
 	}
 }
+
+.who-we-are {
+	background-color: var(--who-bg);
+	color: var(--who-text);
+}
+
+.how-we-work {
+	background-color: var(--how-bg);
+	color: var(--how-text);
+}
+
+.what-we-do {
+	background-color: var(--what-bg);
+	color: var(--what-text);
+}
+
+.why-we-work {
+	background-color: var(--why-bg);
+	color: var(--why-text);
+}
+
+.members {
+	background-color: var(--members-bg); //TEMP
+	color: var(--members-text);
+}
+
+.cases {
+	background-color: var(--cases-bg);
+	color: var(--cases-text);
+
+}

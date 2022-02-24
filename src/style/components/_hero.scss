@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 50vh;
+    min-height: 60vh;
     padding-top: 2rem;
     padding-bottom: 2rem;
     background-color: var(--hero-bg);
@@ -23,7 +23,7 @@
     }
 
     @include large {
-        min-height: 60vh;
+        min-height: 75vh;
         flex-direction: row;
         &__brand {
             width: 50%;
