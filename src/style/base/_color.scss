@@ -39,8 +39,10 @@ html {
 	// Nav
 	--nav-bg: #{getcolor(dark-blue, 0)};
 	--nav-text: #{getcolor(neutral, 0)};
-    --nav-bg-mobile: transparentize(#{getcolor(dark-blue,0)}, 0.3);
+    --nav-text--hover: #{getcolor(light-orange, 0)};
+    --nav-bg-mobile: #{getcolor(dark-blue,0)};
     --nav-text-mobile: #{getcolor(neutral,4)};
+    --nav-text-mobile--hover: #{getcolor(light-orange,0)};
     --nav-toggle: #{getcolor(neutral,4)};
 
 	// Hero

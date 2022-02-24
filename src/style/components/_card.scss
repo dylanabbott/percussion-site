@@ -78,6 +78,8 @@
 		border-radius: 100%;
         margin: 0 auto;
 
+        @include shadow;
+
         @include medium {
             margin: 0 2rem 0 0;
         }
