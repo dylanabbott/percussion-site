@@ -101,9 +101,9 @@ strong {
 /* Semantic Color Assignments */
 html {
   --nav-bg: #004d5c;
-  --nav-text: white;
-  --hero-bg: white;
-  --hero-tagline: black;
+  --nav-text: black;
+  --hero-bg: #ff8000;
+  --hero-tagline: white;
   --footer-bg: #004d5c;
   --footer-text: white;
   --social-item: white;
@@ -424,17 +424,24 @@ label {
 /* HERO */
 .hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 40vh;
+  min-height: 50vh;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background-color: var(--hero-bg);
 }
 .hero__brand {
   object-fit: contain;
 }
 .hero__tagline {
   color: var(--hero-tagline);
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+  }
 }
 
 /* MODAL */

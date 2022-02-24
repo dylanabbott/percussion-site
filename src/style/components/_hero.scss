@@ -3,15 +3,21 @@
 
 .hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 40vh;
+    min-height: 50vh;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    background-color: var(--hero-bg);
     &__brand {
        object-fit: contain;
     }
     &__tagline{
         color: var(--hero-tagline);
+    }
+
+    @include large {
+        flex-direction: row;
     }
 }

@@ -38,11 +38,11 @@ $colors: (
 html {
     // Nav
     --nav-bg: #{getcolor(dark-blue,0)};
-    --nav-text: #{getcolor(neutral,4)};
+    --nav-text: #{getcolor(neutral,0)};
 
     // Hero
-    --hero-bg: #{getcolor(neutral,4)};
-    --hero-tagline: #{getcolor(neutral,0)};
+    --hero-bg: #{getcolor(light-orange,0)};
+    --hero-tagline: #{getcolor(neutral,4)};
 
     // Footer
     --footer-bg: #{getcolor(dark-blue,0)};
