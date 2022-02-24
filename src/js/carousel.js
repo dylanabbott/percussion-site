@@ -17,6 +17,7 @@ btnLeft.setAttribute('disabled', 'disabled');
 
 function cslShift(e) {
 	//this function checks which button was clicked, and which index position we're currently on
+	//console.log(e.includes('btn-left'));
 	if (e.srcElement.id === 'btn-left' && cslIndex !== 0) {
 		//if we're already at the end of the carousel, enable the right button
 		if (cslIndex === cslLength - 1) {
