@@ -1,5 +1,6 @@
 /* MODAL */
 @use '../utils' as *;
+@use 'sass:color';
 
 .modal {
     padding: 1rem;
@@ -14,6 +15,8 @@
 	transform: translateY(0);
 	transition: 0.5s ease-out;
 
+	@include shadow;
+
 	&__close {
 		display: inline-block;
 		//width: 100%;
@@ -24,7 +27,7 @@
 	}
 
 	&__overlay {
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: var(--modal-overlay);
 		width: 100vw;
 		height: 100vh;
 		margin-top: 0;

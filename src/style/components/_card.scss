@@ -129,7 +129,7 @@
         list-style-type: none;
         &:not(:last-of-type)::after {
             content: ", ";
-            margin-right: 1ch;
+            white-space: pre;
         }
     }
     &__bio {

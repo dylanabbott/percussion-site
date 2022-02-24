@@ -40,6 +40,8 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+/* VARIABLES */
+/* MIXINS */
 /* TYPOGRAPHY */
 html {
   font-family: "Inter", sans-serif;
@@ -103,10 +105,12 @@ html {
   --nav-bg: #004d5c;
   --nav-text: black;
   --nav-text--hover: #ff8000;
-  --nav-bg-mobile: #004d5c;
+  --nav-bg-mobile: rgba(0, 77, 92, 0.8);
   --nav-text-mobile: white;
   --nav-text-mobile--hover: #ff8000;
   --nav-toggle: white;
+  --nav-toggle-bg: #004d5c;
+  --nav-toggle-bg-hover: #ff8000;
   --hero-bg: #00a2c2;
   --hero-tagline: white;
   --footer-bg: #004d5c;
@@ -114,10 +118,9 @@ html {
   --social-item: white;
   --social-item--hover: #ff8000;
   --social-icon--hover: #ff8000;
+  --modal-overlay: rgba(0, 77, 92, 0.8);
 }
 
-/* VARIABLES */
-/* MIXINS */
 /* LAYOUT */
 /* temporary spacing hack for early dev, remove this later */
 html {
@@ -291,7 +294,7 @@ html {
 }
 .member-card__role:not(:last-of-type)::after {
   content: ", ";
-  margin-right: 1ch;
+  white-space: pre;
 }
 .member-card__bio p {
   margin-bottom: 0;
@@ -442,8 +445,8 @@ label {
   align-items: center;
   justify-content: space-evenly;
   min-height: 50vh;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: var(--hero-bg);
 }
 .hero__brand {
@@ -481,6 +484,7 @@ label {
   border-radius: 1rem;
   transform: translateY(0);
   transition: 0.5s ease-out;
+  box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02), 0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035), 0px 13.4px 17.9px rgba(0, 0, 0, 0.042), 0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
 }
 .modal__close {
   display: inline-block;
@@ -489,7 +493,7 @@ label {
   right: 1rem;
 }
 .modal__overlay {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--modal-overlay);
   width: 100vw;
   height: 100vh;
   margin-top: 0;
@@ -607,6 +611,10 @@ label {
 .nav__item:not(:last-child) {
   border-bottom: 1px solid var(--nav-text-mobile);
 }
+.nav__item:not(:last-child):hover,
+.nav__item:not(:last-child) :active {
+  border-bottom: 1px solid var(--nav-text-mobile--hover);
+}
 .nav__item a:link,
 .nav__item a:visited {
   text-decoration: none;
@@ -623,7 +631,11 @@ label {
     font-size: 1rem;
   }
   .nav__item:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    border-bottom: 0;
+  }
+  .nav__item:not(:last-child):hover,
+.nav__item:not(:last-child) :active {
     border-bottom: 0;
   }
   .nav__item a:hover,
@@ -647,6 +659,15 @@ label {
   font-weight: 900;
   font-size: 2rem;
   color: var(--nav-toggle);
+}
+.nav__toggle img {
+  padding: 0.25rem;
+  background-color: var(--nav-toggle-bg);
+  border-radius: 100%;
+  box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02), 0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035), 0px 13.4px 17.9px rgba(0, 0, 0, 0.042), 0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
+}
+.nav__toggle img:active {
+  background-color: var(--nav-toggle-bg-hover);
 }
 .nav__toggle a:link,
 .nav__toggle a:visited,

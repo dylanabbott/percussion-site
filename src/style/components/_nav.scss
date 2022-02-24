@@ -14,13 +14,13 @@
 	color: var(--nav-text-mobile);
 	backdrop-filter: blur(3px);
 	z-index: 10;
-    @include shadow;
+	@include shadow;
 	&--hidden-on-mobile {
 		right: -200%;
 	}
-    &__brand {
-        display: none;
-    }
+	&__brand {
+		display: none;
+	}
 	> ul {
 		padding-inline-start: 0;
 		margin-top: 0;
@@ -36,7 +36,7 @@
 		right: initial;
 		background-color: var(--nav-bg);
 		color: var(--nav-text);
-        align-items: center;
+		align-items: center;
 		justify-content: space-between;
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
@@ -45,9 +45,9 @@
 		&--hidden-on-mobile {
 			right: initial;
 		}
-        &__brand {
-            display: inline-block;
-        }
+		&__brand {
+			display: inline-block;
+		}
 	}
 
 	//  {
@@ -63,9 +63,13 @@
 	text-align: right;
 	//margin-right: 1rem;
 	font-size: 1.5rem;
-    padding: 0.25rem;
+	padding: 0.25rem;
 	&:not(:last-child) {
-        border-bottom: 1px solid var(--nav-text-mobile);
+		border-bottom: 1px solid var(--nav-text-mobile);
+		&:hover,
+		:active {
+			border-bottom: 1px solid var(--nav-text-mobile--hover);
+		}
 	}
 	& a:link,
 	a:visited {
@@ -85,15 +89,19 @@
 	@include large {
 		display: inline-block;
 		font-size: 1rem;
-        &:not(:last-child) {
-            margin-right: 1rem;
-            border-bottom: 0;
-        }
-        & a:hover,
-	a:active {
-		text-decoration: underline;
-		color: var(--nav-text--hover);
-	}
+		&:not(:last-child) {
+			margin-right: 0.5rem;
+			border-bottom: 0;
+			&:hover,
+			:active {
+				border-bottom: 0;
+			}
+		}
+		& a:hover,
+		a:active {
+			text-decoration: underline;
+			color: var(--nav-text--hover);
+		}
 	}
 }
 
@@ -111,6 +119,16 @@
 	font-weight: 900;
 	font-size: 2rem;
 	color: var(--nav-toggle);
+    
+	& img {
+        padding: 0.25rem;
+		background-color: var(--nav-toggle-bg);
+		border-radius: 100%;
+        @include shadow;
+        &:active {
+            background-color: var(--nav-toggle-bg-hover);
+        }
+	}
 	& a:link,
 	a:visited,
 	a:active,

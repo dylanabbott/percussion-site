@@ -5,6 +5,7 @@
 $colors: (
 	dark-blue: (
 		0: hsl(190, 100%, 18%),
+		80: hsl(190, 100%, 18%, 80%),
 	),
 	light-blue: (
 		0: hsl(190, 100%, 38%),
@@ -25,6 +26,19 @@ $colors: (
 		3: hsl(0, 0%, 75%),
 		4: hsl(0, 0%, 100%),
 	),
+	alpha: (
+		0: 0%,
+		10: 10%,
+		20: 20%,
+		30: 30%,
+		40: 40%,
+		50: 50%,
+		60: 60%,
+		70: 70%,
+		80: 80%,
+		90: 90%,
+		100: 100%,
+	),
 );
 
 /* Color Table Lookup Function */
@@ -39,11 +53,13 @@ html {
 	// Nav
 	--nav-bg: #{getcolor(dark-blue, 0)};
 	--nav-text: #{getcolor(neutral, 0)};
-    --nav-text--hover: #{getcolor(light-orange, 0)};
-    --nav-bg-mobile: #{getcolor(dark-blue,0)};
-    --nav-text-mobile: #{getcolor(neutral,4)};
-    --nav-text-mobile--hover: #{getcolor(light-orange,0)};
-    --nav-toggle: #{getcolor(neutral,4)};
+	--nav-text--hover: #{getcolor(light-orange, 0)};
+	--nav-bg-mobile: #{getcolor(dark-blue, 80)};
+	--nav-text-mobile: #{getcolor(neutral, 4)};
+	--nav-text-mobile--hover: #{getcolor(light-orange, 0)};
+	--nav-toggle: #{getcolor(neutral, 4)};
+    --nav-toggle-bg: #{getcolor(dark-blue, 0)};
+    --nav-toggle-bg-hover: #{getcolor(light-orange, 0)};
 
 	// Hero
 	--hero-bg: #{getcolor(light-blue, 0)};
@@ -55,4 +71,6 @@ html {
 	--social-item: #{getcolor(neutral, 4)};
 	--social-item--hover: #{getcolor(light-orange, 0)};
 	--social-icon--hover: #{getcolor(light-orange, 0)};
+
+	--modal-overlay: #{getcolor(dark-blue, 80)};
 }
