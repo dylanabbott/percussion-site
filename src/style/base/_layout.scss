@@ -38,6 +38,11 @@ html {
 	//border: 1px solid #999999;
 	padding: 2rem 1rem;
 
+	&__col2-3 p:first-of-type {
+		font-size: 150%;
+		line-height: 1.25;
+	}
+
 	@include medium {
 		padding: 2rem;
 	}
@@ -84,21 +89,33 @@ html {
 .who-we-are {
 	background-color: var(--who-bg);
 	color: var(--who-text);
+	& .section__heading {
+		color: var(--who-heading);
+	} 
 }
 
 .how-we-work {
 	background-color: var(--how-bg);
 	color: var(--how-text);
+	& .section__heading {
+		color: var(--how-heading);
+	}
 }
 
 .what-we-do {
 	background-color: var(--what-bg);
 	color: var(--what-text);
+	& .section__heading {
+		color: var(--what-heading);
+	}
 }
 
 .why-we-work {
 	background-color: var(--why-bg);
 	color: var(--why-text);
+	& .section__heading {
+		color: var(--why-heading);
+	}
 }
 
 .members {
@@ -110,4 +127,11 @@ html {
 	background-color: var(--cases-bg);
 	color: var(--cases-text);
 
+}
+
+.what-we-do, .how-we-work, .why-we-work, .who-we-are {
+	& p:first-of-type {
+		font-size: 150%;
+		line-height: 1.25;
+	}
 }

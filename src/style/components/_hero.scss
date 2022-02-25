@@ -9,7 +9,12 @@
     min-height: 60vh;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    background-color: var(--hero-bg);
+    //background-color: var(--hero-bg);
+    // background-image: url('../img/perc-blob.svg');
+    // background-size: 200%;
+    // background-repeat: no-repeat;
+    // background-position: center 150%;
+    background: url('../img/perc-blob.svg') center 175%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/200% no-repeat;
     &__brand {
         width: 75%;
         object-fit: contain;
@@ -17,14 +22,23 @@
     &__tagline {
         color: var(--hero-tagline);
         font-weight: 400;
-        //margin: 3rem;
+        margin-top: 1rem;
         max-width: 80%;
         text-align: center;
+
+        @include large {
+            text-shadow: 0 0 4px var(--nav-bg);
+        }
+    }
+
+    @include medium {
+        background: url('../img/perc-blob.svg') center 125%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/cover no-repeat;
     }
 
     @include large {
         min-height: 75vh;
         flex-direction: row;
+        background: url('../img/perc-blob.svg') center 108%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/cover no-repeat;
         &__brand {
             width: 50%;
         }
@@ -33,5 +47,9 @@
             text-align: left;
             max-width: 30%;
         }
+    }
+
+    @include xlarge {
+        background: url('../img/perc-blob.svg') center 105%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/cover no-repeat;
     }
 }

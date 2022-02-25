@@ -10,6 +10,7 @@ $colors: (
         3: hsl(190, 40%, 48%),
         4: hsl(190, 30%, 58%),
 		80: hsl(190, 100%, 18%, 80%),
+		60: hsl(190, 100%, 18%, 60%)
 	),
 	light-blue: (
 		0: hsl(190, 100%, 38%),
@@ -32,6 +33,9 @@ $colors: (
         2: hsl(10, 80%, 75%),
         3: hsl(10, 80%, 85%),
         4: hsl(10, 80%, 95%),
+	),
+	deep-orange: (
+		0: hsl(10, 80%, 20%)
 	),
 	light-orange: (
 		0: hsl(30, 100%, 50%),
@@ -83,7 +87,7 @@ html {
     --nav-toggle-bg-hover: #{getcolor(light-orange, 0)};
 
 	// Hero
-	--hero-bg: #{getcolor(light-blue, 0)};
+	--hero-bg: #{getcolor(dark-blue, 60)};
 	--hero-tagline: #{getcolor(neutral, 4)};
 
 	// Footer
@@ -95,17 +99,17 @@ html {
 
 	--modal-overlay: #{getcolor(dark-blue, 80)};
 
-    --who-bg: #{getcolor(dark-orange, 0)};
+    --who-bg: #{getcolor(deep-orange, 0)};
     --who-text: #{getcolor(neutral,4)};
-    --who-heading: ;
+    --who-heading: #{getcolor(light-blue,3)};
 
     --how-bg: #{getcolor(light-blue,0)};
     --how-text: #{getcolor(light-blue,4)};
-    --how-heading: ;
+    --how-heading: #{getcolor(light-blue,3)};
 
     --what-bg: #{getcolor(light-blue,3)};
     --what-text: #{getcolor(dark-blue,0)};
-    --what-heading: ;
+    --what-heading: #{getcolor(teal,0)};
 
     --why-bg: #{getcolor(dark-blue,0)};
     --why-text: #{getcolor(light-blue,4)};

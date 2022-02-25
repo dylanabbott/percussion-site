@@ -112,7 +112,7 @@ html {
   --nav-toggle: white;
   --nav-toggle-bg: #004d5c;
   --nav-toggle-bg-hover: #ff8000;
-  --hero-bg: #00a2c2;
+  --hero-bg: rgba(0, 77, 92, 0.6);
   --hero-tagline: white;
   --footer-bg: #004d5c;
   --footer-text: white;
@@ -120,15 +120,15 @@ html {
   --social-item--hover: #ff8000;
   --social-icon--hover: #ff8000;
   --modal-overlay: rgba(0, 77, 92, 0.8);
-  --who-bg: #e84f30;
+  --who-bg: #5c180a;
   --who-text: white;
-  --who-heading: ;
+  --who-heading: #c2f5ff;
   --how-bg: #00a2c2;
   --how-text: #f5fdff;
-  --how-heading: ;
+  --how-heading: #c2f5ff;
   --what-bg: #c2f5ff;
   --what-text: #004d5c;
-  --what-heading: ;
+  --what-heading: #00686b;
   --why-bg: #004d5c;
   --why-text: #f5fdff;
   --why-heading: #ffb366;
@@ -156,6 +156,12 @@ html {
 .site-footer,
 .site-header {
   padding: 2rem 1rem;
+}
+.section-layout__col2-3 p:first-of-type,
+.site-footer__col2-3 p:first-of-type,
+.site-header__col2-3 p:first-of-type {
+  font-size: 150%;
+  line-height: 1.25;
 }
 @media screen and (min-width: 576px) {
   .section-layout,
@@ -207,20 +213,32 @@ html {
   background-color: var(--who-bg);
   color: var(--who-text);
 }
+.who-we-are .section__heading {
+  color: var(--who-heading);
+}
 
 .how-we-work {
   background-color: var(--how-bg);
   color: var(--how-text);
+}
+.how-we-work .section__heading {
+  color: var(--how-heading);
 }
 
 .what-we-do {
   background-color: var(--what-bg);
   color: var(--what-text);
 }
+.what-we-do .section__heading {
+  color: var(--what-heading);
+}
 
 .why-we-work {
   background-color: var(--why-bg);
   color: var(--why-text);
+}
+.why-we-work .section__heading {
+  color: var(--why-heading);
 }
 
 .members {
@@ -233,6 +251,11 @@ html {
   color: var(--cases-text);
 }
 
+.what-we-do p:first-of-type, .how-we-work p:first-of-type, .why-we-work p:first-of-type, .who-we-are p:first-of-type {
+  font-size: 150%;
+  line-height: 1.25;
+}
+
 /* CARD */
 .members-container {
   display: flex;
@@ -243,7 +266,7 @@ html {
 
 .member-card {
   /* temp border */
-  border-radius: 4px;
+  border-radius: 8px;
   width: max(100%, 300px);
   margin: 1rem 0;
   padding: 1.5rem;
@@ -502,7 +525,7 @@ label {
   min-height: 60vh;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: var(--hero-bg);
+  background: url("../img/perc-blob.svg") center 175%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("../img/hero-bg.jpg") center/200% no-repeat;
 }
 .hero__brand {
   width: 75%;
@@ -511,13 +534,25 @@ label {
 .hero__tagline {
   color: var(--hero-tagline);
   font-weight: 400;
+  margin-top: 1rem;
   max-width: 80%;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .hero__tagline {
+    text-shadow: 0 0 4px var(--nav-bg);
+  }
+}
+@media screen and (min-width: 576px) {
+  .hero {
+    background: url("../img/perc-blob.svg") center 125%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("../img/hero-bg.jpg") center/cover no-repeat;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
     min-height: 75vh;
     flex-direction: row;
+    background: url("../img/perc-blob.svg") center 108%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("../img/hero-bg.jpg") center/cover no-repeat;
   }
   .hero__brand {
     width: 50%;
@@ -525,6 +560,11 @@ label {
   .hero__tagline {
     text-align: left;
     max-width: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    background: url("../img/perc-blob.svg") center 105%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("../img/hero-bg.jpg") center/cover no-repeat;
   }
 }
 
