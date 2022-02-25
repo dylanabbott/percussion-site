@@ -18,6 +18,7 @@ $colors: (
         2: hsl(190, 100%, 78%),
         3: hsl(190, 100%, 88%),
         4: hsl(190, 100%, 98%), 
+		90: hsl(190, 100%, 88%, 90%),
         480: hsl(190, 100%, 98%, 80%)
 	),
 	teal: (
@@ -98,6 +99,7 @@ html {
 	// Hero
 	--hero-bg: #{getcolor(dark-blue, 60)};
 	--hero-tagline: #{getcolor(neutral, 4)};
+	--hero-tagline-lg: #{getcolor(dark-blue,1)};
 
 	// Footer
 	--footer-bg: #{getcolor(dark-blue, 0)};
@@ -109,7 +111,7 @@ html {
 
 	--modal-overlay: #{getcolor(dark-blue, 80)};
 
-    --who-bg: #{getcolor(light-gold, 0)};
+    --who-bg: #{getcolor(light-gold, 2)};
     --who-text: #{getcolor(deep-orange,0)};
     --who-heading: #{getcolor(deep-orange,2)};
 	--who-links: #{getcolor(light-orange,1)};
@@ -117,9 +119,9 @@ html {
 
     --how-bg: #{getcolor(dark-blue,2)};
     --how-text: #{getcolor(light-blue,4)};
-    --how-heading: #{getcolor(light-gold,1)};
+    --how-heading: #{getcolor(light-gold,0)};
 
-    --what-bg: #{getcolor(light-blue,3)};
+    --what-bg: #{getcolor(light-blue,90)};
     --what-text: #{getcolor(dark-blue,0)};
     --what-heading: #{getcolor(teal,0)};
 
@@ -133,7 +135,7 @@ html {
 
     --cases-bg: #{getcolor(light-gold,1)};
     --cases-text: #{getcolor(dark-blue,0)};
-    --cases-heading: #{getcolor(deep-orange,0)};
+    --cases-heading: #{getcolor(dark-blue,0)};
 
     --card-bg: #{getcolor(light-blue,4)};
 

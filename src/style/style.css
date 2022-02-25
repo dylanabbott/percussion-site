@@ -114,6 +114,7 @@ html {
   --nav-toggle-bg-hover: #ff8000;
   --hero-bg: rgba(0, 77, 92, 0.6);
   --hero-tagline: white;
+  --hero-tagline-lg: #0e6d81;
   --footer-bg: #004d5c;
   --footer-text: white;
   --social-item: white;
@@ -121,15 +122,15 @@ html {
   --social-icon--hover: #ff8000;
   --footer-border: #e84f30;
   --modal-overlay: rgba(0, 77, 92, 0.8);
-  --who-bg: #fcdf97;
+  --who-bg: #fdeec9;
   --who-text: #5c180a;
   --who-heading: #8a240f;
   --who-links: #ff9933;
   --who-links-active: white;
   --how-bg: #27889b;
   --how-text: #f5fdff;
-  --how-heading: #fde7b0;
-  --what-bg: #c2f5ff;
+  --how-heading: #fcdf97;
+  --what-bg: rgba(194, 245, 255, 0.9);
   --what-text: #004d5c;
   --what-heading: #00686b;
   --why-bg: #0e6d81;
@@ -140,7 +141,7 @@ html {
   --members-text: #004d5c;
   --cases-bg: #fde7b0;
   --cases-text: #004d5c;
-  --cases-heading: #5c180a;
+  --cases-heading: #004d5c;
   --card-bg: #f5fdff;
   --csl-bg: #f5fdff;
   --csl-text: #004d5c;
@@ -235,11 +236,22 @@ html {
 }
 
 .what-we-do {
-  background-color: var(--what-bg);
+  background: linear-gradient(var(--what-bg), var(--what-bg)), url("../img/what-bg.jpg") center/cover;
   color: var(--what-text);
 }
 .what-we-do .section__heading {
   color: var(--what-heading);
+}
+.what-we-do::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 105%;
+  height: 96px;
+  overflow: visible;
+  background-image: url("../img/div-to-dk-blue-2.svg");
+  background-repeat: no-repeat;
+  margin: -96px -10%;
 }
 
 .why-we-work {
@@ -560,7 +572,7 @@ label {
 }
 @media screen and (min-width: 768px) {
   .hero__tagline {
-    text-shadow: 0 0 4px var(--nav-bg);
+    color: var(--hero-tagline-lg);
   }
 }
 @media screen and (min-width: 576px) {
@@ -778,11 +790,8 @@ label {
 .nav__toggle img {
   padding: 0.25rem;
   background-color: var(--nav-toggle-bg);
+  transition: background-color 0.1s ease-in-out;
   border-radius: 100%;
-  box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02), 0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035), 0px 13.4px 17.9px rgba(0, 0, 0, 0.042), 0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
-}
-.nav__toggle img:active {
-  background-color: var(--nav-toggle-bg-hover);
 }
 .nav__toggle a:link,
 .nav__toggle a:visited,
@@ -802,12 +811,15 @@ label {
 
 #menu-button {
   display: inline-block;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   margin-right: 1rem;
 }
 
 .rotated {
   transform: rotate(405deg);
+}
+.rotated img {
+  background-color: var(--nav-toggle-bg-hover);
 }
 
 :target::before {

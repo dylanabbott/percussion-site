@@ -124,11 +124,11 @@
 	& img {
         padding: 0.25rem;
 		background-color: var(--nav-toggle-bg);
+		transition: background-color 0.1s ease-in-out;
 		border-radius: 100%;
-        @include shadow;
-        &:active {
-            background-color: var(--nav-toggle-bg-hover);
-        }
+        // &:active {
+        //     background-color: var(--nav-toggle-bg-hover);
+        // }
 	}
 	& a:link,
 	a:visited,
@@ -152,12 +152,15 @@
 
 #menu-button {
 	display: inline-block;
-	transition: transform 0.3s ease-in-out;
+	transition: transform 0.4s ease-in-out;
 	margin-right: 1rem;
 }
 
 .rotated {
 	transform: rotate(405deg);
+	& img {
+		background-color: var(--nav-toggle-bg-hover);
+	}
 }
 
 :target::before {

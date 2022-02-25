@@ -27,7 +27,7 @@
         text-align: center;
 
         @include large {
-            text-shadow: 0 0 4px var(--nav-bg);
+            color: var(--hero-tagline-lg);
         }
     }
 

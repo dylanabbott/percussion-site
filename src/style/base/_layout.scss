@@ -103,10 +103,21 @@ html {
 }
 
 .what-we-do {
-	background-color: var(--what-bg);
+	background: linear-gradient(var(--what-bg), var(--what-bg)), url('../img/what-bg.jpg') center/cover;
 	color: var(--what-text);
 	& .section__heading {
 		color: var(--what-heading);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 105%;
+		height: 96px;
+		overflow: visible;
+		background-image: url("../img/div-to-dk-blue-2.svg");
+		background-repeat: no-repeat;
+		margin: -96px -10%;
 	}
 }
 
