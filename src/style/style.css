@@ -272,7 +272,7 @@ html {
 }
 @media screen and (min-width: 1400px) {
   .what-we-do::after {
-    margin: 0 calc(-10% - (50% + 700px));
+    margin: 0 calc(-10% + -50% + 700px);
   }
 }
 

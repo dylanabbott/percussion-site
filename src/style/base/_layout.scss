@@ -139,7 +139,7 @@ html {
 		}
 
 		@include huge {
-			margin: 0 calc(-10% - (50% + 700px));
+			margin: 0 calc(-10% + (-50% + 700px));
 		}
 	}
 }
