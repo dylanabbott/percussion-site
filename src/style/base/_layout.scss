@@ -48,16 +48,22 @@ html {
 	}
 
 	@include large {
-        padding: 2rem 10%;
+		padding: 2rem 10%;
 		display: flex;
 		align-items: flex-start;
-        max-width: 1400px;
-        margin: 0 auto;
+		max-width: 1400px;
+		margin: 0 auto;
 	}
 
 	@include huge {
 		max-width: 100%;
 		padding: 2rem calc(10% + (50% - 700px));
+	}
+}
+
+.section {
+	&__col2-3 {
+		padding-bottom: 4rem;
 	}
 }
 
@@ -91,7 +97,7 @@ html {
 	color: var(--who-text);
 	& .section__heading {
 		color: var(--who-heading);
-	} 
+	}
 }
 
 .how-we-work {
@@ -103,7 +109,9 @@ html {
 }
 
 .what-we-do {
-	background: linear-gradient(var(--what-bg), var(--what-bg)), url('../img/what-bg.jpg') center/cover;
+	position: relative;
+	background: linear-gradient(var(--what-bg), var(--what-bg)),
+		url('../img/what-bg.jpg') center/cover;
 	color: var(--what-text);
 	& .section__heading {
 		color: var(--what-heading);
@@ -112,12 +120,27 @@ html {
 		content: '';
 		position: absolute;
 		bottom: 0;
-		width: 105%;
-		height: 96px;
+		margin: 0 -1rem;
+		width: 100%;
+		height: 64px;
 		overflow: visible;
-		background-image: url("../img/div-to-dk-blue-2.svg");
+		background-image: url('../img/div-to-dk-blue-2.svg');
 		background-repeat: no-repeat;
-		margin: -96px -10%;
+		background-size: cover;
+		background-position: center bottom;
+		//margin: -96px -10%;
+
+		@include medium {
+			margin: 0 -2rem;
+		}
+
+		@include large {
+			margin: 0 -10%;
+		}
+
+		@include huge {
+			margin: 0 calc(-10% - (50% + 700px));
+		}
 	}
 }
 
@@ -127,16 +150,21 @@ html {
 	& .section__heading {
 		color: var(--why-heading);
 	}
-	& a:link, a:visited {
+	& a:link,
+	a:visited {
 		color: var(--who-links);
 	}
-	& a:hover, a:active {
+	& a:hover,
+	a:active {
 		color: var(--who-links-active);
 	}
 }
 
 .members {
-	background: linear-gradient(var(--members-bg), var(--members-bg-2));//var(--members-bg); //TEMP
+	background: linear-gradient(
+		var(--members-bg),
+		var(--members-bg-2)
+	); //var(--members-bg); //TEMP
 	color: var(--members-text);
 }
 
@@ -148,7 +176,10 @@ html {
 	}
 }
 
-.what-we-do, .how-we-work, .why-we-work, .who-we-are {
+.what-we-do,
+.how-we-work,
+.why-we-work,
+.who-we-are {
 	& p:first-of-type {
 		font-size: 150%;
 		line-height: 1.25;

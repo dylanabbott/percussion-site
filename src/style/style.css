@@ -200,6 +200,10 @@ html {
   }
 }
 
+.section__col2-3 {
+  padding-bottom: 4rem;
+}
+
 @media screen and (min-width: 768px) {
   .section__col1-3 {
     width: 33%;
@@ -236,6 +240,7 @@ html {
 }
 
 .what-we-do {
+  position: relative;
   background: linear-gradient(var(--what-bg), var(--what-bg)), url("../img/what-bg.jpg") center/cover;
   color: var(--what-text);
 }
@@ -246,12 +251,29 @@ html {
   content: "";
   position: absolute;
   bottom: 0;
-  width: 105%;
-  height: 96px;
+  margin: 0 -1rem;
+  width: 100%;
+  height: 64px;
   overflow: visible;
   background-image: url("../img/div-to-dk-blue-2.svg");
   background-repeat: no-repeat;
-  margin: -96px -10%;
+  background-size: cover;
+  background-position: center bottom;
+}
+@media screen and (min-width: 576px) {
+  .what-we-do::after {
+    margin: 0 -2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .what-we-do::after {
+    margin: 0 -10%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .what-we-do::after {
+    margin: 0 calc(-10% - (50% + 700px));
+  }
 }
 
 .why-we-work {
@@ -261,10 +283,12 @@ html {
 .why-we-work .section__heading {
   color: var(--why-heading);
 }
-.why-we-work a:link, .why-we-work a:visited {
+.why-we-work a:link,
+.why-we-work a:visited {
   color: var(--who-links);
 }
-.why-we-work a:hover, .why-we-work a:active {
+.why-we-work a:hover,
+.why-we-work a:active {
   color: var(--who-links-active);
 }
 
@@ -281,7 +305,10 @@ html {
   color: var(--cases-heading);
 }
 
-.what-we-do p:first-of-type, .how-we-work p:first-of-type, .why-we-work p:first-of-type, .who-we-are p:first-of-type {
+.what-we-do p:first-of-type,
+.how-we-work p:first-of-type,
+.why-we-work p:first-of-type,
+.who-we-are p:first-of-type {
   font-size: 150%;
   line-height: 1.25;
 }
