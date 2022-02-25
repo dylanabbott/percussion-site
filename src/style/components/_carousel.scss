@@ -47,6 +47,10 @@
 		font-weight: 600;
 		margin-top: 1rem;
 	}
+
+	@include large {
+		padding: 2rem;
+	}
 }
 
 .carousel__controls {
@@ -68,15 +72,27 @@
 	background-color: var(--csl-btn-bg);
 	//color: #ffffff;
 	//font-size: 24px;
-	padding: 0.5rem;
+	width: 32px;
+	height: 32px;
 	margin: 0.5rem 1rem;
 	&[disabled] {
 		opacity: 0.7;
 		cursor: not-allowed;
+		&:hover {
+			background-color: var(--csl-btn-bg);
+		}
 	}
 	&:hover {
-		background-color: #666666;
+		background-color: var(--csl-btn-bg-hover);
 	}
+}
+
+#btn-left {
+	background-image: url('../img/arrow-left.svg');
+}
+
+#btn-right {
+	background-image: url('../img/arrow-right.svg');
 }
 
 // .carousel__trail {

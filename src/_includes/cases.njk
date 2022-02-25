@@ -3,22 +3,24 @@
         <h2 class="section__heading">Cases</h2>
     </div>
     <div class="section__col2-3">
-    <div class="carousel__container">
-        <ul class="carousel__items" id="carousel-items">
-            {% for case in collections.cases %}
-                <li class="carousel__item">
-                    <h3>{{ case.data.title }}</h3>
-                    {% if case.data.image %}
-                        <img src="{{ case.data.image }}" width="200">
-                        {% endif %}
-                        {{ case.templateContent | safe }}
-                    </li>
-                {% endfor %}
-            </ul>
-            <div class="carousel__controls">
-                <button class="carousel__btn" id="btn-left"><img src="img/arrow-left.svg" alt="Back" width="24" height="24"></button>
-                <button class="carousel__btn" id="btn-right"><img src="img/arrow-right.svg" alt="Forward" width="24" height="24"></button>
-            </div>
-        </div>
-        </div>
-    </section>
+        <div class="carousel__container">
+            <ul class="carousel__items" id="carousel-items">
+                {% for case in collections.cases %}
+                    <li class="carousel__item">
+                        <h3>{{ case.data.title }}</h3>
+                        {% if case.data.image %}
+                            <img src="{{ case.data.image }}" width="200">
+                            {% endif %}
+                            {{ case.templateContent | safe }}
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div class="carousel__controls">
+                    <button class="carousel__btn" id="btn-left">
+                    </button>
+                    <button class="carousel__btn" id="btn-right">
+                    </button>
+                        </div>
+                    </div>
+                </div>
+            </section>

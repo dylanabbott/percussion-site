@@ -111,11 +111,11 @@ html {
     --what-text: #{getcolor(dark-blue,0)};
     --what-heading: #{getcolor(teal,0)};
 
-    --why-bg: #{getcolor(dark-blue,0)};
+    --why-bg: #{getcolor(dark-blue,1)};
     --why-text: #{getcolor(light-blue,4)};
-    --why-heading: #{getcolor(light-orange,2)};
+    --why-heading: #{getcolor(light-orange,1)};
 
-    --members-bg: #{getcolor(light-blue,2)} ;
+    --members-bg: #{getcolor(light-blue,3)} ;
     --members-text: #{getcolor(dark-blue,0)};
 
     --cases-bg: #{getcolor(light-blue,4)};
@@ -128,4 +128,5 @@ html {
     --csl-text: #{getcolor(neutral,0)};
     --csl-controls-bg: #{getcolor(light-blue,480)};
     --csl-btn-bg: #{getcolor(dark-blue,0)};
+	--csl-btn-bg-hover: #{getcolor(dark-blue,2)};
 }
