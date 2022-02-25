@@ -123,7 +123,7 @@ html {
   --who-bg: #5c180a;
   --who-text: white;
   --who-heading: #c2f5ff;
-  --how-bg: #00a2c2;
+  --how-bg: #27889b;
   --how-text: #f5fdff;
   --how-heading: #c2f5ff;
   --what-bg: #c2f5ff;
@@ -297,25 +297,26 @@ html {
 .member-card ul, .member-card li {
   margin-top: 0;
 }
-.member-card h4 {
+.member-card h3 {
   font-family: Inter, sans-serif;
   font-weight: 600;
+  font-size: 1.777rem;
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 0;
 }
 @media screen and (min-width: 576px) {
-  .member-card h4 {
+  .member-card h3 {
     text-align: left;
   }
 }
 @media screen and (min-width: 768px) {
-  .member-card h4 {
+  .member-card h3 {
     text-align: left;
   }
 }
 @media screen and (min-width: 1024px) {
-  .member-card h4 {
+  .member-card h3 {
     text-align: center;
   }
 }
