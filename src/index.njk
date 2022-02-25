@@ -12,7 +12,7 @@
         {% include 'navigation.njk' %}
         {% include 'header.njk' %}
         <main class="site-content">
-            {% for section in collections.section %}
+            {% for section in collections.sectionsSorted %}
             <section class="{{ section.data.title | slug }} section-layout">
                 <div class="section__col1-3">
                     <h2 class="section__heading">

@@ -4,6 +4,7 @@ tags:
 title: Why We Work
 permalink: false
 pull_quote: Blah Blah Blah Pull Quote
+order: 4
 
 ---
 Our core values are:

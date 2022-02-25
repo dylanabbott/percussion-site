@@ -3,6 +3,7 @@ tags:
 - section
 title: How We Work
 permalink: false
+order: 2
 
 ---
 We are independent campaign professionals who help you win by working together. We call ourselves a syndicate because we are fast and lean. There’s no overhead, no hidden costs, no figurehead partners demanding high profit margins.
