@@ -73,13 +73,13 @@
 		}
 	}
 	& a:link,
-	a:visited {
+	a:visited, span {
 		text-decoration: none;
 		color: var(--nav-text-mobile);
 		transition: color 0.2s ease-in;
 	}
 	& a:hover,
-	a:active {
+	a:active, span:hover, span:active {
 		//text-decoration: underline;
 		color: var(--nav-text-mobile--hover);
 	}
@@ -99,7 +99,7 @@
 			}
 		}
 		& a:hover,
-		a:active {
+		a:active, span:hover, span:active {
 			text-decoration: underline;
 			color: var(--nav-text--hover);
 		}
@@ -137,6 +137,10 @@
 		color: var(--nav-toggle);
 		text-decoration: none;
 	}
+
+	& button {
+		appearance: none;
+	}
 	// @media screen and (max-width: 768px) {
 
 	// }
@@ -154,4 +158,11 @@
 
 .rotated {
 	transform: rotate(405deg);
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 4rem; /* fixed header height*/
+  margin: -4rem 0 0; /* negative fixed header height */
 }

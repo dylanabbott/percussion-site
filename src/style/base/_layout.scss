@@ -116,17 +116,25 @@ html {
 	& .section__heading {
 		color: var(--why-heading);
 	}
+	& a:link, a:visited {
+		color: var(--who-links);
+	}
+	& a:hover, a:active {
+		color: var(--who-links-active);
+	}
 }
 
 .members {
-	background-color: var(--members-bg); //TEMP
+	background: linear-gradient(var(--members-bg), var(--members-bg-2));//var(--members-bg); //TEMP
 	color: var(--members-text);
 }
 
 .cases {
 	background-color: var(--cases-bg);
 	color: var(--cases-text);
-
+	& .section__heading {
+		color: var(--cases-heading);
+	}
 }
 
 .what-we-do, .how-we-work, .why-we-work, .who-we-are {

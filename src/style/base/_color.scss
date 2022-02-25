@@ -35,7 +35,11 @@ $colors: (
         4: hsl(10, 80%, 95%),
 	),
 	deep-orange: (
-		0: hsl(10, 80%, 20%)
+		0: hsl(10, 80%, 20%),
+		1: hsl(10, 80%, 25%),
+		2: hsl(10, 80%, 30%),
+		3: hsl(10, 80%, 35%),
+		4: hsl(10, 80%, 40%),
 	),
 	light-orange: (
 		0: hsl(30, 100%, 50%),
@@ -43,6 +47,11 @@ $colors: (
         2: hsl(30, 100%, 70%),
         3: hsl(30, 100%, 80%),
         4: hsl(30, 100%, 90%),
+	),
+	light-gold: (
+		0: hsl(43, 94%, 79%),
+		1: hsl(43, 94%, 84%),
+		2: hsl(43, 94%, 89%),
 	),
 	neutral: (
 		0: hsl(0, 0%, 0%),
@@ -96,16 +105,19 @@ html {
 	--social-item: #{getcolor(neutral, 4)};
 	--social-item--hover: #{getcolor(light-orange, 0)};
 	--social-icon--hover: #{getcolor(light-orange, 0)};
+	--footer-border: #{getcolor(light-orange,0)};
 
 	--modal-overlay: #{getcolor(dark-blue, 80)};
 
-    --who-bg: #{getcolor(deep-orange, 0)};
-    --who-text: #{getcolor(neutral,4)};
-    --who-heading: #{getcolor(light-blue,3)};
+    --who-bg: #{getcolor(light-gold, 0)};
+    --who-text: #{getcolor(deep-orange,0)};
+    --who-heading: #{getcolor(deep-orange,2)};
+	--who-links: #{getcolor(light-orange,1)};
+	--who-links-active: #{getcolor(neutral,4)};
 
     --how-bg: #{getcolor(dark-blue,2)};
     --how-text: #{getcolor(light-blue,4)};
-    --how-heading: #{getcolor(light-blue,3)};
+    --how-heading: #{getcolor(light-gold,1)};
 
     --what-bg: #{getcolor(light-blue,3)};
     --what-text: #{getcolor(dark-blue,0)};
@@ -116,17 +128,22 @@ html {
     --why-heading: #{getcolor(light-orange,1)};
 
     --members-bg: #{getcolor(light-blue,3)} ;
+	--members-bg-2: #{getcolor(dark-blue,3)};
     --members-text: #{getcolor(dark-blue,0)};
 
-    --cases-bg: #{getcolor(light-blue,4)};
+    --cases-bg: #{getcolor(light-gold,1)};
     --cases-text: #{getcolor(dark-blue,0)};
-    --cases-heading: ;
+    --cases-heading: #{getcolor(deep-orange,0)};
 
     --card-bg: #{getcolor(light-blue,4)};
 
-    --csl-bg: #{getcolor(neutral,4)};
-    --csl-text: #{getcolor(neutral,0)};
+    --csl-bg: #{getcolor(light-blue,4)};
+    --csl-text: #{getcolor(dark-blue,0)};
     --csl-controls-bg: #{getcolor(light-blue,480)};
     --csl-btn-bg: #{getcolor(dark-blue,0)};
 	--csl-btn-bg-hover: #{getcolor(dark-blue,2)};
+}
+
+a {
+transition: color 0.2s ease-in;
 }

@@ -119,13 +119,16 @@ html {
   --social-item: white;
   --social-item--hover: #ff8000;
   --social-icon--hover: #ff8000;
+  --footer-border: #ff8000;
   --modal-overlay: rgba(0, 77, 92, 0.8);
-  --who-bg: #5c180a;
-  --who-text: white;
-  --who-heading: #c2f5ff;
+  --who-bg: #fcdf97;
+  --who-text: #5c180a;
+  --who-heading: #8a240f;
+  --who-links: #ff9933;
+  --who-links-active: white;
   --how-bg: #27889b;
   --how-text: #f5fdff;
-  --how-heading: #c2f5ff;
+  --how-heading: #fde7b0;
   --what-bg: #c2f5ff;
   --what-text: #004d5c;
   --what-heading: #00686b;
@@ -133,16 +136,21 @@ html {
   --why-text: #f5fdff;
   --why-heading: #ff9933;
   --members-bg: #c2f5ff ;
+  --members-bg-2: #499bab;
   --members-text: #004d5c;
-  --cases-bg: #f5fdff;
+  --cases-bg: #fde7b0;
   --cases-text: #004d5c;
-  --cases-heading: ;
+  --cases-heading: #5c180a;
   --card-bg: #f5fdff;
-  --csl-bg: white;
-  --csl-text: black;
+  --csl-bg: #f5fdff;
+  --csl-text: #004d5c;
   --csl-controls-bg: rgba(245, 253, 255, 0.8);
   --csl-btn-bg: #004d5c;
   --csl-btn-bg-hover: #27889b;
+}
+
+a {
+  transition: color 0.2s ease-in;
 }
 
 /* LAYOUT */
@@ -241,15 +249,24 @@ html {
 .why-we-work .section__heading {
   color: var(--why-heading);
 }
+.why-we-work a:link, .why-we-work a:visited {
+  color: var(--who-links);
+}
+.why-we-work a:hover, .why-we-work a:active {
+  color: var(--who-links-active);
+}
 
 .members {
-  background-color: var(--members-bg);
+  background: linear-gradient(var(--members-bg), var(--members-bg-2));
   color: var(--members-text);
 }
 
 .cases {
   background-color: var(--cases-bg);
   color: var(--cases-text);
+}
+.cases .section__heading {
+  color: var(--cases-heading);
 }
 
 .what-we-do p:first-of-type, .how-we-work p:first-of-type, .why-we-work p:first-of-type, .who-we-are p:first-of-type {
@@ -406,6 +423,7 @@ html {
 /* FOOTER */
 .site-footer {
   padding-bottom: 3rem;
+  border-bottom: 1rem solid var(--footer-border);
   background-color: var(--footer-bg);
   color: var(--footer-text);
   text-align: center;
@@ -713,13 +731,13 @@ label {
   border-bottom: 1px solid var(--nav-text-mobile--hover);
 }
 .nav__item a:link,
-.nav__item a:visited {
+.nav__item a:visited, .nav__item span {
   text-decoration: none;
   color: var(--nav-text-mobile);
   transition: color 0.2s ease-in;
 }
 .nav__item a:hover,
-.nav__item a:active {
+.nav__item a:active, .nav__item span:hover, .nav__item span:active {
   color: var(--nav-text-mobile--hover);
 }
 @media screen and (min-width: 768px) {
@@ -736,7 +754,7 @@ label {
     border-bottom: 0;
   }
   .nav__item a:hover,
-.nav__item a:active {
+.nav__item a:active, .nav__item span:hover, .nav__item span:active {
     text-decoration: underline;
     color: var(--nav-text--hover);
   }
@@ -773,6 +791,9 @@ label {
   color: var(--nav-toggle);
   text-decoration: none;
 }
+.nav__toggle button {
+  appearance: none;
+}
 @media screen and (min-width: 768px) {
   .nav__toggle {
     display: none;
@@ -789,13 +810,21 @@ label {
   transform: rotate(405deg);
 }
 
+:target::before {
+  content: "";
+  display: block;
+  height: 4rem;
+  /* fixed header height*/
+  margin: -4rem 0 0;
+  /* negative fixed header height */
+}
+
 /* CAROUSEL */
 .carousel__container {
   background-color: var(--csl-bg);
   color: var(--csl-text);
-  border-radius: 6px;
+  border-radius: 8px;
   position: relative;
-  border-radius: 3px;
   width: 100%;
   max-height: 75vh;
   overflow-x: hidden;
