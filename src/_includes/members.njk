@@ -18,16 +18,16 @@
                     {%- if member.data.email or member.data.website -%}
                     <ul class="member-card__links">
                         {%- if member.data.email -%}
-                            <li class="member-card__email"><img src="../img/letter.svg" alt="email" width="24" height="24" class="member-card__icon"><a href="mailto:{{ member.data.email }}">{{ member.data.email }}</a></li>
+                            <li class="member-card__email"><!--<img src="../img/letter.svg" alt="email" width="24" height="24" class="member-card__icon">--><a href="mailto:{{ member.data.email }}">{{ member.data.email }}</a></li>
                         {%- endif -%}
                         {%- if member.data.website -%}
-                            <li class="member-card__link"><li class="member-card__email"><img src="../img/browser.svg" alt="url" width="24" height="24" class="member-card__icon"><a href="http://{{ member.data.website }}">{{ member.data.website }}</a></li>
+                            <li class="member-card__link"><!--<img src="../img/browser.svg" alt="url" width="24" height="24" class="member-card__icon">--><a href="http://{{ member.data.website }}">{{ member.data.website }}</a></li>
                         {%- endif -%}
                     </ul>
                     {%- endif -%}
                 </div>
                 <div class="member-card__bio">
-                    <p>{{ member.data.bio }}</p>
+                    <details class="member-card__details"><summary>About {{ member.data.name }}</summary><p>{{ member.data.bio }}</p></details>
                 </div>
             </div>
         {%- endfor -%}

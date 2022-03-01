@@ -130,7 +130,7 @@ html {
   --how-bg: #27889b;
   --how-text: #f0f8fa;
   --how-heading: #fcdf97;
-  --what-bg: ;
+  --what-bg: rgba(160, 225, 238, 0.9);
   --what-text: #004d5c;
   --what-heading: #00686b;
   --why-bg: #0e6d81;
@@ -139,6 +139,8 @@ html {
   --members-bg: #ceedf3 ;
   --members-bg-2: #499bab;
   --members-text: #004d5c;
+  --card-link: #e84f30;
+  --card-link-active: #f29d8c;
   --cases-bg: #fde7b0;
   --cases-text: #004d5c;
   --cases-heading: #004d5c;
@@ -338,6 +340,7 @@ html {
   margin: 1rem 0;
   padding: 1.5rem;
   background-color: var(--card-bg);
+  transition: height 0.3s ease-out;
   box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02), 0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035), 0px 13.4px 17.9px rgba(0, 0, 0, 0.042), 0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
 }
 @media screen and (min-width: 576px) {
@@ -457,9 +460,20 @@ html {
     margin-top: 1rem;
   }
 }
+.member-card__details > summary {
+  text-align: center;
+}
 .member-card__links {
   padding-inline-start: 0;
   list-style-type: none;
+}
+.member-card__links a:link, .member-card__links a:visited {
+  text-decoration: none;
+  color: var(--card-link);
+}
+.member-card__links a:hover, .member-card__links a:active {
+  text-decoration: underline;
+  color: var(--card-link-active);
 }
 .member-card__icon {
   display: inline-block;

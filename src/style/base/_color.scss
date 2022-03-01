@@ -18,6 +18,7 @@ $colors: (
         2: hsl(190, 70%, 78%),
         3: hsl(190, 60%, 88%),
         4: hsl(190, 50%, 96%), 
+		90: hsl(190, 70%, 78%, 90%),
         480: hsl(190, 100%, 98%, 80%)
 	),
 	teal: (
@@ -132,6 +133,8 @@ html {
     --members-bg: #{getcolor(light-blue,3)} ;
 	--members-bg-2: #{getcolor(dark-blue,3)};
     --members-text: #{getcolor(dark-blue,0)};
+	--card-link: #{getcolor(dark-orange,0)};
+	--card-link-active: #{getcolor(dark-orange,2)};
 
     --cases-bg: #{getcolor(light-gold,1)};
     --cases-text: #{getcolor(dark-blue,0)};

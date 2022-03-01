@@ -24,6 +24,7 @@
 	margin: 1rem 0;
     padding: 1.5rem;
     background-color: var(--card-bg);
+    transition: height 0.3s ease-out;
 
     @include shadow;
     // flex-grow: 2;
@@ -152,9 +153,24 @@
             margin-top: 1rem;
         }
     }
+
+    &__details {
+        & > summary {
+            text-align: center;
+        }
+    }
+
     &__links {
         padding-inline-start: 0;
         list-style-type: none;
+        & a:link, a:visited {
+            text-decoration: none;
+            color: var(--card-link);
+        }
+        & a:hover, a:active {
+            text-decoration: underline;
+            color: var(--card-link-active);
+        }
     }
 
     &__icon {
