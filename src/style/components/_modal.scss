@@ -8,12 +8,14 @@
 	background-color: #ffffff;
 	opacity: 1;
 	z-index: 20;
-    max-width: 96vw;
+    max-width: 100vw;
 	// width: 60vw;
 	// height: 60vw;
 	border-radius: 1rem;
 	transform: translateY(0);
 	transition: 0.5s ease-out;
+	color: var(--contact-text);
+	background-color: var(--contact-bg);
 
 	@include shadow;
 
@@ -24,6 +26,21 @@
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
+		font-weight: 600;
+		color: var(--modal-close);
+		&:hover, :active{
+			color: var(--modal-close-active);
+		}
+
+		@include medium {
+			top: 1.5rem;
+			right: 1.5rem;
+		}
+
+		@include large {
+			top: 2rem;
+			right: 2rem;
+		}
 	}
 
 	&__overlay {
@@ -48,16 +65,21 @@
         min-width: 70vw;
     }
 
+	@include medium {
+		padding: 1.5rem;
+	}
+
 	@include large {
 		padding: 2rem;
 	}
 
-    @include xlarge {
-        padding: 3rem;
-    }
+    // @include xlarge {
+    //     padding: 3rem;
+    // }
 }
 
 .contactform {
+	padding-top: 2rem;
 	flex-direction: column;
 	justify-content: center;
     gap: 2rem;
@@ -71,11 +93,36 @@
 		}
 	}
 
+	&__heading {
+		font-weight: 600;
+		font-size: 1.5rem;
+		line-height: 1.2;
+	}
+
+	& input, textarea {
+		background-color: var(--contact-input-bg);
+		border-color: var(--contact-input-border);
+		&[type="submit"] {
+			background-color: var(--contact-btn-bg);
+			color: var(--contact-btn-text);
+			border-color: var(--contact-btn-border);
+			font-weight: 600;
+			&:hover, :active {
+				background-color: var(--contact-btn-bg-hover);
+			}
+		}
+		&[type="file"] {
+			background-color: var(--contact-bg);
+			padding: 0.25rem;
+		}
+	}
+
 	@include large {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		margin-top: 0;
+		padding-top: 0;
 	}
 }
 
