@@ -34,7 +34,7 @@ $colors: (
         2: hsl(10, 80%, 75%),
         3: hsl(10, 80%, 85%),
         4: hsl(10, 80%, 95%),
-		280: hsl(10, 80%, 75%, 80%),
+		180: hsl(10, 80%, 65%, 80%),
 	),
 	deep-orange: (
 		0: hsl(10, 80%, 20%),
@@ -110,7 +110,7 @@ html {
 	--social-icon--hover: #{getcolor(light-orange, 0)};
 	--footer-border: #{getcolor(dark-orange,0)};
 
-	--modal-overlay: #{getcolor(dark-orange,280)};
+	--modal-overlay: #{getcolor(dark-orange,180)};
 
     --who-bg: #{getcolor(light-gold, 2)};
     --who-text: #{getcolor(deep-orange,0)};
@@ -155,7 +155,7 @@ html {
 	--contact-btn-text: #{getcolor(neutral,4)};
 	--contact-btn-border: #{getcolor(dark-orange,2)};
 	--contact-input-bg: #{getcolor(light-blue,4)};
-	--contact-input-border: #{getcolor(dark-blue,2)};
+	--contact-input-border: #{getcolor(dark-blue,4)};
 	--modal-close: #{getcolor(dark-blue,0)};
 	--modal-close-active: #{getcolor(dark-blue,2)};
 }

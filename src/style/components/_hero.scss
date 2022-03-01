@@ -14,7 +14,7 @@
     // background-size: 200%;
     // background-repeat: no-repeat;
     // background-position: center 150%;
-    background: url('../img/perc-blob.svg') center 175%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/200% no-repeat;
+    background: url('../img/perc-blob-color.svg') center 175%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/200% no-repeat;
     &__brand {
         width: 75%;
         object-fit: contain;
@@ -32,13 +32,13 @@
     }
 
     @include medium {
-        background: url('../img/perc-blob.svg') center 125%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/cover no-repeat;
+        background: url('../img/perc-blob-color.svg') center 125%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/cover no-repeat;
     }
 
     @include large {
         min-height: 75vh;
         flex-direction: row;
-        background: url('../img/perc-blob.svg') center 108%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/cover no-repeat;
+        background: url('../img/perc-blob-color.svg') center 108%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/cover no-repeat;
         &__brand {
             width: 50%;
         }
@@ -50,6 +50,6 @@
     }
 
     @include xlarge {
-        background: url('../img/perc-blob.svg') center 105%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/cover no-repeat;
+        background: url('../img/perc-blob-color.svg') center 105%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('../img/hero-bg.jpg') center/cover no-repeat;
     }
 }

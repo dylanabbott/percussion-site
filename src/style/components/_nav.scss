@@ -13,6 +13,7 @@
 	background-color: var(--nav-bg-mobile);
 	color: var(--nav-text-mobile);
 	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
 	z-index: 8;
 	@include shadow;
 	&--hidden-on-mobile {
