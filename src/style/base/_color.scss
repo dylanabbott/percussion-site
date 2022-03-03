@@ -10,7 +10,9 @@ $colors: (
         3: hsl(190, 40%, 48%),
         4: hsl(190, 30%, 58%),
 		80: hsl(190, 100%, 18%, 80%),
-		60: hsl(190, 100%, 18%, 60%)
+		60: hsl(190, 100%, 18%, 60%),
+		190: hsl(190, 100%, 18%, 90%),
+		290: hsl(190, 80%, 28%, 90%)
 	),
 	light-blue: (
 		0: hsl(190, 100%, 38%),
@@ -54,6 +56,7 @@ $colors: (
 		0: hsl(43, 94%, 79%),
 		1: hsl(43, 94%, 84%),
 		2: hsl(43, 94%, 89%),
+		290: hsl(43, 95%, 89%, 90%)
 	),
 	neutral: (
 		0: hsl(0, 0%, 0%),
@@ -112,13 +115,13 @@ html {
 
 	--modal-overlay: #{getcolor(dark-orange,180)};
 
-    --who-bg: #{getcolor(light-gold, 2)};
+    --who-bg: #{getcolor(light-gold, 290)};
     --who-text: #{getcolor(deep-orange,0)};
     --who-heading: #{getcolor(deep-orange,2)};
 	--who-links: #{getcolor(light-orange,1)};
 	--who-links-active: #{getcolor(neutral,4)};
 
-    --how-bg: #{getcolor(dark-blue,2)};
+    --how-bg: #{getcolor(dark-blue,290)};
     --how-text: #{getcolor(light-blue,4)};
     --how-heading: #{getcolor(light-gold,0)};
 
@@ -126,7 +129,7 @@ html {
     --what-text: #{getcolor(dark-blue,0)};
     --what-heading: #{getcolor(teal,0)};
 
-    --why-bg: #{getcolor(dark-blue,1)};
+    --why-bg: #{getcolor(dark-blue,190)};
     --why-text: #{getcolor(light-blue,4)};
     --why-heading: #{getcolor(light-orange,1)};
 

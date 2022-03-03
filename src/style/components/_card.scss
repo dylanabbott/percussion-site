@@ -145,8 +145,12 @@
         }
 
         @include medium {
-            margin-top: 2rem;
+            margin-top: 0;
             min-width: 100%;
+        }
+
+        @include large {
+            margin-top: -1rem;
         }
 
         @include xlarge {

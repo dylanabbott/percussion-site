@@ -93,18 +93,33 @@ html {
 }
 
 .who-we-are {
-	background-color: var(--who-bg);
+	position: relative;
+	//background-color: var(--who-bg);
+	background: linear-gradient(var(--who-bg), var(--who-bg)), 
+		url('../img/what-bg.jpg') center/cover;
 	color: var(--who-text);
 	& .section__heading {
 		color: var(--who-heading);
 	}
+
+	@include divider {
+		background-image: url('../img/div-to-lt-blue-2.svg');
+	}
 }
 
 .how-we-work {
-	background-color: var(--how-bg);
+	position: relative;
+	//background-color: var(--how-bg);
+	background: linear-gradient(var(--how-bg), var(--how-bg)), 
+		url('../img/what-bg.jpg') center/cover;
+	color: var(--what-text);
 	color: var(--how-text);
 	& .section__heading {
 		color: var(--how-heading);
+	}
+
+	@include divider {
+		background-image: url('../img/div-to-lt-gold-2.svg');
 	}
 }
 
@@ -116,36 +131,42 @@ html {
 	& .section__heading {
 		color: var(--what-heading);
 	}
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		margin: 0 -1rem;
-		width: 100%;
-		height: 64px;
-		overflow: visible;
+	@include divider {
 		background-image: url('../img/div-to-dk-blue-2.svg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center bottom;
-		//margin: -96px -10%;
-
-		@include medium {
-			margin: 0 -2rem;
-		}
-
-		@include large {
-			margin: 0 -10%;
-		}
-
-		@include huge {
-			margin: 0 calc(-10% + (-50% + 700px));
-		}
 	}
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	margin: 0 -1rem;
+	// 	width: 100%;
+	// 	height: 64px;
+	// 	overflow: visible;
+	// 	background-image: url('../img/div-to-dk-blue-2.svg');
+	// 	background-repeat: no-repeat;
+	// 	background-size: cover;
+	// 	background-position: center bottom;
+	// 	//margin: -96px -10%;
+
+	// 	@include medium {
+	// 		margin: 0 -2rem;
+	// 	}
+
+	// 	@include large {
+	// 		margin: 0 -10%;
+	// 	}
+
+	// 	@include huge {
+	// 		margin: 0 calc(-10% + (-50% + 700px));
+	// 	}
+	// }
 }
 
 .why-we-work {
-	background-color: var(--why-bg);
+	position: relative;
+	//background-color: var(--why-bg);
+	background: linear-gradient(var(--why-bg), var(--why-bg)), 
+		url('../img/what-bg.jpg') center/cover;
 	color: var(--why-text);
 	& .section__heading {
 		color: var(--why-heading);
@@ -158,17 +179,28 @@ html {
 	a:active {
 		color: var(--who-links-active);
 	}
+
+	@include divider {
+		background-image: url('../img/div-to-lt-gold-1.svg');
+	}
 }
 
 .members {
+	position: relative;
+	padding-bottom: 6rem;
 	background: linear-gradient(
 		var(--members-bg),
 		var(--members-bg-2)
 	); //var(--members-bg); //TEMP
 	color: var(--members-text);
+
+	@include divider {
+		background-image: url('../img/div-to-dk-blue-1.svg');
+	}
 }
 
 .cases {
+	position: relative;
 	background-color: var(--cases-bg);
 	color: var(--cases-text);
 	& .section__heading {
