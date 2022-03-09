@@ -102,9 +102,9 @@ html {
 		color: var(--who-heading);
 	}
 
-	@include divider {
-		background-image: url('../img/div-to-lt-blue-2.svg');
-	}
+	// @include divider {
+	// 	background-image: url('../img/div-to-lt-blue-2.svg');
+	// }
 }
 
 .how-we-work {
@@ -118,9 +118,9 @@ html {
 		color: var(--how-heading);
 	}
 
-	@include divider {
-		background-image: url('../img/div-to-lt-gold-2.svg');
-	}
+	// @include divider {
+	// 	background-image: url('../img/div-to-lt-gold-2.svg');
+	// }
 }
 
 .what-we-do {
@@ -131,9 +131,10 @@ html {
 	& .section__heading {
 		color: var(--what-heading);
 	}
-	@include divider {
-		background-image: url('../img/div-to-dk-blue-2.svg');
-	}
+
+	// @include divider {
+	// 	background-image: url('../img/div-to-dk-blue-2.svg');
+	// }
 	// &::after {
 	// 	content: '';
 	// 	position: absolute;
@@ -180,9 +181,9 @@ html {
 		color: var(--who-links-active);
 	}
 
-	@include divider {
-		background-image: url('../img/div-to-lt-gold-1.svg');
-	}
+	// @include divider {
+	// 	background-image: url('../img/div-to-lt-gold-1.svg');
+	// }
 }
 
 .members {
@@ -194,9 +195,9 @@ html {
 	); //var(--members-bg); //TEMP
 	color: var(--members-text);
 
-	@include divider {
-		background-image: url('../img/div-to-dk-blue-1.svg');
-	}
+	// @include divider {
+	// 	background-image: url('../img/div-to-dk-blue-1.svg');
+	// }
 }
 
 .cases {
