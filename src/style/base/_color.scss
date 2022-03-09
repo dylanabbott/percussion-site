@@ -161,6 +161,9 @@ html {
 	--contact-input-border: #{getcolor(dark-blue,4)};
 	--modal-close: #{getcolor(dark-blue,0)};
 	--modal-close-active: #{getcolor(dark-blue,2)};
+
+	--clients-bg: #{getcolor(light-blue,4)};
+	--clients-heading: #{getcolor(dark-blue,0)};
 }
 
 a {

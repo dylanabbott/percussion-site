@@ -1,0 +1,26 @@
+/* CLIENTS */
+@use '../utils' as *;
+
+.client__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    & h2 {
+        color: var(--clients-heading);
+        width: 100%;
+    }
+}
+
+.client-logo {
+    display: inline-block;
+    width: 100px;
+    height: auto;
+    margin: 2rem 1rem;
+
+    @include large {
+        width: 150px;
+        margin: 3rem 2rem;
+    }
+}
