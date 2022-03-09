@@ -7,7 +7,9 @@ order: 2
 pull_quote: ''
 
 ---
-We call ourselves a syndicate because we are fast and lean. There’s no overhead, no hidden costs, no figurehead partners padding bills. Each of us is a freelance campaign professional. We choose to work together because, well, we like each other, and respect each other’s expertise and track record of positive impact. Each of our clients is assigned one project manager, who makes sure your work gets done on time and within budget.
+We call ourselves a syndicate because we are fast and lean. There’s no overhead, no hidden costs, no figurehead partners padding bills.
+
+Each of us is a freelance campaign professional. We choose to work together because, well, we like each other, and respect each other’s expertise and track record of positive impact. Each of our clients is assigned one project manager, who makes sure your work gets done on time and within budget.
 
 Each of us has our own portfolios and client bases. Feel free to contact just one of us if you’re looking for a specific service.
 
