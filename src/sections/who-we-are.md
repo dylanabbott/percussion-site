@@ -1,6 +1,10 @@
 ---
+tags:
+- section
 title: Who We Are
-order: "4"
+permalink: false
+order: 4
+pull_quote: ''
 
 ---
 We are a women-led syndicate of professional creative, communications, and campaign consultants servicing progressive campaigns and organizations. Most of us are LGBTQ.

@@ -3,8 +3,8 @@ tags:
 - section
 title: Why We Work
 permalink: false
+order: 3
 pull_quote: ''
-order: 4
 
 ---
 Our core values are:

@@ -1,6 +1,10 @@
 ---
+tags:
+- section
 title: What We Do
-order: "1"
+permalink: false
+order: 1
+pull_quote: ''
 
 ---
 Percussion Strategic is a one-stop shop for everything you need to win your campaign, or take your organization to the next level.
