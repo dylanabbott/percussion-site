@@ -147,7 +147,7 @@ html {
   --card-bg: #f0f8fa;
   --csl-bg: #f0f8fa;
   --csl-text: #004d5c;
-  --csl-controls-bg: rgba(245, 253, 255, 0.8);
+  --csl-controls-bg: rgba(206, 237, 243, 0.8);
   --csl-btn-bg: #004d5c;
   --csl-btn-bg-hover: #27889b;
   --contact-bg: white;
@@ -303,6 +303,7 @@ html {
 .why-we-work p:first-of-type,
 .who-we-are p:first-of-type {
   font-size: 150%;
+  font-weight: 600;
   line-height: 1.25;
 }
 
@@ -311,6 +312,13 @@ html {
 }
 
 /* CARD */
+@media screen and (min-width: 768px) {
+  .members {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .members-container {
   display: flex;
   flex-wrap: wrap;
@@ -341,11 +349,12 @@ html {
   .member-card {
     width: min(100%, 700px);
     align-items: flex-start;
+    margin: 1rem 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .member-card {
-    width: min(48%, 480px);
+    width: min(48%, 400px);
   }
 }
 .member-card ul, .member-card li {

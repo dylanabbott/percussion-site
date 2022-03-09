@@ -1,12 +1,12 @@
 /* CARD */
 @use '../utils' as *;
 
-// .members {
-//     // @include large {
-//     //     padding-left: 2rem;
-//     //     padding-right: 2rem;
-//     // }
-// }
+.members {
+    @include large {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
 
 .members-container {
     display: flex;
@@ -45,10 +45,11 @@
     @include large {
         width: min(100%, 700px);
         align-items: flex-start;
+        margin: 1rem 1rem;
     }
 
     @include xlarge {
-        width: min(48%, 480px);
+        width: min(48%, 400px);
     }
 
     & ul, li {

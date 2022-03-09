@@ -21,6 +21,7 @@ $colors: (
         3: hsl(190, 60%, 88%),
         4: hsl(190, 50%, 96%), 
 		90: hsl(190, 70%, 78%, 90%),
+		380: hsl(190, 60%, 88%, 80%),
         480: hsl(190, 100%, 98%, 80%)
 	),
 	teal: (
@@ -147,7 +148,7 @@ html {
 
     --csl-bg: #{getcolor(light-blue,4)};
     --csl-text: #{getcolor(dark-blue,0)};
-    --csl-controls-bg: #{getcolor(light-blue,480)};
+    --csl-controls-bg: #{getcolor(light-blue,380)};
     --csl-btn-bg: #{getcolor(dark-blue,0)};
 	--csl-btn-bg-hover: #{getcolor(dark-blue,2)};
 
