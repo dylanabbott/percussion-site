@@ -61,9 +61,9 @@
 		transition: opacity 0.9s;
 	}
 
-    @include medium {
-        min-width: 70vw;
-    }
+    // @include medium {
+    //     min-width: 70vw;
+    // }
 
 	@include medium {
 		padding: 1.5rem;
@@ -71,6 +71,7 @@
 
 	@include large {
 		padding: 2rem;
+		max-width: 960px;
 	}
 
     // @include xlarge {
