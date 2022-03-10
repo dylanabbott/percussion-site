@@ -1,6 +1,7 @@
 console.log('Form Submission Loaded!');
 
 const contactForm = document.getElementById('form-body');
+const modalFrame = document.getElementById('contact-form');
 // console.log(contactForm);
 
 const submitBtn = document.getElementById('submit-btn');
@@ -24,15 +25,18 @@ function submitForm(e) {
 		// 	.then((response) => response.json())
 		// 	.then((data) => console.log(data))
 		// 	.catch((error) => console.log(error));
-        
-            confirmSubmission();
+
+		confirmSubmission();
 	}
 }
 
 submitBtn.addEventListener('click', submitForm);
 
 function confirmSubmission() {
-    contactForm.innerHTML = submitMsg;
-};
-
-const submitMsg = "HELLO";
+	const submitMsg = document.createElement('div');
+	submitMsg.innerHTML =
+		'<h3>Thanks for contacting us!</h3><p>We will review your project and respond shortly.</p>';
+	contactForm.classList.add('invisible');
+	modalFrame.append(submitMsg);
+	submitMsg.classList.add('submitted');
+}

@@ -673,9 +673,11 @@ label {
   top: 1rem;
   right: 1rem;
   font-weight: 600;
+  z-index: 30;
   color: var(--modal-close);
 }
-.modal__close:hover, .modal__close :active {
+.modal__close:hover,
+.modal__close :active {
   color: var(--modal-close-active);
 }
 @media screen and (min-width: 576px) {
@@ -724,6 +726,7 @@ label {
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  transition: opacity 0.3s;
 }
 @media screen and (min-width: 576px) {
   .contactform__section {
@@ -735,20 +738,26 @@ label {
   font-size: 1.5rem;
   line-height: 1.2;
 }
-.contactform input, .contactform textarea {
+.contactform input,
+.contactform textarea {
   background-color: var(--contact-input-bg);
   border-color: var(--contact-input-border);
 }
-.contactform input[type=submit], .contactform textarea[type=submit] {
+.contactform input[type=submit],
+.contactform textarea[type=submit] {
   background-color: var(--contact-btn-bg);
   color: var(--contact-btn-text);
   border-color: var(--contact-btn-border);
   font-weight: 600;
 }
-.contactform input[type=submit]:hover, .contactform input[type=submit] :active, .contactform textarea[type=submit]:hover, .contactform textarea[type=submit] :active {
+.contactform input[type=submit]:hover,
+.contactform input[type=submit] :active,
+.contactform textarea[type=submit]:hover,
+.contactform textarea[type=submit] :active {
   background-color: var(--contact-btn-bg-hover);
 }
-.contactform input[type=file], .contactform textarea[type=file] {
+.contactform input[type=file],
+.contactform textarea[type=file] {
   background-color: var(--contact-bg);
   padding: 0.25rem;
 }
@@ -771,6 +780,36 @@ label {
   opacity: 0;
 }
 
+.submitted {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: reveal 0.3s linear 0.3s 1;
+  animation-fill-mode: forwards;
+}
+
+.invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* NAV */
 .nav {
   position: fixed;
