@@ -4,6 +4,7 @@
 		<form
 			class="contactform"
 			name="contact-form"
+			id="form-body"
 			action="https://formsubmit.co/72a94a8f26281b097d6ba54ad8887041"
 			enctype="multipart/form-data"
 			method="POST"
@@ -15,7 +16,7 @@
 				<label for="name">Name*</label>
 				<input type="text" id="name" name="name" required />
 				<label for="email">Email*</label>
-				<input type="email" id="email" name="_replyto" required />
+				<input type="email" id="email" name="email" required />
 				<label for="phone">Phone*</label>
 				<input type="tel" id="phone" name="phone" maxlength="12" required />
 				<label for="org">Campaign or Organization*</label>
@@ -26,9 +27,9 @@
 			<div class="contactform__section">
 				<label for="project">Project Description*</label>
 				<textarea id="project" name="project" cols="30" required></textarea>
-				<label for="attachment">Attachment:</label>
-				<input type="file" id="attachment" name="attachment" multiple />
-				<input type="submit" value="Submit" />
+				<!-- <label for="attachment">Attachment:</label>
+				<input type="file" id="attachment" name="attachment" multiple /> -->
+				<input type="submit" value="Submit" id="submit-btn"/>
 				<input type="text" name="_honey" style="display: none" />
 				<input type="hidden" name="_subject" value="New Contact Request for Percussion">
 				<input type="hidden" name="_next" value="https://www.google.com" />

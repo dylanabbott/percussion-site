@@ -3,8 +3,7 @@ console.log('Mobile Menu code loaded');
 const btnMenu = document.getElementById('menu-button');
 const mobileMenu = document.getElementById('nav');
 
-function toggleMenu(e) {
-	console.log(e);
+function toggleMenu() {
 	btnMenu.classList.toggle('rotated');
 	mobileMenu.classList.toggle('nav--hidden-on-mobile');
 }
