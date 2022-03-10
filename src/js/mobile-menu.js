@@ -1,11 +1,12 @@
-console.log("Mobile Menu code loaded");
+console.log('Mobile Menu code loaded');
 
-const btnMenu = document.getElementById("menu-button");
-const mobileMenu = document.getElementById("nav");
+const btnMenu = document.getElementById('menu-button');
+const mobileMenu = document.getElementById('nav');
 
-function toggleMenu() {
-    btnMenu.classList.toggle("rotated");
-    mobileMenu.classList.toggle("nav--hidden-on-mobile");
+function toggleMenu(e) {
+	console.log(e);
+	btnMenu.classList.toggle('rotated');
+	mobileMenu.classList.toggle('nav--hidden-on-mobile');
 }
 
 btnMenu.addEventListener('click', toggleMenu);

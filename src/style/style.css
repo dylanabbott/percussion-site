@@ -239,7 +239,7 @@ html {
 }
 .who-we-are {
   position: relative;
-  background: linear-gradient(var(--who-bg), var(--who-bg)), url("../img/what-bg.jpg") center/cover;
+  background: var(--who-bg);
   color: var(--who-text);
 }
 .who-we-are .section__heading {
@@ -248,8 +248,7 @@ html {
 
 .how-we-work {
   position: relative;
-  background: linear-gradient(var(--how-bg), var(--how-bg)), url("../img/what-bg.jpg") center/cover;
-  color: var(--what-text);
+  background: var(--how-bg);
   color: var(--how-text);
 }
 .how-we-work .section__heading {
@@ -258,7 +257,7 @@ html {
 
 .what-we-do {
   position: relative;
-  background: linear-gradient(var(--what-bg), var(--what-bg)), url("../img/what-bg.jpg") center/cover;
+  background: var(--what-bg);
   color: var(--what-text);
 }
 .what-we-do .section__heading {
@@ -267,7 +266,7 @@ html {
 
 .why-we-work {
   position: relative;
-  background: linear-gradient(var(--why-bg), var(--why-bg)), url("../img/what-bg.jpg") center/cover;
+  background: var(--why-bg);
   color: var(--why-text);
 }
 .why-we-work .section__heading {
@@ -322,7 +321,7 @@ html {
 .members-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
 }
 
