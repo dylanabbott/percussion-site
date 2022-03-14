@@ -1,16 +1,13 @@
 ---
 name: Katie Hewitt
 roles:
-- Mentoring
-- Strategy
-- Communications
+- Digital Strategy
+- Training & Mentoring
 portrait: "/uploads/precussionheadshots-katie003.jpg"
-bio: Katie is rad at everything. Cras dolor tellus, suscipit in arcu ac, blandit lobortis
-  lectus. Praesent condimentum orci ut ipsum pellentesque faucibus. Nam in dui at
-  velit sollicitudin eleifend. Vestibulum sagittis dui vel ex sollicitudin rhoncus.
-  Duis sodales convallis sagittis. Pellentesque augue metus, viverra eu posuere nec,
-  pulvinar in massa. Aliquam lacinia lorem sit amet maximus hendrerit. Suspendisse
-  eget magna eget est fringilla egestas.
+bio: Katie Hewitt (she/her) has 18 years of experience integrating digital strategies
+  with traditional to create social change. She focuses on legislative advocacy, nonprofit
+  communications, training/mentoring, and social behavior change campaigns. Never
+  afraid to try something new.
 email: katie@kmhewitt.com
 website: www.kmhewitt.com
 order: 2
