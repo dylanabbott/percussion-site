@@ -1,17 +1,15 @@
 ---
 name: Kristin Hyde
 roles:
-- Impact Evaluation
-- Grantmaking Strategy
-- Messaging
-- Spokesperson Training
 - Writing
-- Media
+- Media Relations
+- Spokesperson Training
+- Storytelling
 portrait: "/uploads/copy-of-kristin-hyde_photo.jpg"
-bio: 30 years of experience with political and policy advocacy change initiatives
-  and campaigns, known for my ability to see the big picture, counter opposition,
-  develop effective messages and bring compelling voices into the spotlight at just
-  the right moment to make an impact.
+bio: Kristin Hyde (she/her)  30+ years strategic communications for progressive policy
+  advocacy campaigns, mission driven organizations and foundations. Kristin is known
+  for her skill in spotlighting lived experience voices and compelling stories to
+  achieve impact.
 email: kristin@kristinhyde.com
 website: kristinhyde.com
 order: 3
