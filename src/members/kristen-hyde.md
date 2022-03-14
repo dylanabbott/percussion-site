@@ -7,7 +7,7 @@ roles:
 - Spokesperson Training
 - Writing
 - Media
-portrait: ''
+portrait: "/uploads/copy-of-kristin-hyde_photo.jpg"
 bio: 30 years of experience with political and policy advocacy change initiatives
   and campaigns, known for my ability to see the big picture, counter opposition,
   develop effective messages and bring compelling voices into the spotlight at just
