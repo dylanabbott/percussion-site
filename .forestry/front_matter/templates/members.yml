@@ -1,0 +1,25 @@
+---
+label: members
+hide_body: true
+fields:
+- type: text
+  name: name
+  label: name
+- type: list
+  name: roles
+  label: roles
+- type: file
+  name: portrait
+  label: portrait
+- type: textarea
+  name: bio
+  label: bio
+- type: text
+  name: email
+  label: email
+- type: text
+  name: website
+  label: website
+- type: number
+  name: order
+  label: order
