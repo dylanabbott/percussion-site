@@ -1,6 +1,6 @@
 ---
 label: section-content
-hide_body: false
+hide_body: true
 fields:
 - type: list
   name: tags
