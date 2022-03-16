@@ -1,0 +1,10 @@
+---
+label: cases
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: image
+  label: image
