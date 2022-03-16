@@ -19,13 +19,15 @@ sections:
   match: "**/*"
   exclude: "*.json"
   templates:
-  - member
+  - members
 - type: directory
   path: src/sections
   label: Content
   create: all
   match: "**/*"
   exclude: "*.json"
+  templates:
+  - section-content
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
