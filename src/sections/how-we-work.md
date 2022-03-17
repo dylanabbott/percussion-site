@@ -13,4 +13,4 @@ Each of us is a freelance campaign professional. We choose to work together beca
 
 Each of us has our own portfolios and client bases. Feel free to contact just one of us if you’re looking for a specific service.
 
-**Need a team or a bundle of services?** <span id="modal__link">Fill out our form</span> and we’ll get back to you within one business day with a team that’s available and ready to start working on a proposal.
+**Need a team or a bundle of services?** <span id="modal__link"><a href="#">Fill out our form</a></span> and we’ll get back to you within one business day with a team that’s available and ready to start working on a proposal.
