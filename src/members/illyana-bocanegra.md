@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 3
 name: Illyana Bocanegra
 roles:
 - Strategy
