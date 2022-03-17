@@ -16,10 +16,15 @@ mobileMenu.addEventListener('click', toggleMenu);
 // Show/Hide Modal Contact Form
 
 const showModalButton = document.getElementById('modal__open');
+const showModalLink = document.getElementById('modal__link');
 const hideModalButton = document.getElementById('modal__close');
 const modal = document.getElementById('modal');
 
 showModalButton.addEventListener('click', () =>
+	modal.classList.toggle('hidden')
+);
+
+showModalLink.addEventListener('click', () =>
 	modal.classList.toggle('hidden')
 );
 
