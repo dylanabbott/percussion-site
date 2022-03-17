@@ -13,6 +13,6 @@ bio: Dylan does stuff and that's pretty cool. Aenean lorem odio, auctor ullamcor
   pretium malesuada nulla sed posuere.
 email: dylan@dylanabbottdesign.com
 website: www.dylanabbottdesign.com
-order: 4
+order: 1
 
 ---
