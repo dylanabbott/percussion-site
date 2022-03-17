@@ -11,6 +11,6 @@ bio: 'Communications and digital marketing professional with over ten years of e
   to justice. '
 email: gigliojess@gmail.com
 website: 'https://www.linkedin.com/in/jessica-giglio-8ab08672 '
-order: 4
+order: 5
 
 ---

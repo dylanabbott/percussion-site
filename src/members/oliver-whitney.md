@@ -11,6 +11,6 @@ bio: Oliver is a freelance social marketing strategist and entertainment journal
   for numerous entertainment outlets.
 email: 
 website: https://www.linkedin.com/in/oliver-whitney-78779865/
-order: 9
+order: 8
 
 ---

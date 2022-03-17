@@ -24,9 +24,10 @@ showModalButton.addEventListener('click', () =>
 	modal.classList.toggle('hidden')
 );
 
-showModalLink.addEventListener('click', () =>
+showModalLink.addEventListener('click', (e) => {
+	e.preventDefault();
 	modal.classList.toggle('hidden')
-);
+});
 
 hideModalButton.addEventListener('click', (e) => {
 	e.preventDefault();

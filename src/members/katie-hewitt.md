@@ -10,6 +10,6 @@ bio: Katie Hewitt (she/her) has 18 years of experience integrating digital strat
   afraid to try something new.
 email: katie@kmhewitt.com
 website: www.kmhewitt.com
-order: 5
+order: 6
 
 ---

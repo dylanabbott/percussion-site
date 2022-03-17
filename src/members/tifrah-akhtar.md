@@ -11,6 +11,6 @@ bio: Tifrah (she/her) is a cultural worker and digital organizer with a belief i
   narratives and activate groups.
 email: ''
 website: ''
-order: 2
+order: 9
 
 ---
