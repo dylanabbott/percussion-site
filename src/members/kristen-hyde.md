@@ -12,6 +12,6 @@ bio: Kristin Hyde (she/her)  30+ years strategic communications for progressive 
   achieve impact.
 email: kristin@kristinhyde.com
 website: kristinhyde.com
-order: 3
+order: 6
 
 ---
