@@ -95,9 +95,9 @@ html {
 .who-we-are {
 	position: relative;
 	//background-color: var(--who-bg);
-	background: var(--who-bg);
-	// linear-gradient(var(--who-bg), var(--who-bg)), 
-	// 	url('../img/what-bg.jpg') center/cover;
+	background: 
+	linear-gradient(var(--who-bg), var(--who-bg)),
+	url('../img/who-bg.jpeg') center/cover;
 	color: var(--who-text);
 	& .section__heading {
 		color: var(--who-heading);
@@ -111,12 +111,22 @@ html {
 .how-we-work {
 	position: relative;
 	//background-color: var(--how-bg);
-	background: var(--how-bg);
-	// linear-gradient(var(--how-bg), var(--how-bg)), 
-	// 	url('../img/what-bg.jpg') center/cover;
+	background: 
+	linear-gradient(var(--how-bg), var(--how-bg)),
+	url('../img/how-bg.jpeg') center/cover;
 	color: var(--how-text);
 	& .section__heading {
 		color: var(--how-heading);
+	}
+
+	& p a:link,
+	p a:visited {
+		color: var(--how-link);
+	}
+
+	& p a:hover,
+	p a:active {
+		color: var(--how-link-active);
 	}
 
 	// @include divider {
@@ -126,9 +136,9 @@ html {
 
 .what-we-do {
 	position: relative;
-	background: var(--what-bg);
-	// linear-gradient(var(--what-bg), var(--what-bg)),
-	// 	url('../img/what-bg.jpg') center/cover;
+	background: 
+	linear-gradient(var(--what-bg), var(--what-bg)),
+	url('../img/what-bg.jpeg') center/cover;
 	color: var(--what-text);
 	& .section__heading {
 		color: var(--what-heading);
@@ -169,18 +179,18 @@ html {
 	position: relative;
 	//background-color: var(--why-bg);
 	background: var(--why-bg);
-	// linear-gradient(var(--why-bg), var(--why-bg)), 
+	// linear-gradient(var(--why-bg), var(--why-bg)),
 	// 	url('../img/what-bg.jpg') center/cover;
 	color: var(--why-text);
 	& .section__heading {
 		color: var(--why-heading);
 	}
-	& a:link,
-	a:visited {
+	& p a:link,
+	p a:visited {
 		color: var(--who-links);
 	}
-	& a:hover,
-	a:active {
+	& p a:hover,
+	p a:active {
 		color: var(--who-links-active);
 	}
 

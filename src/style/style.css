@@ -130,12 +130,16 @@ html {
   --how-bg: rgba(14, 109, 129, 0.9);
   --how-text: #f0f8fa;
   --how-heading: #fcdf97;
-  --what-bg: rgba(160, 225, 238, 0.9);
-  --what-text: #004d5c;
-  --what-heading: #00686b;
+  --how-link: #ff9933;
+  --how-link-active: white;
+  --what-bg: rgba(115, 30, 13, 0.9);
+  --what-text: white;
+  --what-heading: #ff9933;
   --why-bg: rgba(0, 77, 92, 0.9);
   --why-text: #f0f8fa;
   --why-heading: #ff9933;
+  --why-link: #ff9933;
+  --why-link-active: white;
   --members-bg: #ceedf3 ;
   --members-bg-2: #499bab;
   --members-text: #004d5c;
@@ -143,7 +147,7 @@ html {
   --card-link-active: #f29d8c;
   --cases-bg: #ffe6cc;
   --cases-text: #004d5c;
-  --cases-heading: #004d5c;
+  --cases-heading: #e84f30;
   --card-bg: #f0f8fa;
   --csl-bg: #f0f8fa;
   --csl-text: #004d5c;
@@ -239,7 +243,7 @@ html {
 }
 .who-we-are {
   position: relative;
-  background: var(--who-bg);
+  background: linear-gradient(var(--who-bg), var(--who-bg)), url("../img/who-bg.jpeg") center/cover;
   color: var(--who-text);
 }
 .who-we-are .section__heading {
@@ -248,16 +252,24 @@ html {
 
 .how-we-work {
   position: relative;
-  background: var(--how-bg);
+  background: linear-gradient(var(--how-bg), var(--how-bg)), url("../img/how-bg.jpeg") center/cover;
   color: var(--how-text);
 }
 .how-we-work .section__heading {
   color: var(--how-heading);
 }
+.how-we-work p a:link,
+.how-we-work p a:visited {
+  color: var(--how-link);
+}
+.how-we-work p a:hover,
+.how-we-work p a:active {
+  color: var(--how-link-active);
+}
 
 .what-we-do {
   position: relative;
-  background: var(--what-bg);
+  background: linear-gradient(var(--what-bg), var(--what-bg)), url("../img/what-bg.jpeg") center/cover;
   color: var(--what-text);
 }
 .what-we-do .section__heading {
@@ -272,12 +284,12 @@ html {
 .why-we-work .section__heading {
   color: var(--why-heading);
 }
-.why-we-work a:link,
-.why-we-work a:visited {
+.why-we-work p a:link,
+.why-we-work p a:visited {
   color: var(--who-links);
 }
-.why-we-work a:hover,
-.why-we-work a:active {
+.why-we-work p a:hover,
+.why-we-work p a:active {
   color: var(--who-links-active);
 }
 
@@ -387,6 +399,8 @@ html {
   height: 150px;
   object-fit: cover;
   border-radius: 100%;
+  outline: solid 0px #fcebe8;
+  transition: outline 0.5s;
   margin: 0 auto;
   box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02), 0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035), 0px 13.4px 17.9px rgba(0, 0, 0, 0.042), 0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
 }
@@ -406,6 +420,9 @@ html {
   .member-card__portrait {
     margin: 0 auto;
   }
+}
+.member-card:hover > .member-card__portrait {
+  outline: solid 8px #e84f30;
 }
 .member-card__info {
   width: 100%;

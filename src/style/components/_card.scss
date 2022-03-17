@@ -82,6 +82,8 @@
 		height: 150px;
 		object-fit: cover;
 		border-radius: 100%;
+        outline: solid 0px hsl(10, 80%, 95%);
+        transition: outline 0.5s;
         margin: 0 auto;
 
         @include shadow;
@@ -100,6 +102,10 @@
             margin: 0 auto;
         }
 	}
+
+    &:hover > .member-card__portrait {
+            outline: solid 8px hsl(10, 80%, 55%);
+    }
 
     &__info {
         width: 100%;

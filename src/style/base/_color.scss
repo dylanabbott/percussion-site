@@ -38,6 +38,7 @@ $colors: (
         3: hsl(10, 80%, 85%),
         4: hsl(10, 80%, 95%),
 		180: hsl(10, 80%, 65%, 80%),
+		090: hsl(10, 80%, 55%, 90%)
 	),
 	deep-orange: (
 		0: hsl(10, 80%, 20%),
@@ -45,6 +46,7 @@ $colors: (
 		2: hsl(10, 80%, 30%),
 		3: hsl(10, 80%, 35%),
 		4: hsl(10, 80%, 40%),
+		190: hsl(10, 80%, 25%, 90%)
 	),
 	light-orange: (
 		0: hsl(30, 100%, 50%),
@@ -125,14 +127,18 @@ html {
     --how-bg: #{getcolor(dark-blue,290)};
     --how-text: #{getcolor(light-blue,4)};
     --how-heading: #{getcolor(light-gold,0)};
+	--how-link: #{getcolor(light-orange,1)};
+	--how-link-active: #{getcolor(neutral,4)};
 
-    --what-bg: #{getcolor(light-blue,90)};
-    --what-text: #{getcolor(dark-blue,0)};
-    --what-heading: #{getcolor(teal,0)};
+    --what-bg: #{getcolor(deep-orange,190)};
+    --what-text: #{getcolor(neutral,4)};
+    --what-heading: #{getcolor(light-orange,1)};
 
     --why-bg: #{getcolor(dark-blue,190)};
     --why-text: #{getcolor(light-blue,4)};
     --why-heading: #{getcolor(light-orange,1)};
+	--why-link: #{getcolor(light-orange,1)};
+	--why-link-active: #{getcolor(neutral,4)};
 
     --members-bg: #{getcolor(light-blue,3)} ;
 	--members-bg-2: #{getcolor(dark-blue,3)};
@@ -142,7 +148,7 @@ html {
 
     --cases-bg: #{getcolor(light-orange,4)};
     --cases-text: #{getcolor(dark-blue,0)};
-    --cases-heading: #{getcolor(dark-blue,0)};
+    --cases-heading: #{getcolor(dark-orange,0)};
 
     --card-bg: #{getcolor(light-blue,4)};
 
