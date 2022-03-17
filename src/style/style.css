@@ -1094,4 +1094,33 @@ label {
   }
 }
 
+.services__list {
+  padding-inline-start: 0;
+  list-style-type: none;
+  font-family: sans-serif;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+.services__list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.reveal {
+  animation: reveal 1s 1 normal;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
