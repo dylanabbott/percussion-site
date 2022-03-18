@@ -271,6 +271,7 @@ html {
   position: relative;
   background: linear-gradient(var(--what-bg), var(--what-bg)), url("../img/what-bg.jpeg") center/cover;
   color: var(--what-text);
+  flex-wrap: wrap;
 }
 .what-we-do .section__heading {
   color: var(--what-heading);
@@ -309,6 +310,12 @@ html {
   color: var(--cases-heading);
 }
 
+.what-we-do,
+.how-we-work,
+.why-we-work,
+.who-we-are {
+  padding-top: 3rem;
+}
 .what-we-do p:first-of-type,
 .how-we-work p:first-of-type,
 .why-we-work p:first-of-type,
@@ -1089,6 +1096,11 @@ label {
   }
 }
 
+.services {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
 .services__list {
   padding-inline-start: 0;
   list-style-type: none;
@@ -1096,7 +1108,6 @@ label {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 600;
-  line-height: 3rem;
 }
 .services__list__item {
   display: inline-block;

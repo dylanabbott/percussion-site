@@ -11,4 +11,4 @@ Percussion Strategic is a one-stop shop for everything you need to win your camp
 
 Whether it’s a new logo and website, skills and strategy training for your social media managers, or a soup to nuts statewide paid and earned media campaign with seamlessly integrated digital strategies, we are the experts you’re looking for. Because your audience is online, we center digital strategy using tested, proven messaging.
 
-<!-- {% include 'services.njk' %} -->
+{% include 'services.njk' %}

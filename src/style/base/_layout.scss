@@ -140,6 +140,7 @@ html {
 	linear-gradient(var(--what-bg), var(--what-bg)),
 	url('../img/what-bg.jpeg') center/cover;
 	color: var(--what-text);
+	flex-wrap: wrap;
 	& .section__heading {
 		color: var(--what-heading);
 	}
@@ -226,6 +227,7 @@ html {
 .how-we-work,
 .why-we-work,
 .who-we-are {
+	padding-top: 3rem;
 	& p:first-of-type {
 		font-size: 150%;
 		font-weight: 600;
