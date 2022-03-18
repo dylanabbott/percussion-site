@@ -278,7 +278,7 @@ html {
 
 .why-we-work {
   position: relative;
-  background: var(--why-bg);
+  background: linear-gradient(var(--why-bg), var(--why-bg)), url("../img/why-bg.jpeg") center/cover;
   color: var(--why-text);
 }
 .why-we-work .section__heading {
@@ -286,11 +286,11 @@ html {
 }
 .why-we-work p a:link,
 .why-we-work p a:visited {
-  color: var(--who-links);
+  color: var(--why-link);
 }
 .why-we-work p a:hover,
 .why-we-work p a:active {
-  color: var(--who-links-active);
+  color: var(--why-link-active);
 }
 
 .members {
@@ -399,8 +399,6 @@ html {
   height: 150px;
   object-fit: cover;
   border-radius: 100%;
-  outline: solid 0px #fcebe8;
-  transition: outline 0.5s;
   margin: 0 auto;
   box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02), 0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035), 0px 13.4px 17.9px rgba(0, 0, 0, 0.042), 0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
 }
@@ -420,9 +418,6 @@ html {
   .member-card__portrait {
     margin: 0 auto;
   }
-}
-.member-card:hover > .member-card__portrait {
-  outline: solid 8px #e84f30;
 }
 .member-card__info {
   width: 100%;

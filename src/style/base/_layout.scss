@@ -178,20 +178,20 @@ html {
 .why-we-work {
 	position: relative;
 	//background-color: var(--why-bg);
-	background: var(--why-bg);
-	// linear-gradient(var(--why-bg), var(--why-bg)),
-	// 	url('../img/what-bg.jpg') center/cover;
+	background: 
+	linear-gradient(var(--why-bg), var(--why-bg)),
+		url('../img/why-bg.jpeg') center/cover;
 	color: var(--why-text);
 	& .section__heading {
 		color: var(--why-heading);
 	}
 	& p a:link,
 	p a:visited {
-		color: var(--who-links);
+		color: var(--why-link);
 	}
 	& p a:hover,
 	p a:active {
-		color: var(--who-links-active);
+		color: var(--why-link-active);
 	}
 
 	// @include divider {

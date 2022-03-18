@@ -82,8 +82,9 @@
 		height: 150px;
 		object-fit: cover;
 		border-radius: 100%;
-        outline: solid 0px hsl(10, 80%, 95%);
-        transition: outline 0.5s;
+        // outline: solid 0px hsl(10, 80%, 95%);
+        // transition: outline 0.5s;
+        // Hidden until a bugfix comes for Safari
         margin: 0 auto;
 
         @include shadow;
@@ -103,9 +104,10 @@
         }
 	}
 
-    &:hover > .member-card__portrait {
-            outline: solid 8px hsl(10, 80%, 55%);
-    }
+    // &:hover > .member-card__portrait {
+    //         outline: solid 8px hsl(10, 80%, 55%);
+    // }
+    // Hidden until a bugfix comes for Safari
 
     &__info {
         width: 100%;

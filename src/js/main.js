@@ -137,4 +137,5 @@ function confirmSubmission() {
 	contactForm.classList.add('invisible');
 	modalFrame.append(submitMsg);
 	submitMsg.classList.add('submitted');
+	setTimeout(() => modal.classList.toggle('hidden'), 5000);
 }
