@@ -216,7 +216,7 @@ html {
 
 .cases {
 	position: relative;
-	background-color: var(--cases-bg);
+	background: linear-gradient(var(--cases-bg), var(--cases-bg-2));
 	color: var(--cases-text);
 	& .section__heading {
 		color: var(--cases-heading);

@@ -147,6 +147,7 @@ html {
 	--card-link-active: #{getcolor(dark-orange,2)};
 
     --cases-bg: #{getcolor(light-orange,4)};
+	--cases-bg-2: #{getcolor(light-orange,3)};
     --cases-text: #{getcolor(dark-blue,0)};
     --cases-heading: #{getcolor(dark-orange,0)};
 
@@ -171,6 +172,8 @@ html {
 
 	--clients-bg: #{getcolor(light-blue,4)};
 	--clients-heading: #{getcolor(dark-blue,0)};
+
+	--services-item: #{getcolor(light-orange,2)};
 }
 
 a {

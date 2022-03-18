@@ -146,6 +146,7 @@ html {
   --card-link: #e84f30;
   --card-link-active: #f29d8c;
   --cases-bg: #ffe6cc;
+  --cases-bg-2: #ffcc99;
   --cases-text: #004d5c;
   --cases-heading: #e84f30;
   --card-bg: #f0f8fa;
@@ -166,6 +167,7 @@ html {
   --modal-close-active: #27889b;
   --clients-bg: #f0f8fa;
   --clients-heading: #004d5c;
+  --services-item: #ffb366;
 }
 
 a {
@@ -303,7 +305,7 @@ html {
 
 .cases {
   position: relative;
-  background-color: var(--cases-bg);
+  background: linear-gradient(var(--cases-bg), var(--cases-bg-2));
   color: var(--cases-text);
 }
 .cases .section__heading {
@@ -1105,17 +1107,25 @@ label {
   padding-inline-start: 0;
   list-style-type: none;
   font-family: sans-serif;
-  display: inline-block;
-  font-size: 1.2rem;
+  color: var(--services-item);
   font-weight: 600;
 }
 .services__list__item {
-  display: inline-block;
-  margin-right: 2rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+}
+@media screen and (min-width: 576px) {
+  .services__list__item {
+    font-size: 1.2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
 }
 
 .reveal {
-  animation: reveal 1s 1 normal;
+  animation: reveal 1s 1 forwards;
 }
 
 @keyframes reveal {
