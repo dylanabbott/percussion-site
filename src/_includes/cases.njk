@@ -9,7 +9,7 @@
                     <li class="carousel__item">
                         <h3>{{ case.data.title }}</h3>
                         {% if case.data.image %}
-                            <img src="{{ case.data.image }}" width="200">
+                            <img src="{{ case.data.image }}" class="carousel__item-img" width="600" loading="lazy" alt="{{ case.data.title }}">
                             {% endif %}
                             {{ case.templateContent | safe }}
                         </li>

@@ -4,9 +4,9 @@
         {%- for member in collections.membersSorted -%}
             <div class="member-card">
                 {%- if member.data.portrait -%}
-                    <img src="{{ member.data.portrait }}" width="200" height="200" class="member-card__portrait" alt="Photo of {{ member.data.name }}">
+                    <img src="{{ member.data.portrait }}" width="200" height="200" class="member-card__portrait" alt="Photo of {{ member.data.name }}" loading="lazy">
                 {%- else -%}
-                    <img src="img/placeholder-portrait.png" width="200" height="200" class="member-card__portrait" alt="Placeholder Photo">
+                    <img src="img/placeholder-portrait.png" width="200" height="200" class="member-card__portrait" alt="Placeholder Photo" loading="lazy">
                 {%- endif -%}
                 <div class="member-card__info">
                     <h3>{{ member.data.name }}</h3>
