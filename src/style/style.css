@@ -132,9 +132,9 @@ html {
   --how-heading: #fcdf97;
   --how-link: #ff9933;
   --how-link-active: white;
-  --what-bg: rgba(115, 30, 13, 0.9);
+  --what-bg: rgba(165, 39, 13, 0.9);
   --what-text: white;
-  --what-heading: #ff9933;
+  --what-heading: #ffb366;
   --why-bg: rgba(0, 77, 92, 0.9);
   --why-text: #f0f8fa;
   --why-heading: #ff9933;
@@ -768,6 +768,7 @@ label {
 }
 .contactform input[type=submit],
 .contactform textarea[type=submit] {
+  transition: background-color 0.3s ease-in-out;
   background-color: var(--contact-btn-bg);
   color: var(--contact-btn-text);
   border-color: var(--contact-btn-border);

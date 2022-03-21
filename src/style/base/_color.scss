@@ -38,7 +38,7 @@ $colors: (
         3: hsl(10, 80%, 85%),
         4: hsl(10, 80%, 95%),
 		180: hsl(10, 80%, 65%, 80%),
-		090: hsl(10, 80%, 55%, 90%)
+		090: hsl(10, 85%, 35%, 90%)
 	),
 	deep-orange: (
 		0: hsl(10, 80%, 20%),
@@ -130,9 +130,9 @@ html {
 	--how-link: #{getcolor(light-orange,1)};
 	--how-link-active: #{getcolor(neutral,4)};
 
-    --what-bg: #{getcolor(deep-orange,190)};
+    --what-bg: #{getcolor(dark-orange,090)};
     --what-text: #{getcolor(neutral,4)};
-    --what-heading: #{getcolor(light-orange,1)};
+    --what-heading: #{getcolor(light-orange,2)};
 
     --why-bg: #{getcolor(dark-blue,190)};
     --why-text: #{getcolor(light-blue,4)};
