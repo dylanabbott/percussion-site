@@ -1030,7 +1030,13 @@ label {
 .carousel__item h3 {
   font-family: Inter, sans-serif;
   font-weight: 600;
+  font-size: 1.77rem;
   margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .carousel__item h3 {
+    font-size: 2.369rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .carousel__item {

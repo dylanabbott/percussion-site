@@ -26,7 +26,7 @@ showModalButton.addEventListener('click', () =>
 
 showModalLink.addEventListener('click', (e) => {
 	e.preventDefault();
-	modal.classList.toggle('hidden')
+	modal.classList.toggle('hidden');
 });
 
 hideModalButton.addEventListener('click', (e) => {
@@ -44,24 +44,25 @@ modal.addEventListener('click', (e) => {
 
 const btnLeft = document.getElementById('btn-left');
 const btnRight = document.getElementById('btn-right');
+const csl = document.getElementById('csl');
 const cslItems = document.getElementById('carousel-items');
 const cslLength = document.querySelectorAll('.carousel__item').length;
 
-//Define initial position of carousel items, and the current item for targetting
+// Define initial position of carousel items, and the current item for targetting
 let cslIndex = 0;
 
 let cslCurrentItem = document.querySelectorAll('.carousel__item');
-//console.log(cslCurrentItem[cslIndex]);
+// console.log(cslCurrentItem[cslIndex]);
 cslCurrentItem[cslIndex].classList.toggle('carousel__item--current');
 
-//Disabled the left button initially
+// Disabled the left button initially
 btnLeft.setAttribute('disabled', 'disabled');
 
 function cslShift(e) {
-	//this function checks which button was clicked, and which index position we're currently on
+	// this function checks which button was clicked, and which index position we're currently on
 	//console.log(e.includes('btn-left'));
 	if (e.srcElement.id === 'btn-left' && cslIndex !== 0) {
-		//if we're already at the end of the carousel, enable the right button
+		// if we're already at the end of the carousel, enable the right button
 		if (cslIndex === cslLength - 1) {
 			btnRight.removeAttribute('disabled');
 		}
@@ -69,19 +70,21 @@ function cslShift(e) {
 		// decrement the index
 		cslIndex--;
 		cslCurrentItem[cslIndex].classList.toggle('carousel__item--current');
-		//and change position ( shift the left position, calc adds space for margins from preceding items)
+		// and change position ( shift the left position, calc adds space for margins from preceding items)
 		cslItems.style.left = `calc(${cslIndex * -100}% - ${cslIndex}em)`;
+		csl.scroll({ top: 0 });
 		if (cslIndex === 0) {
 			//after decrementing the index to 0, disable the left button
 			btnLeft.setAttribute('disabled', '');
 		}
 	} else if (e.srcElement.id === 'btn-right' && cslIndex < cslLength - 1) {
-		//on right click, unless we're at the end of the carousel, increase the index
+		// on right click, unless we're at the end of the carousel, increase the index
 		cslCurrentItem[cslIndex].classList.remove('carousel__item--current');
 		cslIndex++;
 		cslCurrentItem[cslIndex].classList.add('carousel__item--current');
-		//and change position
+		// and change position
 		cslItems.style.left = `calc(${cslIndex * -100}% - ${cslIndex}em)`;
+		csl.scroll({top: 0});
 		//Disable the right button when reaching the last item
 		if (cslIndex === cslLength - 1) {
 			btnRight.setAttribute('disabled', '');
@@ -96,7 +99,7 @@ btnRight.addEventListener('click', cslShift);
 
 // Subimt form to Formsubmit.co via fetch
 // Uncomment fetch for prod
-console.log("Did you remember to uncomment the form submission?");
+console.log('Did you remember to uncomment the form submission?');
 
 const contactForm = document.getElementById('form-body');
 const modalFrame = document.getElementById('contact-form');
