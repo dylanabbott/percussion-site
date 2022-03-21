@@ -72,7 +72,7 @@ function cslShift(e) {
 		cslCurrentItem[cslIndex].classList.toggle('carousel__item--current');
 		// and change position ( shift the left position, calc adds space for margins from preceding items)
 		cslItems.style.left = `calc(${cslIndex * -100}% - ${cslIndex}em)`;
-		csl.scroll({ top: 0 });
+		csl.scroll({ top: 0, behavior: 'smooth' });
 		if (cslIndex === 0) {
 			//after decrementing the index to 0, disable the left button
 			btnLeft.setAttribute('disabled', '');
@@ -84,7 +84,7 @@ function cslShift(e) {
 		cslCurrentItem[cslIndex].classList.add('carousel__item--current');
 		// and change position
 		cslItems.style.left = `calc(${cslIndex * -100}% - ${cslIndex}em)`;
-		csl.scroll({top: 0});
+		csl.scroll({top: 0, behavior: 'smooth'});
 		//Disable the right button when reaching the last item
 		if (cslIndex === cslLength - 1) {
 			btnRight.setAttribute('disabled', '');
@@ -142,3 +142,23 @@ function confirmSubmission() {
 	submitMsg.classList.add('submitted');
 	setTimeout(() => modal.classList.toggle('hidden'), 5000);
 }
+
+
+//  Services Reveal 
+// console.log('Reveal script loaded.');
+
+const observer = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry, index) => {
+			setTimeout(function () {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('reveal');
+				}
+			}, 300 * index);
+		});
+	},
+	{ rootMargin: '0px', threshold: 1.0 }
+);
+
+const listItems = document.querySelectorAll('.services__list__item');
+listItems.forEach((el) => observer.observe(el));
