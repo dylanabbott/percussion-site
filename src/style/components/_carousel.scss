@@ -57,6 +57,14 @@
 		}
 	}
 
+	& a:link, a:visited {
+		color: var(--cases-link);
+	}
+
+	& a:hover, a:active {
+		color: var(--cases-link-active);
+	}
+
 	@include large {
 		padding: 2rem;
 	}

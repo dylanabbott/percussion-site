@@ -149,6 +149,8 @@ html {
   --cases-bg-2: #ffcc99;
   --cases-text: #004d5c;
   --cases-heading: #e84f30;
+  --cases-link: #e84f30;
+  --cases-link-active: #f29d8c;
   --card-bg: #f0f8fa;
   --csl-bg: #f0f8fa;
   --csl-text: #004d5c;
@@ -1037,6 +1039,12 @@ label {
   .carousel__item h3 {
     font-size: 2.369rem;
   }
+}
+.carousel__item a:link, .carousel__item a:visited {
+  color: var(--cases-link);
+}
+.carousel__item a:hover, .carousel__item a:active {
+  color: var(--cases-link-active);
 }
 @media screen and (min-width: 768px) {
   .carousel__item {

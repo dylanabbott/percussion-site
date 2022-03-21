@@ -150,6 +150,8 @@ html {
 	--cases-bg-2: #{getcolor(light-orange,3)};
     --cases-text: #{getcolor(dark-blue,0)};
     --cases-heading: #{getcolor(dark-orange,0)};
+	--cases-link: #{getcolor(dark-orange,0)};
+	--cases-link-active: #{getcolor(dark-orange,2)};
 
     --card-bg: #{getcolor(light-blue,4)};
 

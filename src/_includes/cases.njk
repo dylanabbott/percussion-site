@@ -7,7 +7,7 @@
             <ul class="carousel__items" id="carousel-items">
                 {% for case in collections.cases %}
                     <li class="carousel__item">
-                        <h3>{{ case.data.title }}</h3>
+                        <h3>&ldquo;{{ case.data.title }}&rdquo;</h3>
                         {% if case.data.image %}
                             <img src="{{ case.data.image }}" class="carousel__item-img" width="600" loading="lazy" alt="{{ case.data.title }}">
                             {% endif %}
