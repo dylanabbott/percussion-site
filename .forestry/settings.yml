@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: src/admin
 webhook_url: 
 sections:
+- type: document
+  path: ssrc/services.md
+  label: Services
+  match: "**/*"
 - type: directory
   path: src/cases
   label: Cases
