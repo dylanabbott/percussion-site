@@ -5,9 +5,8 @@ admin_path: src/admin
 webhook_url: 
 sections:
 - type: document
-  path: ssrc/services.md
+  path: src/services/services.md
   label: Services
-  match: "**/*"
 - type: directory
   path: src/cases
   label: Cases
