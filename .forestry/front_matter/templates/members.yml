@@ -18,10 +18,15 @@ fields:
   name: email
   label: email
 - type: text
-  name: website
-  label: website
+  name: website_url
+  label: website url
 - type: number
   name: order
   label: order
+- name: website_name
+  type: text
+  config:
+    required: false
+  label: website name
 pages:
 - src/members/jessica-giglio.md
