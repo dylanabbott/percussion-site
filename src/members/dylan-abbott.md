@@ -9,7 +9,8 @@ bio: Dylan Abbott (he/him) is a graphic designer, front-end developer, and video
   with over two decades of experience. He enjoys balancing the creative and technical
   sides of these roles for organizations working towards a more just world.
 email: dylan@percussionstrategic.com
-website: www.dylanabbottdesign.com
+website_url: www.dylanabbottdesign.com
+website_name: www.dylanabbottdesign.com
 order: 2
 
 ---

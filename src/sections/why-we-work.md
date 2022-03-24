@@ -17,6 +17,6 @@ Our core values are:
 
 **Take smart risks, make smart mistakes**: We are always studying and testing, trying out new strategies and tactics.
 
-**Empathy & ethics:** We are firm believers in [ethical storytelling](https://www.ethicalstorytelling.com/), providing campaign messengers with the emotional and financial support they need to share their experiences.
+**Empathy & ethics:** We are firm believers in [ethical storytelling,](https://www.ethicalstorytelling.com/) providing campaign messengers with the emotional and financial support they need to share their experiences.
 
 **Humor & humility:** It’s not about us, it’s about you, and forwarding your mission.

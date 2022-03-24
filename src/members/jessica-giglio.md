@@ -10,7 +10,8 @@ bio: 'Communications and digital marketing professional with over ten years of e
   and strategic thinker, researcher, and learner. Passionate about education and committed
   to justice. '
 email: gigliojess@gmail.com
-website: 'https://www.linkedin.com/in/jessica-giglio-8ab08672 '
+website_url: 'https://www.linkedin.com/in/jessica-giglio-8ab08672 '
+website_name: Jessica on LinkedIn
 order: 5
 
 ---

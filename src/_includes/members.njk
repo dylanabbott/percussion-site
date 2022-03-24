@@ -21,8 +21,8 @@
                         {%- if member.data.email -%}
                             <li class="member-card__email"><!--<img src="../img/letter.svg" alt="email" width="24" height="24" class="member-card__icon">--><a href="mailto:{{ member.data.email }}">{{ member.data.email }}</a></li>
                         {%- endif -%}
-                        {%- if member.data.website -%}
-                            <li class="member-card__link"><!--<img src="../img/browser.svg" alt="url" width="24" height="24" class="member-card__icon">--><a href="http://{{ member.data.website }}">{{ member.data.website }}</a></li>
+                        {%- if member.data.website_url -%}
+                            <li class="member-card__link"><!--<img src="../img/browser.svg" alt="url" width="24" height="24" class="member-card__icon">--><a href="http://{{ member.data.website_url }}">{{ member.data.website_name }}</a></li>
                         {%- endif -%}
                     </ul>
                     {%- endif -%}

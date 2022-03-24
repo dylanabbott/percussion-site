@@ -10,7 +10,7 @@ bio: Tifrah (she/her) is a cultural worker and digital organizer with a belief i
   creation and strategy with base building and online engagement to shift popular
   narratives and activate groups.
 email: 'tifrah.akhtar@gmail.com'
-website: ''
+website_url:
+website_name:
 order: 9
-
 ---
