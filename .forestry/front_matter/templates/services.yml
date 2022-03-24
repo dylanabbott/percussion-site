@@ -1,8 +1,0 @@
----
-label: Services
-hide_body: true
-fields:
-- name: services
-  type: tag_list
-  default: []
-  label: Services
