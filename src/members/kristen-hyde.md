@@ -13,6 +13,6 @@ bio: Kristin Hyde (she/her) has 30+ years experience in strategic communications
 email: kristin@kristinhyde.com
 website_url: kristinhyde.com
 website_name: www.kristinhyde.com
-order: 7
+
 
 ---

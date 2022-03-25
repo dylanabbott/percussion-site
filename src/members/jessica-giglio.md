@@ -12,6 +12,6 @@ bio: 'Communications and digital marketing professional with over ten years of e
 email: gigliojess@gmail.com
 website_url: 'https://www.linkedin.com/in/jessica-giglio-8ab08672 '
 website_name: Jessica on LinkedIn
-order: 5
+
 
 ---

@@ -12,5 +12,5 @@ bio: Tifrah (she/her) is a cultural worker and digital organizer with a belief i
 email: 'tifrah.akhtar@gmail.com'
 website_url:
 website_name:
-order: 9
+
 ---

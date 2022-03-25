@@ -11,11 +11,17 @@ module.exports = (eleventyConfig) => {
 	// Add sorted collection of members
 	eleventyConfig.addCollection('membersSorted', function (collectionApi) {
 		return collectionApi.getFilteredByTag('members').sort(function (a, b) {
-			return a.data.order - b.data.order;
+			if (a.data.name < b.data.name) {
+				return -1;
+			}
+			if (a.data.name > b.data.name) {
+				return 1;
+			}
+			return 0;
 		});
 	});
 
-	// Add sorted collection of members
+	// Add sorted collection of sections
 	eleventyConfig.addCollection('sectionsSorted', function (collectionApi) {
 		return collectionApi.getFilteredByTag('section').sort(function (a, b) {
 			return a.data.order - b.data.order;

@@ -12,6 +12,6 @@ bio: Oliver is a freelance social marketing strategist and entertainment journal
 email: oliverjwhitney@gmail.com
 website_url: https://www.linkedin.com/in/oliver-whitney-78779865/
 website_name: Oliver on LinkedIn
-order: 8
+
 
 ---

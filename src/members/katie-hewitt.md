@@ -12,6 +12,6 @@ bio: Katie Hewitt (she/her) has 18 years of experience integrating digital strat
 email: katie@percussionstrategic.com
 website_url: www.kmhewitt.com
 website_name: www.kmhewitt.com
-order: 6
+
 
 ---
