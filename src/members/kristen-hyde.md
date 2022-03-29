@@ -11,7 +11,7 @@ bio: Kristin Hyde (she/her) has 30+ years experience in strategic communications
   for her skill in spotlighting lived experience voices and compelling stories to
   achieve impact.
 email: kristin@kristinhyde.com
-website_url: kristinhyde.com
+website_url: https://kristinhyde.com
 website_name: www.kristinhyde.com
 
 

@@ -12,7 +12,7 @@ bio: Illyana Bocanegra (they/them) is a communication designer and filmmaker liv
   directing, and making creative content for individuals, brands, small businesses,
   and nonprofits.
 email: illyanaboc@gmail.com
-website_url: www.illyana.co
+website_url: https://www.illyana.co
 website_name: www.illyana.co
 
 ---

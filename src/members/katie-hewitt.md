@@ -10,7 +10,7 @@ bio: Katie Hewitt (she/her) has 18 years of experience integrating digital strat
   communications, training/mentoring, and social behavior change campaigns. Never
   afraid to try something new.
 email: katie@percussionstrategic.com
-website_url: www.kmhewitt.com
+website_url: https://www.kmhewitt.com
 website_name: www.kmhewitt.com
 
 
