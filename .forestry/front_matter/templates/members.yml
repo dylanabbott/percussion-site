@@ -11,6 +11,7 @@ fields:
 - type: file
   name: portrait
   label: portrait
+  description: 'For best results, use a square photo. '
 - type: textarea
   name: bio
   label: bio
