@@ -31,7 +31,7 @@ sections:
   exclude: "*.json"
   templates:
   - section-content
-upload_dir: uploads
+upload_dir: src/uploads
 public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
