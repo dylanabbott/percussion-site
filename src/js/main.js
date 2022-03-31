@@ -117,17 +117,17 @@ function submitForm(e) {
 		let formData = new FormData(contactForm);
 		formData.append('_replyto', formData.get('email'));
 		let formSubmission = Object.fromEntries(formData.entries());
-		console.log(formSubmission);
+		//console.log(formSubmission);
 
-		// fetch('https://formsubmit.co/ajax/7b52d9988421ca86c4a6e0faf8655890', {
-		// 	method: 'POST',
-		// 	body: JSON.stringify(formSubmission),
-		// })
-		// 	.then((response) => response.json())
-		// 	.then((data) => console.log(data))
-		// 	.catch((error) => console.log(error));
+		fetch('https://formsubmit.co/ajax/7b52d9988421ca86c4a6e0faf8655890', {
+			method: 'POST',
+			body: JSON.stringify(formSubmission),
+		})
+			.then((response) => response.json())
+			.then((data) => console.log(data))
+			.catch((error) => console.log(error));
 
-		// confirmSubmission();
+		confirmSubmission();
 	}
 }
 
