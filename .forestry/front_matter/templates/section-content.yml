@@ -5,12 +5,14 @@ fields:
 - type: list
   name: tags
   label: tags
+  hidden: true
 - type: text
   name: title
   label: title
 - type: boolean
   name: permalink
   label: permalink
+  hidden: true
 - type: number
   name: order
   label: order
