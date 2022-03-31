@@ -84,7 +84,7 @@ function cslShift(e) {
 		cslCurrentItem[cslIndex].classList.add('carousel__item--current');
 		// and change position
 		cslItems.style.left = `calc(${cslIndex * -100}% - ${cslIndex}em)`;
-		csl.scroll({top: 0, behavior: 'smooth'});
+		csl.scroll({ top: 0, behavior: 'smooth' });
 		//Disable the right button when reaching the last item
 		if (cslIndex === cslLength - 1) {
 			btnRight.setAttribute('disabled', '');
@@ -117,11 +117,15 @@ function submitForm(e) {
 		let formData = new FormData(contactForm);
 		formData.append('_replyto', formData.get('email'));
 		let formSubmission = Object.fromEntries(formData.entries());
-		//console.log(formSubmission);
+		console.log(JSON.stringify(formSubmission));
 
 		fetch('https://formsubmit.co/ajax/7b52d9988421ca86c4a6e0faf8655890', {
 			method: 'POST',
 			body: JSON.stringify(formSubmission),
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json',
+			},
 		})
 			.then((response) => response.json())
 			.then((data) => console.log(data))
@@ -143,8 +147,7 @@ function confirmSubmission() {
 	setTimeout(() => modal.classList.toggle('hidden'), 5000);
 }
 
-
-//  Services Reveal 
+//  Services Reveal
 // console.log('Reveal script loaded.');
 
 const observer = new IntersectionObserver(
