@@ -55,3 +55,12 @@ label {
     display: inline-block;
     min-width: 7ch;
 }
+
+.bots-only {
+    display: none;
+}
+
+.recaptcha {
+    display: flex;
+    justify-content: center;
+}

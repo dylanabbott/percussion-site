@@ -108,32 +108,18 @@ const modalFrame = document.getElementById('contact-form');
 const submitBtn = document.getElementById('submit-btn');
 // console.log(submitBtn);
 
-function submitForm(e) {
+const handleSubmit = (e) => {
 	e.preventDefault();
-	if (!contactForm.checkValidity()) {
-		contactForm.reportValidity();
-		// console.log('Invalid!');
-	} else {
-		let formData = new FormData(contactForm);
-		formData.append('_replyto', formData.get('email'));
-		let formSubmission = Object.fromEntries(formData.entries());
-		// console.log(formSubmission);
+	let myForm = document.getElementById('form-body');
+	let formData = new FormData(myForm);
+	fetch('/', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		body: new URLSearchParams(formData).toString(),
+	})
+		.then(() => console.log('Form successfully submitted'))
+		.catch((error) => alert(error));
 
-		fetch('https://formsubmit.co/ajax/team@percussionstrategic.com', {
-			method: 'POST',
-			body: JSON.stringify(formSubmission),
-		})
-			.then((response) => response.json())
-			.then((data) => console.log(data))
-			.catch((error) => console.log(error));
-
-		confirmSubmission();
-	}
-}
-
-submitBtn.addEventListener('click', submitForm);
-
-function confirmSubmission() {
 	const submitMsg = document.createElement('div');
 	submitMsg.innerHTML =
 		'<h3>Thanks for contacting us!</h3><p>We will review your project and respond shortly.</p>';
@@ -141,7 +127,45 @@ function confirmSubmission() {
 	modalFrame.append(submitMsg);
 	submitMsg.classList.add('submitted');
 	setTimeout(() => modal.classList.toggle('hidden'), 5000);
-}
+};
+
+document.querySelector('form').addEventListener('submit', handleSubmit);
+
+
+// function submitForm(e) {
+// 	e.preventDefault();
+// 	if (!contactForm.checkValidity()) {
+// 		contactForm.reportValidity();
+// 		// console.log('Invalid!');
+// 	} else {
+// 		let formData = new FormData(contactForm);
+// 		formData.append('_replyto', formData.get('email'));
+// 		let formSubmission = Object.fromEntries(formData.entries());
+// 		// console.log(formSubmission);
+
+// 		fetch('https://formsubmit.co/ajax/team@percussionstrategic.com', {
+// 			method: 'POST',
+// 			body: JSON.stringify(formSubmission),
+// 		})
+// 			.then((response) => response.json())
+// 			.then((data) => console.log(data))
+// 			.catch((error) => console.log(error));
+
+// 		confirmSubmission();
+// 	}
+// }
+
+// submitBtn.addEventListener('click', submitForm);
+
+// function confirmSubmission() {
+// 	const submitMsg = document.createElement('div');
+// 	submitMsg.innerHTML =
+// 		'<h3>Thanks for contacting us!</h3><p>We will review your project and respond shortly.</p>';
+// 	contactForm.classList.add('invisible');
+// 	modalFrame.append(submitMsg);
+// 	submitMsg.classList.add('submitted');
+// 	setTimeout(() => modal.classList.toggle('hidden'), 5000);
+// }
 
 
 //  Services Reveal 

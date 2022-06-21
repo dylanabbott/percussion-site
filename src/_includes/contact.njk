@@ -5,14 +5,20 @@
 			class="contactform"
 			name="contact-form"
 			id="form-body"
-			action="https://formsubmit.co/team@percussionstrategic.com"
-			enctype="multipart/form-data"
 			method="POST"
+			data-netlify-recaptcha="true"
+			netlify-honeypot="bots-only"
+			data-netlify="true"
 		>
 			<div class="contactform__section">
 				<p class="contactform__heading">
 					Get in touch with us about your next project:
 				</p>
+				<p class="bots-only">
+				<label>
+					Don’t fill this out if you’re human: <input name="bots-only" />
+				</label>
+			</p>
 				<label for="name">Name*</label>
 				<input type="text" id="name" name="name" required />
 				<label for="email">Email*</label>
@@ -27,13 +33,9 @@
 			<div class="contactform__section">
 				<label for="project">Project Description*</label>
 				<textarea id="project" name="project" cols="30" required></textarea>
-				<!-- <label for="attachment">Attachment:</label>
-				<input type="file" id="attachment" name="attachment" multiple /> -->
+				<div data-netlify-recaptcha="true" class="recaptcha"></div>
 				<input type="submit" value="Submit" id="submit-btn"/>
-				<input type="text" name="_honey" style="display: none" />
-				<input type="hidden" name="_subject" value="New Contact Request for Percussion">
-				<input type="hidden" name="_next" value="https://www.google.com" />
-				<input type="hidden" name="_url" value="https://localhost:8080">
+				<input type="hidden" name="subject" value="New Contact Request for Percussion">
 			</div>
 		</form>
 	</div>
