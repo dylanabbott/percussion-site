@@ -132,40 +132,6 @@ const handleSubmit = (e) => {
 document.querySelector('form').addEventListener('submit', handleSubmit);
 
 
-// function submitForm(e) {
-// 	e.preventDefault();
-// 	if (!contactForm.checkValidity()) {
-// 		contactForm.reportValidity();
-// 		// console.log('Invalid!');
-// 	} else {
-// 		let formData = new FormData(contactForm);
-// 		formData.append('_replyto', formData.get('email'));
-// 		let formSubmission = Object.fromEntries(formData.entries());
-// 		// console.log(formSubmission);
-
-// 		fetch('https://formsubmit.co/ajax/team@percussionstrategic.com', {
-// 			method: 'POST',
-// 			body: JSON.stringify(formSubmission),
-// 		})
-// 			.then((response) => response.json())
-// 			.then((data) => console.log(data))
-// 			.catch((error) => console.log(error));
-
-// 		confirmSubmission();
-// 	}
-// }
-
-// submitBtn.addEventListener('click', submitForm);
-
-// function confirmSubmission() {
-// 	const submitMsg = document.createElement('div');
-// 	submitMsg.innerHTML =
-// 		'<h3>Thanks for contacting us!</h3><p>We will review your project and respond shortly.</p>';
-// 	contactForm.classList.add('invisible');
-// 	modalFrame.append(submitMsg);
-// 	submitMsg.classList.add('submitted');
-// 	setTimeout(() => modal.classList.toggle('hidden'), 5000);
-// }
 
 //  Services Reveal
 // console.log('Reveal script loaded.');
