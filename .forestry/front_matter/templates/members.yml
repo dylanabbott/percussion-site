@@ -27,5 +27,6 @@ fields:
     required: false
   label: website name
 pages:
+- src/members/dana-variano.md
 - src/members/jessica-giglio.md
 - src/members/laura-galindo-palomera.md
