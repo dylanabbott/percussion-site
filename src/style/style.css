@@ -40,9 +40,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-/* VARIABLES */
-/* MIXINS */
-/* TYPOGRAPHY */
+/* VARIABLES */ /* MIXINS */ /* TYPOGRAPHY */
 html {
   font-family: "Inter", sans-serif;
   font-size: 100%;
@@ -103,73 +101,73 @@ strong {
 /* Color Table Lookup Function */
 /* Semantic Color Assignments */
 html {
-  --nav-bg: #004d5c;
-  --nav-text: black;
-  --nav-text--hover: #ff8000;
-  --nav-bg-mobile: rgba(0, 77, 92, 0.8);
-  --nav-text-mobile: white;
-  --nav-text-mobile--hover: #ff8000;
-  --nav-toggle: white;
-  --nav-toggle-bg: #004d5c;
-  --nav-toggle-bg-hover: #ff8000;
-  --hero-bg: rgba(0, 77, 92, 0.6);
-  --hero-tagline: white;
-  --hero-tagline-lg: #0e6d81;
-  --footer-bg: #004d5c;
-  --footer-text: white;
-  --social-item: white;
-  --social-item--hover: #ff8000;
-  --social-icon--hover: #ff8000;
-  --footer-border: #e84f30;
-  --modal-overlay: rgba(237, 118, 94, 0.8);
-  --who-bg: rgba(254, 238, 200, 0.9);
-  --who-text: #5c180a;
-  --who-heading: #8a240f;
-  --who-links: #ff9933;
-  --who-links-active: white;
-  --how-bg: rgba(14, 109, 129, 0.9);
-  --how-text: #f0f8fa;
-  --how-heading: #fcdf97;
-  --how-link: #ff9933;
-  --how-link-active: white;
-  --what-bg: rgba(165, 39, 13, 0.9);
-  --what-text: white;
-  --what-heading: #ffb366;
-  --why-bg: rgba(0, 77, 92, 0.9);
-  --why-text: #f0f8fa;
-  --why-heading: #ff9933;
-  --why-link: #ff9933;
-  --why-link-active: white;
-  --members-bg: #ceedf3 ;
-  --members-bg-2: #499bab;
-  --members-text: #004d5c;
-  --card-link: #e84f30;
-  --card-link-active: #f29d8c;
-  --cases-bg: #ffe6cc;
-  --cases-bg-2: #ffcc99;
-  --cases-text: #004d5c;
-  --cases-heading: #e84f30;
-  --cases-link: #e84f30;
-  --cases-link-active: #f29d8c;
-  --card-bg: #f0f8fa;
-  --csl-bg: #f0f8fa;
-  --csl-text: #004d5c;
-  --csl-controls-bg: rgba(206, 237, 243, 0.8);
-  --csl-btn-bg: #004d5c;
-  --csl-btn-bg-hover: #27889b;
-  --contact-bg: white;
-  --contact-text: #004d5c;
-  --contact-btn-bg: #e84f30;
-  --contact-btn-bg-hover: #ff8000;
-  --contact-btn-text: white;
-  --contact-btn-border: #f29d8c;
-  --contact-input-bg: #f0f8fa;
-  --contact-input-border: #74a9b4;
-  --modal-close: #004d5c;
-  --modal-close-active: #27889b;
-  --clients-bg: #f0f8fa;
-  --clients-heading: #004d5c;
-  --services-item: #ffb366;
+  --nav-bg: hsl(190deg, 100%, 18%);
+  --nav-text: hsl(0deg, 0%, 0%);
+  --nav-text--hover: hsl(30deg, 100%, 50%);
+  --nav-bg-mobile: hsla(190deg, 100%, 18%, 0.8);
+  --nav-text-mobile: hsl(0deg, 0%, 100%);
+  --nav-text-mobile--hover: hsl(30deg, 100%, 50%);
+  --nav-toggle: hsl(0deg, 0%, 100%);
+  --nav-toggle-bg: hsl(190deg, 100%, 18%);
+  --nav-toggle-bg-hover: hsl(30deg, 100%, 50%);
+  --hero-bg: hsla(190deg, 100%, 18%, 0.6);
+  --hero-tagline: hsl(0deg, 0%, 100%);
+  --hero-tagline-lg: hsl(190deg, 80%, 28%);
+  --footer-bg: hsl(190deg, 100%, 18%);
+  --footer-text: hsl(0deg, 0%, 100%);
+  --social-item: hsl(0deg, 0%, 100%);
+  --social-item--hover: hsl(30deg, 100%, 50%);
+  --social-icon--hover: hsl(30deg, 100%, 50%);
+  --footer-border: hsl(10deg, 80%, 55%);
+  --modal-overlay: hsla(10deg, 80%, 65%, 0.8);
+  --who-bg: hsla(43deg, 95%, 89%, 0.9);
+  --who-text: hsl(10deg, 80%, 20%);
+  --who-heading: hsl(10deg, 80%, 30%);
+  --who-links: hsl(30deg, 100%, 60%);
+  --who-links-active: hsl(0deg, 0%, 100%);
+  --how-bg: hsla(190deg, 80%, 28%, 0.9);
+  --how-text: hsl(190deg, 50%, 96%);
+  --how-heading: hsl(43deg, 94%, 79%);
+  --how-link: hsl(30deg, 100%, 60%);
+  --how-link-active: hsl(0deg, 0%, 100%);
+  --what-bg: hsla(10deg, 85%, 35%, 0.9);
+  --what-text: hsl(0deg, 0%, 100%);
+  --what-heading: hsl(30deg, 100%, 70%);
+  --why-bg: hsla(190deg, 100%, 18%, 0.9);
+  --why-text: hsl(190deg, 50%, 96%);
+  --why-heading: hsl(30deg, 100%, 60%);
+  --why-link: hsl(30deg, 100%, 60%);
+  --why-link-active: hsl(0deg, 0%, 100%);
+  --members-bg: hsl(190deg, 60%, 88%) ;
+  --members-bg-2: hsl(190deg, 40%, 48%);
+  --members-text: hsl(190deg, 100%, 18%);
+  --card-link: hsl(10deg, 80%, 55%);
+  --card-link-active: hsl(10deg, 80%, 75%);
+  --cases-bg: hsl(30deg, 100%, 90%);
+  --cases-bg-2: hsl(30deg, 100%, 80%);
+  --cases-text: hsl(190deg, 100%, 18%);
+  --cases-heading: hsl(10deg, 80%, 55%);
+  --cases-link: hsl(10deg, 80%, 55%);
+  --cases-link-active: hsl(10deg, 80%, 75%);
+  --card-bg: hsl(190deg, 50%, 96%);
+  --csl-bg: hsl(190deg, 50%, 96%);
+  --csl-text: hsl(190deg, 100%, 18%);
+  --csl-controls-bg: hsla(190deg, 60%, 88%, 0.8);
+  --csl-btn-bg: hsl(190deg, 100%, 18%);
+  --csl-btn-bg-hover: hsl(190deg, 60%, 38%);
+  --contact-bg: hsl(0deg, 0%, 100%);
+  --contact-text: hsl(190deg, 100%, 18%);
+  --contact-btn-bg: hsl(10deg, 80%, 55%);
+  --contact-btn-bg-hover: hsl(30deg, 100%, 50%);
+  --contact-btn-text: hsl(0deg, 0%, 100%);
+  --contact-btn-border: hsl(10deg, 80%, 75%);
+  --contact-input-bg: hsl(190deg, 50%, 96%);
+  --contact-input-border: hsl(190deg, 30%, 58%);
+  --modal-close: hsl(190deg, 100%, 18%);
+  --modal-close-active: hsl(190deg, 60%, 38%);
+  --clients-bg: hsl(190deg, 50%, 96%);
+  --clients-heading: hsl(190deg, 100%, 18%);
+  --services-item: hsl(30deg, 100%, 70%);
 }
 
 a {
@@ -503,8 +501,7 @@ html {
   top: 8px;
 }
 
-/* DIVIDER */
-/* FOOTER */
+/* DIVIDER */ /* FOOTER */
 .site-footer {
   padding-bottom: 3rem;
   border-bottom: 1rem solid var(--footer-border);
@@ -994,10 +991,8 @@ label {
 :target::before {
   content: "";
   display: block;
-  height: 4rem;
-  /* fixed header height*/
-  margin: -4rem 0 0;
-  /* negative fixed header height */
+  height: 4rem; /* fixed header height*/
+  margin: -4rem 0 0; /* negative fixed header height */
 }
 
 /* CAROUSEL */
