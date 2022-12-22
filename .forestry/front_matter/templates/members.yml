@@ -27,5 +27,6 @@ fields:
     required: false
   label: website name
 pages:
+- src/members/alex-koren.md
 - src/members/dana-variano.md
 - src/members/laura-galindo-palomera.md
