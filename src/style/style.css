@@ -101,73 +101,73 @@ strong {
 /* Color Table Lookup Function */
 /* Semantic Color Assignments */
 html {
-  --nav-bg: hsl(190deg, 100%, 18%);
-  --nav-text: hsl(0deg, 0%, 0%);
-  --nav-text--hover: hsl(30deg, 100%, 50%);
-  --nav-bg-mobile: hsla(190deg, 100%, 18%, 0.8);
-  --nav-text-mobile: hsl(0deg, 0%, 100%);
-  --nav-text-mobile--hover: hsl(30deg, 100%, 50%);
-  --nav-toggle: hsl(0deg, 0%, 100%);
-  --nav-toggle-bg: hsl(190deg, 100%, 18%);
-  --nav-toggle-bg-hover: hsl(30deg, 100%, 50%);
-  --hero-bg: hsla(190deg, 100%, 18%, 0.6);
-  --hero-tagline: hsl(0deg, 0%, 100%);
-  --hero-tagline-lg: hsl(190deg, 80%, 28%);
-  --footer-bg: hsl(190deg, 100%, 18%);
-  --footer-text: hsl(0deg, 0%, 100%);
-  --social-item: hsl(0deg, 0%, 100%);
-  --social-item--hover: hsl(30deg, 100%, 50%);
-  --social-icon--hover: hsl(30deg, 100%, 50%);
-  --footer-border: hsl(10deg, 80%, 55%);
-  --modal-overlay: hsla(10deg, 80%, 65%, 0.8);
-  --who-bg: hsla(43deg, 95%, 89%, 0.9);
-  --who-text: hsl(10deg, 80%, 20%);
-  --who-heading: hsl(10deg, 80%, 30%);
-  --who-links: hsl(30deg, 100%, 60%);
-  --who-links-active: hsl(0deg, 0%, 100%);
-  --how-bg: hsla(190deg, 80%, 28%, 0.9);
-  --how-text: hsl(190deg, 50%, 96%);
-  --how-heading: hsl(43deg, 94%, 79%);
-  --how-link: hsl(30deg, 100%, 60%);
-  --how-link-active: hsl(0deg, 0%, 100%);
-  --what-bg: hsla(10deg, 85%, 35%, 0.9);
-  --what-text: hsl(0deg, 0%, 100%);
-  --what-heading: hsl(30deg, 100%, 70%);
-  --why-bg: hsla(190deg, 100%, 18%, 0.9);
-  --why-text: hsl(190deg, 50%, 96%);
-  --why-heading: hsl(30deg, 100%, 60%);
-  --why-link: hsl(30deg, 100%, 60%);
-  --why-link-active: hsl(0deg, 0%, 100%);
-  --members-bg: hsl(190deg, 60%, 88%) ;
-  --members-bg-2: hsl(190deg, 40%, 48%);
-  --members-text: hsl(190deg, 100%, 18%);
-  --card-link: hsl(10deg, 80%, 55%);
-  --card-link-active: hsl(10deg, 80%, 75%);
-  --cases-bg: hsl(30deg, 100%, 90%);
-  --cases-bg-2: hsl(30deg, 100%, 80%);
-  --cases-text: hsl(190deg, 100%, 18%);
-  --cases-heading: hsl(10deg, 80%, 55%);
-  --cases-link: hsl(10deg, 80%, 55%);
-  --cases-link-active: hsl(10deg, 80%, 75%);
-  --card-bg: hsl(190deg, 50%, 96%);
-  --csl-bg: hsl(190deg, 50%, 96%);
-  --csl-text: hsl(190deg, 100%, 18%);
-  --csl-controls-bg: hsla(190deg, 60%, 88%, 0.8);
-  --csl-btn-bg: hsl(190deg, 100%, 18%);
-  --csl-btn-bg-hover: hsl(190deg, 60%, 38%);
-  --contact-bg: hsl(0deg, 0%, 100%);
-  --contact-text: hsl(190deg, 100%, 18%);
-  --contact-btn-bg: hsl(10deg, 80%, 55%);
-  --contact-btn-bg-hover: hsl(30deg, 100%, 50%);
-  --contact-btn-text: hsl(0deg, 0%, 100%);
-  --contact-btn-border: hsl(10deg, 80%, 75%);
-  --contact-input-bg: hsl(190deg, 50%, 96%);
-  --contact-input-border: hsl(190deg, 30%, 58%);
-  --modal-close: hsl(190deg, 100%, 18%);
-  --modal-close-active: hsl(190deg, 60%, 38%);
-  --clients-bg: hsl(190deg, 50%, 96%);
-  --clients-heading: hsl(190deg, 100%, 18%);
-  --services-item: hsl(30deg, 100%, 70%);
+  --nav-bg: hsl(190, 100%, 18%);
+  --nav-text: hsl(0, 0%, 0%);
+  --nav-text--hover: hsl(30, 100%, 50%);
+  --nav-bg-mobile: hsla(190, 100%, 18%, 0.8);
+  --nav-text-mobile: hsl(0, 0%, 100%);
+  --nav-text-mobile--hover: hsl(30, 100%, 50%);
+  --nav-toggle: hsl(0, 0%, 100%);
+  --nav-toggle-bg: hsl(190, 100%, 18%);
+  --nav-toggle-bg-hover: hsl(30, 100%, 50%);
+  --hero-bg: hsla(190, 100%, 18%, 0.6);
+  --hero-tagline: hsl(0, 0%, 100%);
+  --hero-tagline-lg: hsl(190, 80%, 28%);
+  --footer-bg: hsl(190, 100%, 18%);
+  --footer-text: hsl(0, 0%, 100%);
+  --social-item: hsl(0, 0%, 100%);
+  --social-item--hover: hsl(30, 100%, 50%);
+  --social-icon--hover: hsl(30, 100%, 50%);
+  --footer-border: hsl(10, 80%, 55%);
+  --modal-overlay: hsla(10, 80%, 65%, 0.8);
+  --who-bg: hsla(43, 95%, 89%, 0.9);
+  --who-text: hsl(10, 80%, 20%);
+  --who-heading: hsl(10, 80%, 30%);
+  --who-links: hsl(30, 100%, 60%);
+  --who-links-active: hsl(0, 0%, 100%);
+  --how-bg: hsla(190, 80%, 28%, 0.9);
+  --how-text: hsl(190, 50%, 96%);
+  --how-heading: hsl(43, 94%, 79%);
+  --how-link: hsl(30, 100%, 60%);
+  --how-link-active: hsl(0, 0%, 100%);
+  --what-bg: hsla(10, 85%, 35%, 0.9);
+  --what-text: hsl(0, 0%, 100%);
+  --what-heading: hsl(30, 100%, 70%);
+  --why-bg: hsla(190, 100%, 18%, 0.9);
+  --why-text: hsl(190, 50%, 96%);
+  --why-heading: hsl(30, 100%, 60%);
+  --why-link: hsl(30, 100%, 60%);
+  --why-link-active: hsl(0, 0%, 100%);
+  --members-bg: hsl(190, 60%, 88%) ;
+  --members-bg-2: hsl(190, 40%, 48%);
+  --members-text: hsl(190, 100%, 18%);
+  --card-link: hsl(10, 80%, 55%);
+  --card-link-active: hsl(10, 80%, 75%);
+  --cases-bg: hsl(30, 100%, 90%);
+  --cases-bg-2: hsl(30, 100%, 80%);
+  --cases-text: hsl(190, 100%, 18%);
+  --cases-heading: hsl(10, 80%, 55%);
+  --cases-link: hsl(10, 80%, 55%);
+  --cases-link-active: hsl(10, 80%, 75%);
+  --card-bg: hsl(190, 50%, 96%);
+  --csl-bg: hsl(190, 50%, 96%);
+  --csl-text: hsl(190, 100%, 18%);
+  --csl-controls-bg: hsla(190, 60%, 88%, 0.8);
+  --csl-btn-bg: hsl(190, 100%, 18%);
+  --csl-btn-bg-hover: hsl(190, 60%, 38%);
+  --contact-bg: hsl(0, 0%, 100%);
+  --contact-text: hsl(190, 100%, 18%);
+  --contact-btn-bg: hsl(10, 80%, 55%);
+  --contact-btn-bg-hover: hsl(30, 100%, 50%);
+  --contact-btn-text: hsl(0, 0%, 100%);
+  --contact-btn-border: hsl(10, 80%, 75%);
+  --contact-input-bg: hsl(190, 50%, 96%);
+  --contact-input-border: hsl(190, 30%, 58%);
+  --modal-close: hsl(190, 100%, 18%);
+  --modal-close-active: hsl(190, 60%, 38%);
+  --clients-bg: hsl(190, 50%, 96%);
+  --clients-heading: hsl(190, 100%, 18%);
+  --services-item: hsl(30, 100%, 70%);
 }
 
 a {
@@ -195,15 +195,15 @@ html {
 }
 @media screen and (min-width: 576px) {
   .section-layout,
-.site-footer,
-.site-header {
+  .site-footer,
+  .site-header {
     padding: 2rem;
   }
 }
 @media screen and (min-width: 768px) {
   .section-layout,
-.site-footer,
-.site-header {
+  .site-footer,
+  .site-header {
     padding: 2rem 10%;
     display: flex;
     align-items: flex-start;
@@ -213,8 +213,8 @@ html {
 }
 @media screen and (min-width: 1400px) {
   .section-layout,
-.site-footer,
-.site-header {
+  .site-footer,
+  .site-header {
     max-width: 100%;
     padding: 2rem calc(10% + 50% - 700px);
   }
@@ -928,11 +928,11 @@ label {
     border-bottom: 0;
   }
   .nav__item:not(:last-child):hover,
-.nav__item:not(:last-child) :active {
+  .nav__item:not(:last-child) :active {
     border-bottom: 0;
   }
   .nav__item a:hover,
-.nav__item a:active, .nav__item span:hover, .nav__item span:active {
+  .nav__item a:active, .nav__item span:hover, .nav__item span:active {
     text-decoration: underline;
     color: var(--nav-text--hover);
   }
