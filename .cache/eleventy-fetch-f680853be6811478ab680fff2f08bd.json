@@ -1,0 +1,167 @@
+{
+	"ms": 8,
+	"query": "*[_type == \"section-content\"] | order(postedDate desc) { tags, title, permalink, order, pullquote, body }",
+	"result": [
+		{
+			"body": [
+				{
+					"_key": "a410bdb06c4f",
+					"_type": "block",
+					"children": [
+						{
+							"_key": "3c1c5a2c6efe0",
+							"_type": "span",
+							"marks": [],
+							"text": "Our core values are:"
+						}
+					],
+					"markDefs": [],
+					"style": "normal"
+				},
+				{
+					"_key": "87b8c7a303d0",
+					"_type": "block",
+					"children": [
+						{
+							"_key": "e8f72bec07c10",
+							"_type": "span",
+							"marks": ["strong"],
+							"text": "Driven by your mission:"
+						},
+						{
+							"_key": "e8f72bec07c11",
+							"_type": "span",
+							"marks": [],
+							"text": " You deserve consultants who care about the work just as much as you do."
+						}
+					],
+					"markDefs": [],
+					"style": "normal"
+				},
+				{
+					"_key": "eb97ff790a8e",
+					"_type": "block",
+					"children": [
+						{
+							"_key": "f2f998aca0dd0",
+							"_type": "span",
+							"marks": ["strong"],
+							"text": "Stand by our work"
+						},
+						{
+							"_key": "f2f998aca0dd1",
+							"_type": "span",
+							"marks": [],
+							"text": ": If we aren’t meeting your goals, we’ll be the first to call it out and fix it."
+						}
+					],
+					"markDefs": [],
+					"style": "normal"
+				},
+				{
+					"_key": "fd1ee6553cd4",
+					"_type": "block",
+					"children": [
+						{
+							"_key": "b58d002638130",
+							"_type": "span",
+							"marks": ["strong"],
+							"text": "Pro-BIPOC, pro-gay, pro-trans, pro-woman:"
+						},
+						{
+							"_key": "b58d002638131",
+							"_type": "span",
+							"marks": [],
+							"text": " We believe in making space and generating demand for other women, BIPOC, and LGBTQ creative and campaign freelancers. We are building an anti-racist work space."
+						}
+					],
+					"markDefs": [],
+					"style": "normal"
+				},
+				{
+					"_key": "669c7ba0b645",
+					"_type": "block",
+					"children": [
+						{
+							"_key": "620e4d1b542a0",
+							"_type": "span",
+							"marks": ["strong"],
+							"text": "Take smart risks, make smart mistakes"
+						},
+						{
+							"_key": "620e4d1b542a1",
+							"_type": "span",
+							"marks": [],
+							"text": ": We are always studying and testing, trying out new strategies and tactics."
+						}
+					],
+					"markDefs": [],
+					"style": "normal"
+				},
+				{
+					"_key": "cea30ff26c12",
+					"_type": "block",
+					"children": [
+						{
+							"_key": "bd4eaed197150",
+							"_type": "span",
+							"marks": ["strong"],
+							"text": "Empathy & ethics:"
+						},
+						{
+							"_key": "bd4eaed197151",
+							"_type": "span",
+							"marks": [],
+							"text": " We are firm believers in "
+						},
+						{
+							"_key": "bd4eaed197152",
+							"_type": "span",
+							"marks": ["456a3b909e7d"],
+							"text": "ethical storytelling,"
+						},
+						{
+							"_key": "bd4eaed197153",
+							"_type": "span",
+							"marks": [],
+							"text": " providing campaign messengers with the emotional and financial support they need to share their experiences."
+						}
+					],
+					"markDefs": [
+						{
+							"_key": "456a3b909e7d",
+							"_type": "link",
+							"href": "https://www.ethicalstorytelling.com/"
+						}
+					],
+					"style": "normal"
+				},
+				{
+					"_key": "066bd5d65897",
+					"_type": "block",
+					"children": [
+						{
+							"_key": "b4acd3b941070",
+							"_type": "span",
+							"marks": ["strong"],
+							"text": "Humor & humility:"
+						},
+						{
+							"_key": "b4acd3b941071",
+							"_type": "span",
+							"marks": [],
+							"text": " It’s not about us, it’s about you, and forwarding your mission."
+						}
+					],
+					"markDefs": [],
+					"style": "normal"
+				}
+			],
+			"order": 3,
+			"permalink": false,
+			"pullquote": "Test",
+			"tags": "section",
+			"title": "Why We Work"
+		}
+	]
+}

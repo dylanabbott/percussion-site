@@ -21,22 +21,22 @@
         {% include 'navigation.njk' %}
         {% include 'header.njk' %}
         <main class="site-content">
-            {% for section in collections.sectionsSorted %}
+            {% for section in collections.sectionContent %}
             <section class="{{ section.data.title | slug }} section-layout">
                 <div class="section__col1-3">
                     <h2 class="section__heading">
                         <a id="{{ section.data.title | slug }}">{{ section.data.title }}</a>
                     </h2>
                     {%- if section.data.pull_quote -%}
-                        <h4 class="section__pullquote">{{ section.data.pull_quote }}</h4>
+                        <h4 class="section__pullquote">{{ section.data.pullquote }}</h4>
                     {%- endif -%}
                 </div>
                 <div class="section__col2-3">
-                    {{ section.templateContent | safe }}
+                    {{ section.body | safe }}
                 </div>
             </section>    
             {%- endfor -%}
-            {# {% include 'members.njk' %} #}
+            {% include 'members.njk' %}
             {# {% include 'cases.njk' %} #}
             {% include 'clients.njk' %}
             {% include 'contact.njk' %}

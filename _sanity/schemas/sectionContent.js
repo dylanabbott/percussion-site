@@ -5,8 +5,7 @@ export default {
     fields: [
         {
             name: 'tags',
-            type: 'array',
-            of: [{type: 'string'}],
+            type: 'string',
             hidden: true,
             initialValue: 'section'
         },
@@ -21,7 +20,7 @@ export default {
             title: 'Order'
         },
         {
-            name: 'pull_quote',
+            name: 'pullquote',
             type: 'string',
             title: 'Pull Quote'
         },
@@ -30,6 +29,12 @@ export default {
             type: 'boolean',
             hidden: true,
             initialValue: false
+        },
+        {
+            name: 'body',
+            type: 'array',
+            of: [{type:'block'}],
+            title: 'Body'
         }
     ]
 }

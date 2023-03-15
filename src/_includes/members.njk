@@ -2,7 +2,7 @@
 </section>
 <section class="members section-layout">
     <div class="members-container section__col3-3">
-        {%- for member in collections.membersSorted -%}
+        {%- for member in collections.members -%}
             <div class="member-card">
                 {%- if member.data.portrait -%}
                     <img src="{{ member.data.portrait }}" width="200" height="200" class="member-card__portrait" alt="Photo of {{ member.data.name }}" loading="lazy">

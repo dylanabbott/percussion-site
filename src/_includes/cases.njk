@@ -11,7 +11,7 @@
                         {% if case.data.image %}
                             <img src="{{ case.data.image }}" class="carousel__item-img" width="600" loading="lazy" alt="{{ case.data.title }}">
                             {% endif %}
-                            {{ case.templateContent | safe }}
+                            {{ case.content | safe }}
                         </li>
                     {% endfor %}
                 </ul>
