@@ -3,7 +3,7 @@ name: Alison Lorelle
 roles:
 - Social Media
 - Advocacy
-- Graphics
+- v
 portrait: "/uploads/Alison-headshot-cropped.jpeg"
 bio: Experience in advocacy communications & research for sexual and reproductive
   health rights, racial justice, and social progress. Obsessed with using words and

@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <ul>
+            {%- for post in collections.members -%}
+                <li>
+                    {{ post.bio | richText | safe }}
+                </li>
+                <li>
+                    <img src="{{ post.portraitUrl }}" width="200" height="200">
+                </li>
+            {%- endfor -%}
+        </ul>
+        <ul>
+            {%- for post in collections.cases -%}
+                <li>
+                    {{ post.title }}
+                </li>
+                <li>
+                    <img src="{{ post.imageUrl }}">
+                </li>
+                <li>
+                    {{ post.content | richText | safe }}
+                </li>
+            {%- endfor -%}
+        </ul>
+        <ul>
+            {%- for post in collections.sectionContent -%}
+                <li>
+                    {{ post.title }}
+                </li>
+                <li>{{ post.body | richText | safe }}</li>
+            {%- endfor -%}
+        </ul>
+    </body>
+</html>

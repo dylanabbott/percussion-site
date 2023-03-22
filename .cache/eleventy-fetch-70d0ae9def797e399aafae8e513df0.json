@@ -1,1 +1,0 @@
-{"ms":6,"query":"*[_type == \"members\"] | order(postedDate desc) { name, roles, portrait, bio, body[]{..., asset->}, email, website_url, website_name}","result":[]}

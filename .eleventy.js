@@ -53,7 +53,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addFilter('richText', function (blocks) {
 		const types = {
 			types: {
-				bodyImage: ({ value }) =>
+				image: ({ value }) =>
 					html`<img
 						src="${value.asset.url}?w=800"
 						alt="${value.alt}"

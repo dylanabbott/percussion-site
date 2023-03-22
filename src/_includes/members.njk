@@ -1,35 +1,45 @@
-</div>
-</section>
 <section class="members section-layout">
     <div class="members-container section__col3-3">
         {%- for member in collections.members -%}
             <div class="member-card">
-                {%- if member.data.portrait -%}
-                    <img src="{{ member.data.portrait }}" width="200" height="200" class="member-card__portrait" alt="Photo of {{ member.data.name }}" loading="lazy">
+                {%- if member.portraitUrl -%}
+                    <img src="{{ member.portraitUrl }}" width="200" height="200" class="member-card__portrait" alt="Photo of {{ member.name }}" loading="lazy">
                 {%- else -%}
-                    <img src="img/placeholder-portrait.png" width="200" height="200" class="member-card__portrait" alt="Placeholder Photo" loading="lazy">
+                    <img
+                        src="img/placeholder-portrait.png"
+                        width="200"
+                        height="200"
+                        class="member-card__portrait"
+                        alt="Placeholder Photo"
+                        loading="lazy">
                 {%- endif -%}
-                <div class="member-card__info">
-                    <h3>{{ member.data.name }}</h3>
-                    <ul class="member-card__list">
-                        {%- for role in member.data.roles -%}
-                            <li class="member-card__role">{{ role }}</li>
-                        {%- endfor -%}
-                    </ul>
-                    {%- if member.data.email or member.data.website -%}
-                    <ul class="member-card__links">
-                        {%- if member.data.email -%}
-                            <li class="member-card__email"><!--<img src="../img/letter.svg" alt="email" width="24" height="24" class="member-card__icon">--><a href="mailto:{{ member.data.email }}">{{ member.data.email }}</a></li>
-                        {%- endif -%}
-                        {%- if member.data.website_url -%}
-                            <li class="member-card__link"><!--<img src="../img/browser.svg" alt="url" width="24" height="24" class="member-card__icon">--><a href="{{ member.data.website_url }}">{{ member.data.website_name }}</a></li>
-                        {%- endif -%}
-                    </ul>
-                    {%- endif -%}
-                </div>
-                <div class="member-card__bio">
-                    <details class="member-card__details"><summary>About {{ member.data.name }}</summary><p>{{ member.data.bio }}</p></details>
-                </div>
-            </div>
+                        <div class="member-card__info">
+                            <h3>{{ member.name }}</h3>
+                            <ul class="member-card__list">
+                                {%- for role in member.roles -%}
+                                    <li class="member-card__role">{{ role }}</li>
+                                {%- endfor -%}
+                            </ul>
+                            {%- if member.email or member.website -%}
+                                <ul class="member-card__links">
+                                    {%- if member.email -%}
+                                        <li class="member-card__email"><!--<img src="../img/letter.svg" alt="email" width="24" height="24" class="member-card__icon">--><a href="mailto:{{ member.email }}">{{ member.email }}</a>
+                                        </li>
+                                    {%- endif -%}
+                                    {%- if member.website_url -%}
+                                        <li class="member-card__link"><!--<img src="../img/browser.svg" alt="url" width="24" height="24" class="member-card__icon">--><a href="{{ member.website_url }}">{{ member.website_name }}</a>
+                                        </li>
+                                    {%- endif -%}
+                                </ul>
+                            {%- endif -%}
+                        </div>
+                        <div class="member-card__bio">
+                            <details class="member-card__details">
+                                <summary>About {{ member.name }}</summary>
+                                <p>{{ member.bio | richText | safe }}</p>
+                            </details>
+                        </div>
+                    </div>
         {%- endfor -%}
-        
+        </div>
+</section>
