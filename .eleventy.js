@@ -1,9 +1,8 @@
-const { toHTML } = require('@portabletext/to-html');
+const { toHTML, escapeHTML } = require('@portabletext/to-html');
 const htm = require('htm');
 const vhtml = require('vhtml');
 
 const html = htm.bind(vhtml);
-
 
 module.exports = (eleventyConfig) => {
 	// Pass through static assets and bundled CSS
@@ -62,6 +61,12 @@ module.exports = (eleventyConfig) => {
 							value.asset.metadata.dimensions.width) *
 						800}"
 					/>`,
+			},
+			marks: {
+				span: ({ children, value }) =>
+					html`<span id="${value.spanID}">${children}</span>`,
+				link: ({ children, value }) => 
+					html`<a href="${value.url}">${children}</a>`,
 			},
 		};
 		return toHTML(blocks, { components: types });
