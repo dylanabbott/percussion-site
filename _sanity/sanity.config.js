@@ -6,6 +6,7 @@ import {schemaTypes} from './schemas'
 export default defineConfig({
   name: 'default',
   title: 'Percussion',
+  basePath: '',
 
   projectId: 'irv9pire',
   dataset: 'production',

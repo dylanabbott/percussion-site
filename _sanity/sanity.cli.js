@@ -4,5 +4,8 @@ export default defineCliConfig({
   api: {
     projectId: 'irv9pire',
     dataset: 'production'
+  },
+  project: {
+    basePath: '/admin'
   }
 })

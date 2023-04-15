@@ -11,7 +11,6 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPassthroughCopy('./src/js/*');
 	eleventyConfig.addPassthroughCopy('./src/img/*');
 	eleventyConfig.addPassthroughCopy('./src/admin');
-	eleventyConfig.addPassthroughCopy('./src/.forestry');
 	eleventyConfig.addPassthroughCopy('./src/uploads');
 
 	// // Add sorted collection of members
