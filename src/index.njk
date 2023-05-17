@@ -33,6 +33,9 @@
                     <div class="section__col2-3">
                         {{ section.body | richText | safe }}
                     </div>
+                    {%- if section.title === "What We Do" -%}
+                {% include 'services.njk' %}
+            {%- endif -%}
                 </section>
             {%- endfor -%}
             {% include 'members.njk' %}
