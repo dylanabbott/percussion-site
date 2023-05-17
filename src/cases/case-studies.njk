@@ -6,10 +6,14 @@ pagination:
 permalink: "cases/{{ case.title | slugify }}/index.html"
 ---
 
+
 {% include 'site-header.njk' %}
     {% include 'navigation.njk' %}
-
+<div class="clients section-layout">
+    <div class="client__list section__col3-3">
 <h1>{{case.title}}</h1>
 {{ case.content | richText | safe }}
+</div>
+</div>
 
 {% include 'site-footer.njk' %}
