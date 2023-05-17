@@ -245,7 +245,7 @@ html {
 }
 .who-we-are {
   position: relative;
-  background: linear-gradient(var(--who-bg), var(--who-bg)), url("../img/who-bg.jpeg") center/cover;
+  background: linear-gradient(var(--who-bg), var(--who-bg)), url("/img/who-bg.jpeg") center/cover;
   color: var(--who-text);
 }
 .who-we-are .section__heading {
@@ -254,7 +254,7 @@ html {
 
 .how-we-work {
   position: relative;
-  background: linear-gradient(var(--how-bg), var(--how-bg)), url("../img/how-bg.jpeg") center/cover;
+  background: linear-gradient(var(--how-bg), var(--how-bg)), url("/img/how-bg.jpeg") center/cover;
   color: var(--how-text);
 }
 .how-we-work .section__heading {
@@ -271,7 +271,7 @@ html {
 
 .what-we-do {
   position: relative;
-  background: linear-gradient(var(--what-bg), var(--what-bg)), url("../img/what-bg.jpeg") center/cover;
+  background: linear-gradient(var(--what-bg), var(--what-bg)), url("/img/what-bg.jpeg") center/cover;
   color: var(--what-text);
   flex-wrap: wrap;
 }
@@ -281,7 +281,7 @@ html {
 
 .why-we-work {
   position: relative;
-  background: linear-gradient(var(--why-bg), var(--why-bg)), url("../img/why-bg.jpeg") center/cover;
+  background: linear-gradient(var(--why-bg), var(--why-bg)), url("/img/why-bg.jpeg") center/cover;
   color: var(--why-text);
 }
 .why-we-work .section__heading {
@@ -639,7 +639,7 @@ label {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-blend-mode: screen, multiply, normal;
-  background: url("../img/perc-blob-color.svg") center 175%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("../img/perc-hero-bg.jpeg") center top/200% no-repeat;
+  background: url("/img/perc-blob-color.svg") center 175%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("/img/perc-hero-bg.jpeg") center top/200% no-repeat;
 }
 .hero__brand {
   width: 75%;
@@ -659,7 +659,7 @@ label {
 }
 @media screen and (min-width: 576px) {
   .hero {
-    background: url("../img/perc-blob-color.svg") center 125%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("../img/perc-hero-bg.jpeg") center top/cover no-repeat;
+    background: url("/img/perc-blob-color.svg") center 125%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("/img/perc-hero-bg.jpeg") center top/cover no-repeat;
   }
 }
 @media screen and (min-width: 768px) {
@@ -669,7 +669,7 @@ label {
     justify-content: space-evenly;
     align-items: center;
     padding-bottom: 25%;
-    background: url("../img/perc-blob-color.svg") center 120%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("../img/perc-hero-bg.jpeg") center top/cover no-repeat;
+    background: url("/img/perc-blob-color.svg") center 120%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("/img/perc-hero-bg.jpeg") center top/cover no-repeat;
   }
   .hero__brand {
     width: 50%;
@@ -682,7 +682,7 @@ label {
 @media screen and (min-width: 1024px) {
   .hero {
     padding-bottom: 10%;
-    background: url("../img/perc-blob-color.svg") center 108%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("../img/perc-hero-bg.jpeg") center 15%/cover no-repeat;
+    background: url("/img/perc-blob-color.svg") center 108%/200% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("/img/perc-hero-bg.jpeg") center 15%/cover no-repeat;
   }
 }
 
@@ -1094,11 +1094,11 @@ label {
 }
 
 #btn-left {
-  background-image: url("../img/arrow-left.svg");
+  background-image: url("/img/arrow-left.svg");
 }
 
 #btn-right {
-  background-image: url("../img/arrow-right.svg");
+  background-image: url("/img/arrow-right.svg");
 }
 
 /* CLIENTS */

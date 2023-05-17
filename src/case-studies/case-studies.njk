@@ -1,0 +1,15 @@
+---
+pagination:
+    data: collections.cases
+    size: 1
+    alias: case
+permalink: "cases/{{ case.title | slugify }}/index.html"
+---
+
+{% include 'site-header.njk' %}
+    {% include 'navigation.njk' %}
+
+<h1>{{case.title}}</h1>
+{{ case.content | richText | safe }}
+
+{% include 'site-footer.njk' %}

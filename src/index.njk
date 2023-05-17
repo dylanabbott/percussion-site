@@ -1,46 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Percussions Strategic is a syndicate of digital and communications professionals.">
-        <meta property="og:title" content="Percussion Strategic">
-        <meta property="og:description" content="A syndicate of digital and communications professionals.">
-        <meta property="og:image" content="https://percussionstrategic.com/img/perc-og-card.jpg">
-        <meta proerty="og:type" content="website">
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:site" content="@percussioncomms">
-        <meta property="twitter:image" content="https://percussionstrategic.com/img/perc-og-card.jpg">
-        {% include 'fonts.njk' %} <link rel="stylesheet" href="style/style.css">
-        <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Percussion Strategic</title>
-    </head>
-    <body>
-        {% include 'navigation.njk' %}
-        {% include 'header.njk' %}
-        <main class="site-content">
-            {% for section in collections.sectionContent %}
-                <section class="{{ section.title | slug }} section-layout">
-                    <div class="section__col1-3">
-                        <h2 class="section__heading">
-                            <a id="{{ section.title | slug }}">{{ section.title }}</a>
-                        </h2>
-                        {%- if section.pull_quote -%}
-                            <h4 class="section__pullquote">{{ section.pullquote }}</h4>
-                        {%- endif -%}
-                    </div>
-                    <div class="section__col2-3">
-                        {{ section.body | richText | safe }}
-                    </div>
-                </section>
-            {%- endfor -%}
-            {% include 'members.njk' %}
-            {# {% include 'cases.njk' %} #}
-            {% include 'clients.njk' %}
-            {% include 'contact.njk' %}
-        </main>
-        {% include 'footer.njk' %}
-        <script src="js/main.js"></script>
-    </body>
-</html>
+{% include 'site-header.njk' %}
+    {% include 'navigation.njk' %}
+    {% include 'hero.njk' %}
+    <main class="site-content">
+        {% for section in collections.sectionContent %}
+            <section class="{{ section.title | slug }} section-layout">
+                <div class="section__col1-3">
+                    <h2 class="section__heading">
+                        <a id="{{ section.title | slug }}">{{ section.title }}</a>
+                    </h2>
+                    {%- if section.pull_quote -%}
+                        <h4 class="section__pullquote">{{ section.pullquote }}</h4>
+                    {%- endif -%}
+                </div>
+                <div class="section__col2-3">
+                    {{ section.body | richText | safe }}
+                </div>
+            </section>
+        {%- endfor -%}
+        {% include 'members.njk' %}
+        {# {% include 'cases.njk' %} #}
+        {% include 'clients.njk' %}
+        {% include 'contact.njk' %}
+
+    {% include 'site-footer.njk' %}
+    
