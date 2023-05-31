@@ -10,7 +10,7 @@ let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}
 module.exports = async function () {
 	return EleventyFetch(URL, {
 		directory: '.cache',
-		duration: '10s',
+		duration: '1d',
 		type: 'json',
 	});
 };
