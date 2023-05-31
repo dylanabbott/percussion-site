@@ -6,7 +6,7 @@
                     {{ post.bio | richText | safe }}
                 </li>
                 <li>
-                    <img src="{{ post.portraitUrl }}" width="200" height="200">
+                    <img src="{{ post.portraitUrl }}" width="200" height="auto">
                 </li>
             {%- endfor -%}
         </ul>
@@ -16,7 +16,7 @@
                     {{ post.title }}
                 </li>
                 <li>
-                    <img src="{{ post.imageUrl }}">
+                    <img src="{{ post.imageUrl }}" width="250" height="auto">
                 </li>
                 <li>
                     {{ post.content | richText | safe }}
@@ -29,6 +29,19 @@
                     {{ post.title }}
                 </li>
                 <li>{{ post.body | richText | safe }}</li>
+            {%- endfor -%}
+        </ul>
+        <ul>
+            {%- for post in collections.blog -%}
+                <li>
+                    {{ post.title }}
+                </li>
+                <li>{{ post.subtitle }}</li>
+                <li>{{ post.content | richText | safe }}</li>
+                <li><img src="{{ post.imageUrl }}" alt="" width="250" height="auto"></li>
+                <li><ul>{%- for tag in post.tags -%}
+                    <li>{{ tag }}</li>
+                {%- endfor -%}</ul></li>
             {%- endfor -%}
         </ul>
     </body>

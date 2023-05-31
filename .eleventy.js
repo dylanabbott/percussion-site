@@ -48,6 +48,11 @@ module.exports = (eleventyConfig) => {
 		return sectionContent;
 	});
 
+	eleventyConfig.addCollection('blog', (collectionApi) => {
+		const blog = collectionApi.items[0].data.blog.result;
+		return blog;
+	});
+
 	eleventyConfig.addFilter('richText', function (blocks) {
 		const types = {
 			types: {

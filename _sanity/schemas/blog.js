@@ -38,13 +38,13 @@ export default {
             title: 'Content'
         },
         {
-            name: 'pullquote',
+            name: 'pullQuote',
             type: 'array',
             of: [{type:'string'}],
             title: 'Pull Quotes'
         },
         {
-            name: 'featuredimage',
+            name: 'featuredImage',
             type: 'image',
             title: 'Featured Image',
             fields: [

@@ -1,0 +1,19 @@
+---
+pagination:
+    data: collections.blog
+    size: 1
+    alias: blog
+permalink: "blog/{{ blog.title | slugify }}/index.html"
+---
+
+
+{% include 'site-header.njk' %}
+    {% include 'navigation.njk' %}
+<div class="clients section-layout">
+    <div class="client__list section__col3-3">
+<h1>{{blog.title}}</h1>
+{{ blog.content | richText | safe }}
+</div>
+</div>
+
+{% include 'site-footer.njk' %}
