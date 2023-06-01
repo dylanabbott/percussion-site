@@ -1,0 +1,19 @@
+---
+pagination:
+    data: collections.cases
+    size: 1
+permalink: "cases/index.html"
+---
+
+{% include 'site-head.njk' %}
+{% include 'secondary-navigation.njk' %}
+<main class="site-content">
+    <h1>Case Study Test</h1>
+    <ul>
+    {%- for case in collections.cases -%}
+    <li>{{ case.title }}</li>
+    {%- endfor -%}
+    </ul>
+    {% include 'contact.njk' %}
+    {% include 'site-footer.njk' %}
+</main>

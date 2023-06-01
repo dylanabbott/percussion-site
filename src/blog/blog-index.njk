@@ -1,0 +1,19 @@
+---
+pagination:
+    data: collections.blog
+    size: 10
+permalink: "blog/index.html"
+---
+
+{% include 'site-head.njk' %}
+{% include 'secondary-navigation.njk' %}
+<main class="site-content">
+    <h1>Blog Test</h1>
+    <ul>
+    {%- for post in collections.blog -%}
+    <li>{{ post.title }}</li>
+    {%- endfor -%}
+    </ul>
+    {% include 'contact.njk' %}
+    {% include 'site-footer.njk' %}
+</main>
