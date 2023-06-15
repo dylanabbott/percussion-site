@@ -43,6 +43,11 @@ module.exports = (eleventyConfig) => {
 		return cases;
 	});
 
+	eleventyConfig.addCollection('caseStudies', (collectionApi) => {
+		const caseStudies = collectionApi.items[0].data.caseStudies.result;
+		return caseStudies;
+	});
+
 	eleventyConfig.addCollection('sectionContent', (collectionApi) => {
 		const sectionContent = collectionApi.items[0].data.sectionContent.result;
 		return sectionContent;
@@ -65,11 +70,25 @@ module.exports = (eleventyConfig) => {
 							value.asset.metadata.dimensions.width) *
 						800}"
 					/>`,
+				pullQuote: ({ value }) =>
+					html`<div>
+						<blockquote>${value.quote}</blockquote>
+						<cite>${value.cite}</cite>
+					</div>`,
+				textWithIcon: ({ value }) =>
+					html`<div>
+						<img
+							src="${value.iconUrl}"
+							alt="${value.alt}"
+							width="50"
+							height="50"
+						/>
+					</div>`,
 			},
 			marks: {
 				span: ({ children, value }) =>
 					html`<span id="${value.spanID}">${children}</span>`,
-				link: ({ children, value }) => 
+				link: ({ children, value }) =>
 					html`<a href="${value.url}">${children}</a>`,
 			},
 		};

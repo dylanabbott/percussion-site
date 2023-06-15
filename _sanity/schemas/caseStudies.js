@@ -1,5 +1,3 @@
-import textWithIconRender from "./textWithIconRender"
-
 export default {
   name: 'caseStudies',
   type: 'document',
@@ -16,10 +14,34 @@ export default {
       title: 'Featured Image',
     },
     {
-      name: 'content',
+      name: 'problem',
+      type: 'array',
+      of: [{type: 'block'}, {type: 'pullQuote'}, {type: 'bodyImage'}],
+      title: 'Problem',
+    },
+    {
+      name: 'solution',
+      type: 'array',
+      of: [{type: 'block'}, {type: 'bodyImage'}],
+      title: 'Solution',
+    },
+    {
+      name: 'tactics',
       type: 'array',
       of: [{type: 'block'}, {type: 'bodyImage'}, {type: 'textWithIcon'}],
-      title: 'Content',
+      title: 'Tactics',
     },
+    {
+      name: 'results',
+      type: 'array',
+      of: [{type: 'block'}, {type: 'bodyImage'}, {type: 'textWithIcon'}],
+      title: 'Results',
+    },
+    {
+      name: 'conclusion',
+      type: 'array',
+      of: [{type: 'block'}, {type: 'bodyImage'}, {type: 'pullQuote'}],
+      title: 'Conclusion'
+    }
   ],
 }

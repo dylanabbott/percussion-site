@@ -1,6 +1,6 @@
 ---
 pagination:
-    data: collections.cases
+    data: collections.caseStudies
     size: 1
 permalink: "cases/index.html"
 ---
@@ -8,11 +8,13 @@ permalink: "cases/index.html"
 {% include 'site-head.njk' %}
 {% include 'secondary-navigation.njk' %}
 <main class="site-content">
-    <h1>Case Study Test</h1>
+    <h1>Case Study Listing</h1>
     <ul>
-    {%- for case in collections.cases -%}
-    <li>{{ case.title }}</li>
-    {%- endfor -%}
+        {%- for case in collections.caseStudies -%}
+            <li>
+                <a href="../cases/{{ case.title | slugify }}/">{{ case.title }}</a>
+            </li>
+        {%- endfor -%}
     </ul>
     {% include 'contact.njk' %}
     {% include 'site-footer.njk' %}

@@ -5,5 +5,6 @@ import blog from './blog'
 import bodyImage from './bodyImage'
 import caseStudies from './caseStudies'
 import textWithIcon from './textWithIcon'
+import pullQuote from './pullQuote'
 
-export const schemaTypes = [members, sectionContent, cases, blog, bodyImage, caseStudies, textWithIcon ]
+export const schemaTypes = [members, sectionContent, cases, blog, bodyImage, caseStudies, textWithIcon, pullQuote ]

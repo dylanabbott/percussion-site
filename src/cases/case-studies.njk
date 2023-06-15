@@ -1,19 +1,23 @@
 ---
 pagination:
-    data: collections.cases
+    data: collections.caseStudies
     size: 1
     alias: case
 permalink: "cases/{{ case.title | slugify }}/index.html"
 ---
 
-
 {% include 'site-head.njk' %}
-    {% include 'secondary-navigation.njk' %}
-<div class="clients section-layout">
-    <div class="client__list section__col3-3">
-<h1>{{case.title}}</h1>
-{{ case.content | richText | safe }}
-</div>
-</div>
-
+{% include 'secondary-navigation.njk' %}
+<section class="section-layout">
+    <div class="section__col1-3">
+        <h1 class="section__heading">{{ case.title }}</h1>
+    </div>
+    <div class="section__col2-3">
+        {{ case.problem | richText | safe }}
+        {{ case.solution | richText | safe }}
+        {{ case.tactics| richText | safe }}
+        {{ case.results | richText | safe }}
+        {{ case.conclusion | richText | safe }}
+    </div>
+</section>
 {% include 'site-footer.njk' %}
