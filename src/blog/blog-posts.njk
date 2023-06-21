@@ -6,14 +6,17 @@ pagination:
 permalink: "blog/{{ blog.title | slugify }}/index.html"
 ---
 
-
 {% include 'site-head.njk' %}
-    {% include 'secondary-navigation.njk' %}
-<div class="clients section-layout">
-    <div class="client__list section__col3-3">
-<h1>{{blog.title}}</h1>
-{{ blog.content | richText | safe }}
-</div>
-</div>
-
+{% include 'secondary-navigation.njk' %}
+<section class="single-blog section-layout">
+    <div class="section__col1-3">
+        <h1>{{ blog.title }}</h1>
+        <h2>{{blog.subtitle }}</h2>
+        <p>by {{ blog.author.name }}</p>
+        <img src="{{ blog.imageUrl }}" alt="{{ blog.featuredImage.alt }}">
+    </div>
+    <div class="section__col2-3">
+        {{ blog.content | richText | safe }}
+    </div>
+</section>
 {% include 'site-footer.njk' %}

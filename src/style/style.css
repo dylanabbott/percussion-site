@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5 {
   font-family: "Big Shoulders Display", sans-serif;
   font-weight: 900;
   margin: 3rem 0 1.38rem;
-  line-height: 1.3;
+  line-height: 1.1;
 }
 
 h1 {
@@ -296,7 +296,7 @@ html {
   color: var(--why-link-active);
 }
 
-.members {
+.members, .blog-listing {
   position: relative;
   padding-bottom: 6rem;
   background: linear-gradient(var(--members-bg), var(--members-bg-2));
@@ -329,6 +329,10 @@ html {
 
 .clients {
   background-color: var(--clients-bg);
+}
+
+.single-blog, .blog-listing, .single-case, .case-listing {
+  padding-top: 6rem;
 }
 
 /* CARD */
