@@ -8,14 +8,20 @@ permalink: "blog/{{ blog.title | slugify }}/index.html"
 
 {% include 'site-head.njk' %}
 {% include 'secondary-navigation.njk' %}
-<section class="single-blog section-layout">
+<section class="blog-single section-layout">
     <div class="section__col1-3">
         <h1>{{ blog.title }}</h1>
-        <h2>{{blog.subtitle }}</h2>
+        <img src="{{ blog.author.portrait.asset.url }}" alt="{{ blog.author }}" class="blog-single__author">
         <p>by {{ blog.author.name }}</p>
-        <img src="{{ blog.imageUrl }}" alt="{{ blog.featuredImage.alt }}">
+        <ul class="blog-listing__tag-list">
+    {%- for tag in blog.tags -%}
+    <li class="blog-listing__tag">{{ tag }}</li>
+    {%- endfor -%}
+    </ul>
     </div>
     <div class="section__col2-3">
+        <p class="blog-single__subtitle">{{blog.subtitle }}</p>
+        <img src="{{ blog.imageUrl }}" alt="{{ blog.featuredImage.alt }}" class="blog-single__featured">
         {{ blog.content | richText | safe }}
     </div>
 </section>

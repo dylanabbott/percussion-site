@@ -58,6 +58,16 @@ module.exports = (eleventyConfig) => {
 		return blog;
 	});
 
+	eleventyConfig.addFilter('shortDate', (date) => {
+		const options = {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+		};
+		const shortDate = new Date(date).toLocaleString('en-US', options);
+		return shortDate;
+	});
+
 	eleventyConfig.addFilter('richText', function (blocks) {
 		const types = {
 			types: {
