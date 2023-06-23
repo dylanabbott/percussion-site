@@ -11,13 +11,14 @@ html {
 	overflow-x: hidden;
 }
 
-// body {
+body {
+	min-height: 100%;
 // 	// padding: 2rem 20%;
 
 // 	// @include medium {
 // 	//     padding: 0.5rem 5%;
 // 	// }
-// }
+}
 
 /* Temporary outlines */
 // .nav {
@@ -30,7 +31,7 @@ html {
 
 // .site-content {
 // 	border: 1px solid #999999;
-// }
+//}
 
 .section-layout,
 .site-footer,

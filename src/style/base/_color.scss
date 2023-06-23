@@ -179,6 +179,11 @@ html {
 
 	//Blog 
 	--blog-tag: #{getcolor(dark-blue,0)};
+
+	--blog-single-title-bg: #{getcolor(dark-blue, 1)}; 
+	--blog-single-title: #{getcolor(light-orange, 1)};
+	--blog-single-content: #{getcolor(light-blue,4)};
+	--blog-single-subtitle: #{getcolor(dark-blue,0)};
 }
 
 a {

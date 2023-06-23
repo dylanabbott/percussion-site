@@ -1,13 +1,19 @@
+@use '../utils' as *;
+
 .blog-listing {
     &__header {
         padding-top: 6rem;
     }
     &__title {
-
+        margin-block-start: 0;
     }
     &__subtitle {
         font-family: "Inter", sans-serif;
         font-weight: 500;
+        margin-block-start: 1rem;
+    }
+    &__author {
+        text-align: center;
     }
     &__tag-list {
         margin-top: 1rem;
@@ -15,13 +21,17 @@
         flex-direction: row;
         padding-inline-start: 0;
         list-style-type: none;
+        //justify-content: center;
     }
     &__tag {
         background-color: var(--blog-tag);
         color: #fff;
-        margin-inline-end: 1.5rem;
+        margin-inline-start: 1.5rem;
         padding: 0.1rem 1rem;
         border-radius: 0.3rem;
+        &:first-child {
+            margin-inline-start: 0;
+        }
     }
     &__featured {
         max-width: calc(100% - 2rem);
@@ -30,6 +40,19 @@
 }
 
 .blog-single {
+    background-color: var(--blog-single-title-bg);
+    color: var(--blog-single-title);
+    &__meta {
+        position: relative;
+        top: -125px;
+        & img {
+            margin-block-end: 1rem;
+            @include shadow;
+        }
+    }
+    &__content {
+        background-color: var(--blog-single-content);
+    }
     &__featured {
         max-width: 100%;
         //max-height: 250px;
@@ -37,13 +60,39 @@
         object-fit: cover;
         margin-block-end: 2rem;
     }
+    &__title {
+        padding-inline-start: 33%;
+        & h1 {
+        margin: 0;
+        }
+    }
     &__subtitle {
-        font-size: 1.8rem;
+        font-size: 1.333rem;
+        color: var(--blog-single-subtitle);
         line-height: 1.2;
     }
     &__author {
         border-radius: 100%;
         max-width: 200px;
         margin: 0 auto;
+        text-align: center;
     }
-}
+    &__tag-list {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        padding-inline-start: 0;
+        list-style-type: none;
+        justify-content: center;
+    }
+    &__tag {
+        background-color: var(--blog-tag);
+        color: #fff;
+        margin-inline-start: 1.5rem;
+        padding: 0.1rem 1rem;
+        border-radius: 0.3rem;
+            &:first-child {
+                margin-inline-start: 0;
+            }
+        }
+    }
