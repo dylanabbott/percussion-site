@@ -184,6 +184,9 @@ html {
 	--blog-single-title: #{getcolor(light-orange, 1)};
 	--blog-single-content: #{getcolor(light-blue,4)};
 	--blog-single-subtitle: #{getcolor(dark-blue,0)};
+
+	//Case Study
+	--case-single-icon: #{getcolor(dark-blue,0)};
 }
 
 a {

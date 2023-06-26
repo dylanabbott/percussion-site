@@ -81,12 +81,12 @@ module.exports = (eleventyConfig) => {
 						800}"
 					/>`,
 				pullQuote: ({ value }) =>
-					html`<div>
+					html`<div class="case-single__pullquote">
 						<blockquote>${value.quote}</blockquote>
 						<cite>${value.cite}</cite>
 					</div>`,
 				textWithIcon: ({ value }) =>
-					html`<div>
+					html`<div class="case-single__icon">
 						<img
 							src="${value.iconUrl}"
 							alt="${value.alt}"

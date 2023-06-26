@@ -9,17 +9,24 @@ permalink: "cases/{{ case.title | slugify }}/index.html"
 {% include 'site-head.njk' %}
 {% include 'secondary-navigation.njk' %}
 <main class="site-content">
-<section class="case-single section-layout">
-    <div class="section__col1-3">
-        <h1 class="section__heading">{{ case.title }}</h1>
-    </div>
-    <div class="section__col2-3">
-        {{ case.problem | richText | safe }}
-        {{ case.solution | richText | safe }}
-        {{ case.tactics| richText | safe }}
-        {{ case.results | richText | safe }}
-        {{ case.conclusion | richText | safe }}
-    </div>
-</section>
+    <section class="case-single section-layout">
+        <div class="case-single__title section__col3-3">
+            <h1>{{ case.title }}</h1>
+        </div>
+    </section>
+    <section class="section-layout">
+        <div class="section__col1-3"></div>
+        <div class="section__col2-3 case-single__content">
+            <h3>The Problem</h3>
+            {{ case.problem | richText | safe }}
+            <h3>The Solution</h3>
+            {{ case.solution | richText | safe }}
+            <h3>Tactics</h3>
+            {{ case.tactics| richText | safe }}
+            <h3>Results</h3>
+            {{ case.results | richText | safe }}
+            {{ case.conclusion | richText | safe }}
+        </div>
+    </section>
 </main>
 {% include 'site-footer.njk' %}
