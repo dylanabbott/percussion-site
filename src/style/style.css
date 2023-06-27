@@ -1283,25 +1283,25 @@ label {
 .case-single__title h1 {
   margin: 0;
 }
+.case-single__content h2 {
+  margin-block-start: 0;
+}
+.case-single__content-with-icons {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
 .case-single__icon {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-block-end: 1rem;
-  height: 72px;
-  width: 72px;
-  padding: 0.5rem;
+  height: 80px;
+  width: 80px;
   border-radius: 100%;
   background-color: var(--case-single-icon);
-  float: left;
   margin-inline-end: 1rem;
-}
-.case-single__pullquote {
-  margin: 1.5rem 1rem;
-  float: left;
-  position: relative;
-  left: -33%;
-  max-width: 32ch;
+  display: flex;
+  flex-direction: row;
 }
 .case-single__pullquote blockquote {
   font-size: 1.4rem;
@@ -1309,6 +1309,15 @@ label {
 }
 .case-single__pullquote cite {
   font-style: italics;
+}
+
+p {
+  grid-column-end: span 3;
+}
+
+div.case-single__icon + p {
+  grid-column-start: 2;
+  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */
