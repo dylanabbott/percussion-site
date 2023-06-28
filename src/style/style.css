@@ -174,6 +174,8 @@ html {
   --blog-single-content: hsl(190, 50%, 96%);
   --blog-single-subtitle: hsl(190, 100%, 18%);
   --case-single-icon: hsl(190, 100%, 18%);
+  --case-single-overlay: hsla(190, 100%, 18%, 0.8);
+  --case-single-title: hsl(0, 0%, 100%);
 }
 
 a {
@@ -339,10 +341,6 @@ body {
 
 .clients {
   background-color: var(--clients-bg);
-}
-
-.blog-single, .case-single, .case-listing {
-  padding-top: 6rem;
 }
 
 /* CARD */
@@ -1223,6 +1221,7 @@ label {
 .blog-single {
   background-color: var(--blog-single-title-bg);
   color: var(--blog-single-title);
+  padding-top: 6rem;
 }
 .blog-single__meta {
   position: relative;
@@ -1277,11 +1276,32 @@ label {
   margin-inline-start: 0;
 }
 
+.case-single {
+  padding-top: 6rem;
+}
+.case-single__hero {
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center center;
+  align-items: flex-end;
+  position: relative;
+}
+.case-single__hero-overlay {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent 50%, var(--case-single-overlay) 80%);
+}
 .case-single__title {
   padding-inline-start: 33%;
+  z-index: 10;
 }
 .case-single__title h1 {
   margin: 0;
+  color: var(--case-single-title);
 }
 .case-single__content h2 {
   margin-block-start: 0;
@@ -1291,6 +1311,7 @@ label {
   grid-template-columns: 100px 1fr;
 }
 .case-single__icon {
+  align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1318,6 +1339,7 @@ p {
 div.case-single__icon + p {
   grid-column-start: 2;
   align-self: center;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

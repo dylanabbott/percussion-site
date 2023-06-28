@@ -187,6 +187,8 @@ html {
 
 	//Case Study
 	--case-single-icon: #{getcolor(dark-blue,0)};
+	--case-single-overlay: #{getcolor(dark-blue,80)};
+	--case-single-title: #{getcolor(neutral,4)};
 }
 
 a {

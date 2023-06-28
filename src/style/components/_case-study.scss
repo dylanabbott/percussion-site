@@ -1,11 +1,30 @@
 @use '../utils' as *;
 
 .case-single {
+    padding-top: 6rem;
+    &__hero {
+        min-height: 60vh;
+        background-size: cover;
+        background-position: center center;
+        align-items: flex-end;
+        position: relative;
+        &-overlay {
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent 50%, var(--case-single-overlay) 80%);
+            //mix-blend-mode: color;
+        }
+    }
     &__title {
         padding-inline-start: 33%;
-
+        z-index: 10;
         & h1 {
             margin: 0;
+            color: var(--case-single-title);
         }
     }
 
@@ -20,6 +39,7 @@
     }
 
     &__icon {
+        align-self: center;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -60,6 +80,7 @@ p {
 div.case-single__icon+p {
     grid-column-start: 2;
     align-self: center;
+    font-size: 1.2rem;
 }
 
 .problem {
