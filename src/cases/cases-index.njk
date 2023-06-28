@@ -8,27 +8,24 @@ permalink: "cases/index.html"
 {% include 'site-head.njk' %}
 {% include 'secondary-navigation.njk' %}
 <main class="site-content">
-    <section class="case-listing section-layout">
+    <section class="case-listing__hero section-layout">
         <div class="section__col3-3 case-listing__header">
-            <h1>Case Studies Intro Goes Here</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            <h1 class="case-listing__heading">Case Studies</h1>
+            <p class="case-listing__intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                 occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     </section>
-    <section class="case-listing section-layout">
+    <section class="case-listing__body section-layout">
         {%- for case in collections.caseStudies -%}
-            <div class="section__col1-3">
+            <div class="section__col1-3 case-listing__img-container">
                 <a href="../cases/{{ case.title | slugify }}/">
-                    <img src="{{ case.featuredImageUrl }}" alt="{{ case.featuredImage.alt }}" class="blog-listing__featured"></a>
+                    <img src="{{ case.featuredImageUrl }}" alt="{{ case.featuredImage.alt }}" class="case-listing__featured"></a>
                 </div>
                 <div class="section__col2-3">
-                    <a href="../cases/{{ case.title | slugify }}/">
-                        <h2 class="blog-listing__title">{{ case.title }}</h2>
-                    </a>
-                    <h3>The Problem:</h3>
+                        <h2 class="case-listing__title"><a href="../cases/{{ case.title | slugify }}/">{{ case.title }}</a></h2>
                     {{ case.problem | richText | safe }}
+                    <p><a href="../cases/{{ case.title | slugify }}/">Keep Reading...</a></p>
                 {%- endfor -%}
             </div>
         </section>

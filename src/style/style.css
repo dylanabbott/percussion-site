@@ -169,13 +169,28 @@ html {
   --clients-heading: hsl(190, 100%, 18%);
   --services-item: hsl(30, 100%, 70%);
   --blog-tag: hsl(190, 100%, 18%);
-  --blog-single-title-bg: hsl(190, 80%, 28%);
-  --blog-single-title: hsl(30, 100%, 60%);
+  --blog-single-title-bg: hsl(10, 80%, 55%);
+  --blog-single-title: hsl(0, 0%, 100%);
   --blog-single-content: hsl(190, 50%, 96%);
   --blog-single-subtitle: hsl(190, 100%, 18%);
   --case-single-icon: hsl(190, 100%, 18%);
   --case-single-overlay: hsla(190, 100%, 18%, 0.8);
   --case-single-title: hsl(0, 0%, 100%);
+  --case-single-problem-bg: hsl(182, 80%, 31%);
+  --case-single-problem-text: hsl(0, 0%, 100%);
+  --case-single-solution-bg: hsl(182, 100%, 21%);
+  --case-single-solution-text: hsl(0, 0%, 100%);
+  --case-single-tactics-bg: hsl(190, 60%, 88%);
+  --case-single-tactics-text: hsl(190, 100%, 18%);
+  --case-single-result-bg: hsl(190, 70%, 78%);
+  --case-single-result-text: hsl(190, 100%, 18%);
+  --case-single-conclusion-bg: hsl(10, 80%, 35%);
+  --case-single-conclusion-text: hsl(0, 0%, 100%);
+  --case-listing-heading: hsl(10, 80%, 55%);
+  --case-listing-intro-text: hsl(190, 100%, 18%);
+  --case-listing-intro-bg: hsl(43, 94%, 79%);
+  --case-listing-body-bg: hsl(190, 60%, 88%);
+  --case-listing-title: hsl(10, 80%, 55%);
 }
 
 a {
@@ -1250,6 +1265,7 @@ label {
   font-size: 1.333rem;
   color: var(--blog-single-subtitle);
   line-height: 1.2;
+  margin-block-end: 2rem;
 }
 .blog-single__author {
   border-radius: 100%;
@@ -1297,7 +1313,7 @@ label {
 }
 .case-single__title {
   padding-inline-start: 33%;
-  z-index: 10;
+  z-index: 5;
 }
 .case-single__title h1 {
   margin: 0;
@@ -1309,6 +1325,7 @@ label {
 .case-single__content-with-icons {
   display: grid;
   grid-template-columns: 100px 1fr;
+  grid-row-gap: 1rem;
 }
 .case-single__icon {
   align-self: center;
@@ -1324,12 +1341,25 @@ label {
   display: flex;
   flex-direction: row;
 }
+.case-single__pullquote {
+  margin: 1.5rem;
+  max-width: 44ch;
+  padding-inline-start: 1.5rem;
+  border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+.case-single__pullquote:first-child {
+  margin-block-start: 0;
+}
 .case-single__pullquote blockquote {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-block-end: 1rem;
+  font-family: "Big Shoulders Display";
+  font-weight: 600;
+  line-height: 1.2;
 }
 .case-single__pullquote cite {
-  font-style: italics;
+  font-style: italic;
+  max-width: 24ch;
 }
 
 p {
@@ -1340,6 +1370,70 @@ div.case-single__icon + p {
   grid-column-start: 2;
   align-self: center;
   font-size: 1.2rem;
+}
+
+.problem {
+  background-color: var(--case-single-problem-bg);
+  color: var(--case-single-problem-text);
+}
+
+.solution {
+  background-color: var(--case-single-solution-bg);
+  color: var(--case-single-solution-text);
+}
+
+.tactics {
+  background-color: var(--case-single-tactics-bg);
+  color: var(--case-single-tactics-text);
+}
+
+.result {
+  background-color: var(--case-single-result-bg);
+  color: var(--case-single-result-text);
+}
+
+.conclusion {
+  background-color: var(--case-single-conclusion-bg);
+  color: var(--case-single-conclusion-text);
+}
+
+.case-listing__hero {
+  background-color: var(--case-listing-intro-bg);
+}
+.case-listing__heading {
+  color: var(--case-listing-heading);
+}
+.case-listing__intro-text {
+  color: var(--case-listing-intro-text);
+}
+.case-listing__body {
+  background-color: var(--case-listing-body-bg);
+}
+.case-listing__body .case-single__pullquote {
+  display: none;
+}
+.case-listing__title {
+  margin-block-start: 0;
+}
+.case-listing__title a {
+  color: var(--case-listing-title);
+}
+.case-listing__subtitle {
+  margin-block-start: 0;
+  font-family: Inter;
+  font-weight: 600;
+}
+.case-listing__header {
+  padding-block-start: 6rem;
+}
+.case-listing__img-container {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+}
+.case-listing__featured {
+  max-width: calc(100% - 1rem);
+  box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02), 0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035), 0px 13.4px 17.9px rgba(0, 0, 0, 0.042), 0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
 }
 
 /*# sourceMappingURL=style.css.map */
