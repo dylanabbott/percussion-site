@@ -2,12 +2,14 @@
 
 .case-single {
     padding-top: 6rem;
+
     &__hero {
         min-height: 60vh;
         background-size: cover;
         background-position: center center;
         align-items: flex-end;
         position: relative;
+
         &-overlay {
             position: absolute;
             z-index: 0;
@@ -19,9 +21,11 @@
             //mix-blend-mode: color;
         }
     }
+
     &__title {
         padding-inline-start: 33%;
         z-index: 5;
+
         & h1 {
             margin: 0;
             color: var(--case-single-title);
@@ -31,7 +35,9 @@
     &__content {
         & h2 {
             margin-block-start: 0;
+            text-align: center;
         }
+
         &-with-icons {
             display: grid;
             grid-template-columns: 100px 1fr;
@@ -60,10 +66,11 @@
         margin: 1.5rem;
         max-width: 44ch;
         padding-inline-start: 1.5rem;
-        border-left: 3px solid rgba(255,255,255,0.4);
+        border-left: 3px solid rgba(255, 255, 255, 0.4);
+
         &:first-child {
-                margin-block-start: 0;
-            }
+            margin-block-start: 0;
+        }
 
         & blockquote {
             font-size: 1.8rem;
@@ -119,37 +126,47 @@ div.case-single__icon+p {
     &__hero {
         background-color: var(--case-listing-intro-bg);
     }
+
     &__heading {
         color: var(--case-listing-heading);
     }
+
     &__intro-text {
         color: var(--case-listing-intro-text);
     }
+
     &__body {
         background-color: var(--case-listing-body-bg);
+
         & .case-single__pullquote {
-                display: none;
-            }
+            display: none;
+        }
     }
+
     &__title {
         margin-block-start: 0;
+
         & a {
             color: var(--case-listing-title);
         }
     }
+
     &__subtitle {
         margin-block-start: 0;
         font-family: Inter;
         font-weight: 600;
     }
+
     &__header {
         padding-block-start: 6rem;
     }
+
     &__img-container {
         display: flex;
         min-height: 100%;
         align-items: center;
     }
+
     &__featured {
         max-width: calc(100% - 1rem);
         @include shadow;
