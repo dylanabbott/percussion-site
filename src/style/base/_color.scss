@@ -187,18 +187,27 @@ html {
 
 	//Case Study
 	--case-single-icon: #{getcolor(dark-blue,0)};
-	--case-single-overlay: #{getcolor(dark-blue,80)};
+	--case-single-overlay: #{getcolor(dark-orange,2)};
 	--case-single-title: #{getcolor(neutral,4)};
-	--case-single-problem-bg: #{getcolor(teal,1)};
+	--case-single-title-bg: #{getcolor(dark-orange,0)};
+	--case-single-problem-bg: #{getcolor(dark-blue,0)};
 	--case-single-problem-text: #{getcolor(neutral,4)};
-	--case-single-solution-bg: #{getcolor(teal,0)};
+	--case-single-problem-heading: #{getcolor(dark-orange,4)};
+	--case-single-solution-bg: #{getcolor(teal,1)};
 	--case-single-solution-text: #{getcolor(neutral,4)};
+	--case-single-solution-heading: #{getcolor(light-orange,2)};
 	--case-single-tactics-bg: #{getcolor(light-blue,3)};
 	--case-single-tactics-text: #{getcolor(dark-blue,0)};
-	--case-single-result-bg: #{getcolor(light-blue,2)};
+	--case-single-tactics-heading: #{getcolor(dark-blue,0)};
+	--case-single-result-bg: #{getcolor(light-gold,2)};
 	--case-single-result-text: #{getcolor(dark-blue,0)};
+	--case-single-result-heading: #{getcolor(dark-orange,0)};
 	--case-single-conclusion-bg: #{getcolor(deep-orange,3)};
 	--case-single-conclusion-text: #{getcolor(neutral,4)};
+	--case-single-conclusion-heading: #{getcolor(light-gold,2)};
+
+	--duotone-highlight: #{getcolor(light-orange,4)};
+	--duotone-shadow: #{getcolor(dark-orange,0)};
 
 
 	--case-listing-heading: #{getcolor(dark-orange,0)};

@@ -174,18 +174,26 @@ html {
   --blog-single-content: hsl(190, 50%, 96%);
   --blog-single-subtitle: hsl(190, 100%, 18%);
   --case-single-icon: hsl(190, 100%, 18%);
-  --case-single-overlay: hsla(190, 100%, 18%, 0.8);
+  --case-single-overlay: hsl(10, 80%, 75%);
   --case-single-title: hsl(0, 0%, 100%);
-  --case-single-problem-bg: hsl(182, 80%, 31%);
+  --case-single-title-bg: hsl(10, 80%, 55%);
+  --case-single-problem-bg: hsl(190, 100%, 18%);
   --case-single-problem-text: hsl(0, 0%, 100%);
-  --case-single-solution-bg: hsl(182, 100%, 21%);
+  --case-single-problem-heading: hsl(10, 80%, 95%);
+  --case-single-solution-bg: hsl(182, 80%, 31%);
   --case-single-solution-text: hsl(0, 0%, 100%);
+  --case-single-solution-heading: hsl(30, 100%, 70%);
   --case-single-tactics-bg: hsl(190, 60%, 88%);
   --case-single-tactics-text: hsl(190, 100%, 18%);
-  --case-single-result-bg: hsl(190, 70%, 78%);
+  --case-single-tactics-heading: hsl(190, 100%, 18%);
+  --case-single-result-bg: hsl(43, 94%, 89%);
   --case-single-result-text: hsl(190, 100%, 18%);
+  --case-single-result-heading: hsl(10, 80%, 55%);
   --case-single-conclusion-bg: hsl(10, 80%, 35%);
   --case-single-conclusion-text: hsl(0, 0%, 100%);
+  --case-single-conclusion-heading: hsl(43, 94%, 89%);
+  --duotone-highlight: hsl(30, 100%, 90%);
+  --duotone-shadow: hsl(10, 80%, 55%);
   --case-listing-heading: hsl(10, 80%, 55%);
   --case-listing-intro-text: hsl(190, 100%, 18%);
   --case-listing-intro-bg: hsl(43, 94%, 79%);
@@ -1307,6 +1315,27 @@ label {
   align-items: flex-end;
   position: relative;
 }
+.case-single__hero::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(10, 100%, 90%);
+  mix-blend-mode: darken;
+  backdrop-filter: saturate(0%) contrast(1.2) brightness(1.2);
+}
+.case-single__hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(186, 83%, 20%);
+  mix-blend-mode: lighten;
+}
 .case-single__hero-overlay {
   position: absolute;
   z-index: 0;
@@ -1314,7 +1343,8 @@ label {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent 50%, var(--case-single-overlay) 80%);
+  background-color: var(--case-single-overlay);
+  mix-blend-mode: hard-light;
 }
 .case-single__title {
   padding-inline-start: 33%;
@@ -1322,7 +1352,9 @@ label {
 }
 .case-single__title h1 {
   margin: 0;
+  padding: 0.5rem;
   color: var(--case-single-title);
+  background-color: var(--case-single-title-bg);
 }
 .case-single__content h2 {
   margin-block-start: 0;
@@ -1336,6 +1368,7 @@ label {
 .case-single__icon {
   align-self: center;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-block-end: 1rem;
@@ -1344,12 +1377,9 @@ label {
   border-radius: 100%;
   background-color: var(--case-single-icon);
   margin-inline-end: 1rem;
-  display: flex;
-  flex-direction: row;
 }
 .case-single__pullquote {
   margin: 1.5rem;
-  max-width: 44ch;
   padding-inline-start: 1.5rem;
   border-left: 3px solid rgba(255, 255, 255, 0.4);
 }
@@ -1382,25 +1412,40 @@ div.case-single__icon + p {
   background-color: var(--case-single-problem-bg);
   color: var(--case-single-problem-text);
 }
+.problem h2 {
+  color: var(--case-single-problem-heading);
+}
 
 .solution {
   background-color: var(--case-single-solution-bg);
   color: var(--case-single-solution-text);
+}
+.solution h2 {
+  color: var(--case-single-solution-heading);
 }
 
 .tactics {
   background-color: var(--case-single-tactics-bg);
   color: var(--case-single-tactics-text);
 }
+.tactics h2 {
+  color: var(--case-single-tactics-heading);
+}
 
 .result {
   background-color: var(--case-single-result-bg);
   color: var(--case-single-result-text);
 }
+.result h2 {
+  color: var(--case-single-result-heading);
+}
 
 .conclusion {
   background-color: var(--case-single-conclusion-bg);
   color: var(--case-single-conclusion-text);
+}
+.conclusion h2 {
+  color: var(--case-single-conclusion-heading);
 }
 
 .case-listing__hero {

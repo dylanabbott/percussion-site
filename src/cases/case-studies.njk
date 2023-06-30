@@ -10,7 +10,7 @@ permalink: "cases/{{ case.title | slugify }}/index.html"
 {% include 'secondary-navigation.njk' %}
 <main class="site-content">
     <section class="case-single case-single__hero section-layout" style="background-image:url({{ case.featuredImageUrl }});">
-        <div class="case-single__hero-overlay"></div>
+        {# <div class="case-single__hero-overlay"></div> #}
         <div class="case-single__title section__col3-3">
             <h1>{{ case.title }}</h1>
         </div>
