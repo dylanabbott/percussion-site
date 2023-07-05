@@ -21,6 +21,16 @@
 	}
 	&__brand {
 		display: none;
+		&-mobile {
+			position: absolute;
+			top: 1rem;
+			left: 1rem;
+			filter: drop-shadow(0 0 3px var(--brand-shadow));
+
+			@include large {
+				display: none;
+			}
+		}
 	}
 	> ul {
 		padding-inline-start: 0;
