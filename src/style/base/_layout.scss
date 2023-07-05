@@ -256,5 +256,6 @@ body {
 
 .image-inline {
 	margin: 2rem 0 3rem 0;
-	filter: drop-shadow(0px 10px 16px rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(0px 10px 16px rgba(0, 0, 0, 0.2));
+	grid-column: 1/5;
 }

@@ -9,7 +9,9 @@ permalink: "cases/{{ case.title | slugify }}/index.html"
 {% include 'site-head.njk' %}
 {% include 'secondary-navigation.njk' %}
 <main class="site-content">
-    <section class="case-single case-single__hero section-layout" style="background-image:url({{ case.featuredImageUrl }});">
+    <section
+        class="case-single case-single__hero section-layout"
+        style="background-image:url({{ case.featuredImageUrl }});">
         {# <div class="case-single__hero-overlay"></div> #}
         <div class="case-single__title section__col3-3">
             <h1>{{ case.title }}</h1>
@@ -47,13 +49,13 @@ permalink: "cases/{{ case.title | slugify }}/index.html"
             {{ case.results | richText | safe }}
         </div>
     </section>
-    <section class="section-layout conclusion">
-        <div class="section__col1-3 case-single__content">
-            <h2>Conclusion</h2>
-        </div>
-        <div class="section__col2-3 case-single__content">
-            {{ case.conclusion | richText | safe }}
-        </div>
-    </section>
+    {# <section class="section-layout conclusion">
+                <div class="section__col1-3 case-single__content">
+                    <h2>Conclusion</h2>
+                </div>
+                <div class="section__col2-3 case-single__content">
+                    {{ case.conclusion | richText | safe }}
+                </div>
+            </section> #}
 </main>
 {% include 'site-footer.njk' %}

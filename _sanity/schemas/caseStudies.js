@@ -34,7 +34,7 @@ export default {
     {
       name: 'results',
       type: 'array',
-      of: [{type: 'block'}, {type: 'bodyImage'}, {type: 'textWithIcon'}],
+      of: [{type: 'block'}, {type: 'bodyImage'}, {type: 'textWithIcon'}, {type: 'pullQuote'}],
       title: 'Results',
     },
     {
