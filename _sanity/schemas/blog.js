@@ -33,15 +33,10 @@ export default {
             type: 'array',
             of: [
                 {type:'block'},
-                {type: 'bodyImage'}
+                {type: 'bodyImage'},
+                {type: 'pullQuote'}
             ],
             title: 'Content'
-        },
-        {
-            name: 'pullQuote',
-            type: 'array',
-            of: [{type:'string'}],
-            title: 'Pull Quotes'
         },
         {
             name: 'featuredImage',

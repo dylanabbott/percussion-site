@@ -1,0 +1,12 @@
+.pagination {
+    background-color: var(--pagination-bg);
+    & ul {
+        display: flex;
+        list-style-type: none;
+        padding-inline-start: 0;
+        & li:not(:last-child) {
+            margin-inline-end: 1rem;
+            color: var(--pagination-text);
+        }
+    }
+}

@@ -188,9 +188,16 @@ div.case-single__icon+p {
 
     &__body {
         background-color: var(--case-listing-body-bg);
+        color: var(--case-listing-text);
 
         & .case-single__pullquote {
             display: none;
+        }
+        &.section-layout {
+            align-items: center;
+        }
+        & .section__col2-3 {
+            padding-block-end: 2rem;
         }
     }
 
@@ -216,10 +223,15 @@ div.case-single__icon+p {
         display: flex;
         min-height: 100%;
         align-items: center;
+        padding-block-end: 2rem;
     }
 
     &__featured {
-        max-width: calc(100% - 1rem);
+        
         @include shadow;
+
+        @include large {
+            max-width: calc(100% - 2rem);
+        }
     }
 }

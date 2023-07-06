@@ -1,0 +1,40 @@
+---
+pagination:
+    data: collections.caseStudies
+    size: 2
+---
+
+{% include 'site-head.njk' %}
+{% include 'secondary-navigation.njk' %}
+<main class="site-content">
+    <section class="case-listing__hero section-layout">
+        <a href="/" class="nav__brand-mobile">
+            <img src="/img/perc-logo-horizontal-nt.png" alt="Percussion Strategic logo" height="26" width="165"></a>
+            <div class="section__col3-3 case-listing__header">
+                <h1 class="case-listing__heading">Case Studies</h1>
+                <p class="case-listing__intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                    laborum.</p>
+            </div>
+        </section>
+        {%- for case in pagination.items -%}
+            <section class="case-listing__body section-layout">
+                <div class="section__col1-3 case-listing__img-container">
+                    <a href="../cases/{{ case.title | slugify }}/">
+                        <img src="{{ case.featuredImageUrl }}" alt="{{ case.featuredImage.alt }}" class="case-listing__featured"></a>
+                    </div>
+                    <div class="section__col2-3">
+                        <h2 class="case-listing__title">
+                            <a href="../cases/{{ case.title | slugify }}/">{{ case.title }}</a>
+                        </h2>
+                        {{ case.problem | richText | safe }}
+                        {# <p><a href="../cases/{{ case.title | slugify }}/">Keep Reading...</a></p> #}
+                    </div>
+                </section>
+            {%- endfor -%}
+            {% include 'pagination.njk' %}
+        </main>
+        {% include 'contact.njk' %}
+        {% include 'site-footer.njk' %}

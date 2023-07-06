@@ -95,7 +95,11 @@ module.exports = (eleventyConfig) => {
 						/>
 					</div>`,
 				bodyImage: ({ value }) =>
-					html`<img src="${value.asset.url}" alt="${value.alt}" class="image-inline" />`,
+					html`<img
+						src="${value.asset.url}"
+						alt="${value.alt}"
+						class="image-inline"
+					/>`,
 			},
 			marks: {
 				span: ({ children, value }) =>

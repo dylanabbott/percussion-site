@@ -1,0 +1,21 @@
+<section class="section-layout pagination">
+    <nav class="pagination section__col3-3">
+    <ul>
+        {% if pagination.href.previous %}
+            <li>
+                <a href="{{ pagination.href.previous }}">Previous</a>
+            </li>
+            {% else %}<li>Previous</li>{% endif %}
+        {%- for pageEntry in pagination.pages %}
+            <li>
+                <a href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page" {% endif %}>{{ loop.index }}</a>
+            </li>
+        {%- endfor %}
+        <li>
+            {% if pagination.href.next %}
+                <a href="{{ pagination.href.next }}">Next</a>
+                {% else %}<li>Next</li>{% endif %}
+        </li>
+    </ul>
+</nav>
+</section>
