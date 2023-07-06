@@ -24,10 +24,10 @@ showModalButton.addEventListener('click', () =>
 	modal.classList.toggle('hidden')
 );
 
-showModalLink.addEventListener('click', (e) => {
+if (showModalLink) {showModalLink.addEventListener('click', (e) => {
 	e.preventDefault();
 	modal.classList.toggle('hidden');
-});
+})};
 
 hideModalButton.addEventListener('click', (e) => {
 	e.preventDefault();
@@ -35,7 +35,7 @@ hideModalButton.addEventListener('click', (e) => {
 });
 
 modal.addEventListener('click', (e) => {
-	if (e.path[0] === modal) {
+	if (e.target.id === "modal") {
 		modal.classList.toggle('hidden');
 	}
 });
