@@ -2,6 +2,7 @@
 pagination:
     data: collections.blog
     size: 2
+permalink: "/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 
 {% include 'site-head.njk' %}
@@ -22,20 +23,20 @@ pagination:
         {%- for post in pagination.items -%}
             <section class="blog-listing section-layout">
                 <div class="section__col1-3">
-                    <a href="../blog/{{ post.title | slugify }}/">
+                    <a href="../../blog/{{ post.title | slugify }}/">
                         <img src="{{ post.imageUrl }}" alt="{{ post.featuredImage.alt }}" class="blog-listing__featured"></a>
                     </div>
                     <div class="section__col2-3">
-                        <a href="../blog/{{ post.title | slugify }}/" class="blog-listing__post-title">
+                        <a href="../../blog/{{ post.title | slugify }}/" class="blog-listing__post-title">
                             <h2>{{ post.title }}</h2>
                         </a>
                         <span class="blog-listing__post-meta">{{ post.date | shortDate }}, by {{ post.author.name }}</span>
                         <p class="blog-listing__post-subtitle">{{ post.subtitle }}</p>
                         {# <ul class="blog-listing__tag-list">
-                            {%- for tag in post.tags -%}
-                                <li class="blog-listing__tag">{{ tag }}</li>
-                            {%- endfor -%}
-                        </ul> #}
+                                                                            {%- for tag in post.tags -%}
+                                                                                <li class="blog-listing__tag">{{ tag }}</li>
+                                                                            {%- endfor -%}
+                                                                        </ul> #}
                     </div>
                 </section>
             {%- endfor -%}

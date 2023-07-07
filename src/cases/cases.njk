@@ -2,6 +2,7 @@
 pagination:
     data: collections.caseStudies
     size: 2
+permalink: "/cases/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 
 {% include 'site-head.njk' %}
@@ -22,12 +23,12 @@ pagination:
         {%- for case in pagination.items -%}
             <section class="case-listing__body section-layout">
                 <div class="section__col1-3 case-listing__img-container">
-                    <a href="../cases/{{ case.title | slugify }}/">
+                    <a href="../../cases/{{ case.title | slugify }}/">
                         <img src="{{ case.featuredImageUrl }}" alt="{{ case.featuredImageAlt }}" class="case-listing__featured"></a>
                     </div>
                     <div class="section__col2-3">
                         <h2 class="case-listing__title">
-                            <a href="../cases/{{ case.title | slugify }}/">{{ case.title }}</a>
+                            <a href="../../cases/{{ case.title | slugify }}/">{{ case.title }}</a>
                         </h2>
                         {{ case.problem | richText | safe }}
                         {# <p><a href="../cases/{{ case.title | slugify }}/">Keep Reading...</a></p> #}
