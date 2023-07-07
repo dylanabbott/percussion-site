@@ -141,8 +141,8 @@ html {
   --members-bg: hsl(190, 60%, 88%) ;
   --members-bg-2: hsl(190, 40%, 48%);
   --members-text: hsl(190, 100%, 18%);
-  --card-link: hsl(10, 80%, 55%);
-  --card-link-active: hsl(10, 80%, 75%);
+  --card-link: hsl(10, 80%, 40%);
+  --card-link-active: hsl(10, 80%, 55%);
   --cases-bg: hsl(30, 100%, 90%);
   --cases-bg-2: hsl(30, 100%, 80%);
   --cases-text: hsl(190, 100%, 18%);
@@ -191,7 +191,7 @@ html {
   --case-single-problem-bg: hsl(190, 100%, 18%);
   --case-single-problem-text: hsl(0, 0%, 100%);
   --case-single-problem-heading: hsl(10, 80%, 75%);
-  --case-single-solution-bg: hsl(182, 80%, 31%);
+  --case-single-solution-bg: hsl(182, 100%, 21%);
   --case-single-solution-text: hsl(0, 0%, 100%);
   --case-single-solution-heading: hsl(30, 100%, 70%);
   --case-single-tactics-bg: hsl(190, 60%, 88%);
@@ -207,8 +207,8 @@ html {
   --duotone-shadow: hsl(10, 80%, 55%);
   --brand-shadow: hsl(190, 100%, 18%);
   --case-listing-heading: hsl(0, 0%, 100%);
-  --case-listing-intro-text: hsl(43, 94%, 89%);
-  --case-listing-intro-bg: hsl(10, 80%, 55%);
+  --case-listing-intro-text: hsl(0, 0%, 100%);
+  --case-listing-intro-bg: hsl(10, 80%, 40%);
   --case-listing-body-bg: hsl(190, 60%, 88%);
   --case-listing-title: hsl(10, 80%, 55%);
   --case-listing-text: hsl(190, 100%, 18%);
@@ -1282,9 +1282,9 @@ label {
   max-height: 300px;
   object-fit: cover;
   aspect-ratio: 1/1;
-  margin: 0 auto 2rem auto;
-  padding-block-end: 2rem;
+  margin: 0 auto 4rem auto;
   float: none;
+  box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02), 0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035), 0px 13.4px 17.9px rgba(0, 0, 0, 0.042), 0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
 }
 @media screen and (min-width: 576px) {
   .blog-listing__featured {

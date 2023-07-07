@@ -12,6 +12,13 @@ export default {
       name: 'featuredImage',
       type: 'image',
       title: 'Featured Image',
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alt Text',
+        },
+      ],
     },
     {
       name: 'problem',
@@ -41,7 +48,7 @@ export default {
       name: 'conclusion',
       type: 'array',
       of: [{type: 'block'}, {type: 'bodyImage'}, {type: 'pullQuote'}],
-      title: 'Conclusion'
-    }
+      title: 'Conclusion',
+    },
   ],
 }

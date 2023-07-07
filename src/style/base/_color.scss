@@ -143,8 +143,8 @@ html {
     --members-bg: #{getcolor(light-blue,3)} ;
 	--members-bg-2: #{getcolor(dark-blue,3)};
     --members-text: #{getcolor(dark-blue,0)};
-	--card-link: #{getcolor(dark-orange,0)};
-	--card-link-active: #{getcolor(dark-orange,2)};
+	--card-link: #{getcolor(deep-orange,4)};
+	--card-link-active: #{getcolor(dark-orange,0)};
 
     --cases-bg: #{getcolor(light-orange,4)};
 	--cases-bg-2: #{getcolor(light-orange,3)};
@@ -206,7 +206,7 @@ html {
 	--case-single-problem-bg: #{getcolor(dark-blue,0)};
 	--case-single-problem-text: #{getcolor(neutral,4)};
 	--case-single-problem-heading: #{getcolor(dark-orange,2)};
-	--case-single-solution-bg: #{getcolor(teal,1)};
+	--case-single-solution-bg: #{getcolor(teal,0)};
 	--case-single-solution-text: #{getcolor(neutral,4)};
 	--case-single-solution-heading: #{getcolor(light-orange,2)};
 	--case-single-tactics-bg: #{getcolor(light-blue,3)};
@@ -225,8 +225,8 @@ html {
 
 
 	--case-listing-heading: #{getcolor(neutral,4)};
-	--case-listing-intro-text: #{getcolor(light-gold,2)};
-	--case-listing-intro-bg: #{getcolor(dark-orange,0)};
+	--case-listing-intro-text: #{getcolor(neutral,4)};
+	--case-listing-intro-bg: #{getcolor(deep-orange,4)};
 	--case-listing-body-bg: #{getcolor(light-blue,3)};
 
 	// --case-listing-img: #{getcolor(dark-blue,0)};

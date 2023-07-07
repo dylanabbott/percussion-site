@@ -55,9 +55,9 @@
         max-height: 300px;
         object-fit: cover;
         aspect-ratio: 1/1;
-        margin: 0 auto 2rem auto;
-        padding-block-end: 2rem;
+        margin: 0 auto 4rem auto;
         float: none;
+        @include shadow;
 
         @include medium {
             float: left;
