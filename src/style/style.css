@@ -784,6 +784,7 @@ label {
 }
 .modal__overlay {
   background-color: var(--modal-overlay);
+  backdrop-filter: blur(8px);
   width: 100vw;
   height: 100vh;
   margin-top: 0;
@@ -867,6 +868,7 @@ label {
 }
 
 .hidden {
+  content-visibility: hidden;
   pointer-events: none;
   opacity: 0;
 }
