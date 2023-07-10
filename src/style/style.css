@@ -214,6 +214,8 @@ html {
   --case-listing-text: hsl(190, 100%, 18%);
   --pagination-bg: hsl(190, 70%, 78%);
   --pagination-text: hsl(190, 100%, 18%);
+  --pagination-link: hsl(10, 80%, 30%);
+  --pagination-link-hover: hsl(10, 80%, 55%);
 }
 
 a {
@@ -1588,9 +1590,23 @@ div.case-single__icon + p {
   list-style-type: none;
   padding-inline-start: 0;
 }
+.pagination ul li {
+  color: var(--pagination-text);
+}
 .pagination ul li:not(:last-child) {
   margin-inline-end: 1rem;
-  color: var(--pagination-text);
+}
+.pagination ul li a:link {
+  color: var(--pagination-link);
+}
+.pagination ul li a:visited {
+  color: var(--pagination-link);
+}
+.pagination ul li a:hover {
+  color: var(--pagination-link-hover);
+}
+.pagination ul li a:active {
+  color: var(--pagination-link-hover);
 }
 
 /*# sourceMappingURL=style.css.map */
