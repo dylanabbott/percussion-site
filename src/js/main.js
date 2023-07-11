@@ -3,7 +3,7 @@ console.log('Loaded bundled scripts');
 // Ensure modal is hidden on page load
 
 function modalUpdate() {
-	modal.classList.toggle('hidden-preload');
+	modal.classList.remove('hidden-preload');
 };
 
 window.addEventListener("load", (event) => {
