@@ -1,5 +1,15 @@
 console.log('Loaded bundled scripts');
 
+// Ensure modal is hidden on page load
+
+function modalUpdate() {
+	modal.classList.toggle('hidden-preload');
+};
+
+window.addEventListener("load", (event) => {
+	setTimeout(modalUpdate, 250);
+});
+
 // Show/Hide Mobile Menu
 
 const btnMenu = document.getElementById('menu-button');

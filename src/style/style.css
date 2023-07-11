@@ -873,6 +873,9 @@ label {
   pointer-events: none;
   opacity: 0;
 }
+.hidden-preload {
+  visibility: hidden;
+}
 
 .submitted {
   width: 100%;

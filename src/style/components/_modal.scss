@@ -143,6 +143,9 @@
 	//visibility: hidden;
 	pointer-events: none;
 	opacity: 0;
+	&-preload {
+		visibility: hidden;
+	}
 }
 
 .submitted {
