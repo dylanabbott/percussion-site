@@ -145,6 +145,7 @@
 	opacity: 0;
 	&-preload {
 		visibility: hidden;
+		content-visibility: none;
 	}
 }
 

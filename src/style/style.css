@@ -875,6 +875,7 @@ label {
 }
 .hidden-preload {
   visibility: hidden;
+  content-visibility: none;
 }
 
 .submitted {

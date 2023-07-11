@@ -3,11 +3,12 @@ console.log('Loaded bundled scripts');
 // Ensure modal is hidden on page load
 
 function modalUpdate() {
-	modal.classList.remove('hidden-preload');
+	modal.style.visibility="visible";
+	modalFrame.visibility="visible";
 };
 
 window.addEventListener("load", (event) => {
-	setTimeout(modalUpdate, 250);
+	setTimeout(modalUpdate, 666);
 });
 
 // Show/Hide Mobile Menu
