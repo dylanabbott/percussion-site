@@ -4,8 +4,65 @@
 // Services List
 
 .services {
-	text-align: center;
-	padding-bottom: 4rem;
+	text-align: center; //v1 layout, remove later
+	padding-bottom: 4rem; //v1 layout, remove later
+	&-revised {
+		// new layout, remove "revised" and move up when ready
+		background-color: var(--services-card-section-bg);
+		display: grid;
+		grid-template: 1fr / 1fr;
+		gap: 1rem 1rem;
+		padding: 1rem;
+
+		@include medium {
+			grid-template: 1fr 1fr / 1fr 1fr;
+		}
+
+		@include large {
+			grid-template: 1fr 1fr  / 1fr 1fr 1fr; // maybe consider a 960 breakpoint for this?
+		}
+
+		@include huge {
+			grid-template: 1fr / 1fr 1fr 1fr 1fr;
+		}
+	}
+	&-card {
+		background-color: var(--services-card-bg);
+		color: var(--services-card-text);
+		border-radius: 1rem;
+		padding: 1rem;
+		@include shadow;
+		&__title {
+			text-align: center;
+			margin-block-start: 0;
+			color: var(--services-card-title);
+			font-family: Inter, sans-serif;
+			font-weight: 600;
+			font-size: 1.777rem;
+		}
+		&__list {
+			padding-inline-start: 0;
+			list-style-type: none;
+			text-align: center;
+			&-item {
+				display: inline-block;
+				&::before {
+					content: " • "
+				}
+			}
+		}
+		@include large {
+			&:nth-child(4n) {
+					grid-column-start: 2; 
+				}
+		}
+		@include huge {
+			&:nth-child(4n) {
+				grid-column-start: 4;
+			}
+		}
+	}
+
 }
 
 

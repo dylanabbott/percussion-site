@@ -177,6 +177,13 @@ html {
 
 	--services-item: #{getcolor(light-orange,2)};
 
+	//Services (v2)
+
+	--services-card-section-bg: #{getcolor(dark-blue,0)};
+	--services-card-bg: #{getcolor(light-blue,2)};
+	--services-card-title: #{getcolor(dark-blue,0)};
+	--services-card-text: #{getcolor(dark-blue,0)};
+
 	//Blog 
 	--blog-tag: #{getcolor(dark-blue,0)};
 

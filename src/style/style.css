@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* RESET */
 /* 1. Use a more-intuitive box-sizing model. */
 *, *::before, *::after {
@@ -168,6 +169,10 @@ html {
   --clients-bg: hsl(190, 50%, 96%);
   --clients-heading: hsl(190, 100%, 18%);
   --services-item: hsl(30, 100%, 70%);
+  --services-card-section-bg: hsl(190, 100%, 18%);
+  --services-card-bg: hsl(190, 70%, 78%);
+  --services-card-title: hsl(190, 100%, 18%);
+  --services-card-text: hsl(190, 100%, 18%);
   --blog-tag: hsl(190, 100%, 18%);
   --blog-single-title-bg: hsl(10, 80%, 55%);
   --blog-single-title: hsl(0, 0%, 100%);
@@ -1207,6 +1212,64 @@ label {
 .services {
   text-align: center;
   padding-bottom: 4rem;
+}
+.services-revised {
+  background-color: var(--services-card-section-bg);
+  display: grid;
+  grid-template: 1fr/1fr;
+  gap: 1rem 1rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 576px) {
+  .services-revised {
+    grid-template: 1fr 1fr/1fr 1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  .services-revised {
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .services-revised {
+    grid-template: 1fr/1fr 1fr 1fr 1fr;
+  }
+}
+.services-card {
+  background-color: var(--services-card-bg);
+  color: var(--services-card-text);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02), 0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035), 0px 13.4px 17.9px rgba(0, 0, 0, 0.042), 0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
+}
+.services-card__title {
+  text-align: center;
+  margin-block-start: 0;
+  color: var(--services-card-title);
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 1.777rem;
+}
+.services-card__list {
+  padding-inline-start: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.services-card__list-item {
+  display: inline-block;
+}
+.services-card__list-item::before {
+  content: " • ";
+}
+@media screen and (min-width: 768px) {
+  .services-card:nth-child(4n) {
+    grid-column-start: 2;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .services-card:nth-child(4n) {
+    grid-column-start: 4;
+  }
 }
 
 .services__list {
