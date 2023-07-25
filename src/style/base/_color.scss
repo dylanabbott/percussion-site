@@ -184,6 +184,13 @@ html {
 	--services-card-title: #{getcolor(neutral,4)};
 	--services-card-text: #{getcolor(light-gold,2)};
 
+	//Latest
+	--latest-bg: #{getcolor(light-blue,3)};
+	--latest-heading: #{getcolor(dark-blue,0)};
+	--latest-meta: #{getcolor(dark-orange,0)};
+	--latest-title: #{getcolor(dark-blue,0)};
+	--latest-body: #{getcolor(dark-blue,0)};
+
 	//Blog 
 	--blog-tag: #{getcolor(dark-blue,0)};
 

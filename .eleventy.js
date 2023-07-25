@@ -34,7 +34,11 @@ module.exports = (eleventyConfig) => {
 	// });
 
 	eleventyConfig.addCollection('members', (collectionApi) => {
-		const members = collectionApi.items[0].data.members.result;
+		const members = collectionApi.items[0].data.members.result.sort(function (a,b) {
+			if (a.name < b.name) { return -1;}
+			if (a.name > b.name) { return 1;}
+			return 0;
+		});
 		return members;
 	});
 
@@ -57,6 +61,8 @@ module.exports = (eleventyConfig) => {
 		const blog = collectionApi.items[0].data.blog.result;
 		return blog;
 	});
+
+	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
 
 	eleventyConfig.addFilter('shortDate', (date) => {
 		const options = {

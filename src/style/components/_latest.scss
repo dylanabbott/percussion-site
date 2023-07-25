@@ -1,0 +1,42 @@
+@use '../utils' as *;
+
+.latest {
+    background-color: var(--latest-bg);
+    &__heading {
+        color: var(--latest-heading);
+    }
+    &__blog {
+        //height: 300px;
+        width: 100%;
+        padding-inline-end: 2rem;
+    }
+    &__case {
+        //background-color: blue;
+        //height: 300px;
+        width: 100%;
+        padding-inline-end: 2rem;
+    }
+    &__meta {
+        color: var(--latest-meta);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        margin-block-end: 1rem;
+        letter-spacing: 0.15em;
+        & a {
+            color: var(--latest-meta);
+            }
+        }
+    
+    &__title {
+        margin-block-start: 0;
+        color: var(--latest-title);
+    }
+    &__body {
+        color: var(--latest-body);
+    }
+    &__image {
+        object-fit: cover;
+        aspect-ratio: 16/9;
+        margin-block-end: 1rem;
+    }
+}

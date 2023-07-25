@@ -173,6 +173,11 @@ html {
   --services-card-bg: hsl(10, 80%, 40%);
   --services-card-title: hsl(0, 0%, 100%);
   --services-card-text: hsl(43, 94%, 89%);
+  --latest-bg: hsl(190, 60%, 88%);
+  --latest-heading: hsl(190, 100%, 18%);
+  --latest-meta: hsl(10, 80%, 55%);
+  --latest-title: hsl(190, 100%, 18%);
+  --latest-body: hsl(190, 100%, 18%);
   --blog-tag: hsl(190, 100%, 18%);
   --blog-single-title-bg: hsl(10, 80%, 55%);
   --blog-single-title: hsl(0, 0%, 100%);
@@ -582,7 +587,7 @@ body {
 .footer__info {
   flex-grow: 2;
   width: 100%;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 @media screen and (min-width: 768px) {
   .footer__info {
@@ -1680,6 +1685,43 @@ div.case-single__icon + p {
 }
 .pagination ul li a:active {
   color: var(--pagination-link-hover);
+}
+
+.latest {
+  background-color: var(--latest-bg);
+}
+.latest__heading {
+  color: var(--latest-heading);
+}
+.latest__blog {
+  width: 100%;
+  padding-inline-end: 2rem;
+}
+.latest__case {
+  width: 100%;
+  padding-inline-end: 2rem;
+}
+.latest__meta {
+  color: var(--latest-meta);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-block-end: 1rem;
+  letter-spacing: 0.15em;
+}
+.latest__meta a {
+  color: var(--latest-meta);
+}
+.latest__title {
+  margin-block-start: 0;
+  color: var(--latest-title);
+}
+.latest__body {
+  color: var(--latest-body);
+}
+.latest__image {
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  margin-block-end: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
