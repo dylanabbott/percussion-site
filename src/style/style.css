@@ -170,9 +170,9 @@ html {
   --clients-heading: hsl(190, 100%, 18%);
   --services-item: hsl(30, 100%, 70%);
   --services-card-section-bg: hsl(190, 100%, 18%);
-  --services-card-bg: hsl(190, 70%, 78%);
-  --services-card-title: hsl(190, 100%, 18%);
-  --services-card-text: hsl(190, 100%, 18%);
+  --services-card-bg: hsl(10, 80%, 40%);
+  --services-card-title: hsl(0, 0%, 100%);
+  --services-card-text: hsl(43, 94%, 89%);
   --blog-tag: hsl(190, 100%, 18%);
   --blog-single-title-bg: hsl(10, 80%, 55%);
   --blog-single-title: hsl(0, 0%, 100%);
@@ -582,6 +582,7 @@ body {
 .footer__info {
   flex-grow: 2;
   width: 100%;
+  line-height: 1.2;
 }
 @media screen and (min-width: 768px) {
   .footer__info {
@@ -1217,7 +1218,7 @@ label {
   background-color: var(--services-card-section-bg);
   display: grid;
   grid-template: 1fr/1fr;
-  gap: 1rem 1rem;
+  gap: 2rem 2rem;
   padding: 1rem;
 }
 @media screen and (min-width: 576px) {
@@ -1227,7 +1228,12 @@ label {
 }
 @media screen and (min-width: 768px) {
   .services-revised {
-    grid-template: 1fr 1fr/1fr 1fr 1fr;
+    grid-template: 1fr/1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .services-revised {
+    grid-template: 1fr/1fr 1fr 1fr;
   }
 }
 @media screen and (min-width: 1400px) {

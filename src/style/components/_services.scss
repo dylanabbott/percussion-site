@@ -11,7 +11,7 @@
 		background-color: var(--services-card-section-bg);
 		display: grid;
 		grid-template: 1fr / 1fr;
-		gap: 1rem 1rem;
+		gap: 2rem 2rem;
 		padding: 1rem;
 
 		@include medium {
@@ -19,7 +19,11 @@
 		}
 
 		@include large {
-			grid-template: 1fr 1fr  / 1fr 1fr 1fr; // maybe consider a 960 breakpoint for this?
+			grid-template: 1fr / 1fr 1fr; // maybe consider a 960 breakpoint for this?
+		}
+
+		@include xlarge {
+			grid-template: 1fr / 1fr 1fr 1fr;
 		}
 
 		@include huge {
