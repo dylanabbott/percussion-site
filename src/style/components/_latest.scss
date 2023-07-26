@@ -9,6 +9,11 @@
         //height: 300px;
         width: 100%;
         padding-inline-end: 2rem;
+        margin-block-start: 2rem;
+    
+        @include large {
+            margin-block-start: 0;
+        }
     }
     &__case {
         //background-color: blue;
@@ -20,16 +25,47 @@
         color: var(--latest-meta);
         font-size: 0.75rem;
         text-transform: uppercase;
-        margin-block-end: 1rem;
+        text-decoration: none;
+        margin-block-end: 0.5rem;
         letter-spacing: 0.15em;
+        &:hover {
+                text-decoration: underline;
+            }
         & a {
             color: var(--latest-meta);
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
             }
         }
-    
+    &__list {
+        padding-inline-start: 0;
+        &-item {
+                list-style-type: none;
+                color: var(--latest-title);
+                border-bottom: 1px solid var(--latest-border);
+                margin-block-end: 1rem;
+                & a {
+                    color: var(--latest-title);
+                    text-decoration: none;
+                    &:hover {
+                            text-decoration: underline;
+                        }
+                }
+            }
+    }
     &__title {
+        margin-block-end: 0.5rem;
         margin-block-start: 0;
         color: var(--latest-title);
+        & a {
+            text-decoration: none;
+            color: var(--latest-title);
+            &:hover {
+                    text-decoration: underline;
+                }
+        }
     }
     &__body {
         color: var(--latest-body);
@@ -37,6 +73,6 @@
     &__image {
         object-fit: cover;
         aspect-ratio: 16/9;
-        margin-block-end: 1rem;
+        margin-block: 1rem;
     }
 }

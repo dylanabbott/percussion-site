@@ -4,18 +4,37 @@
     <div class="section__col1-3">
         <h2 class="section__heading latest__heading">Our Latest</h2>
     </div>
-    <div class="section__col1-3 latest__blog">
-        <p class="latest__meta">From the <a href="/blog">Blog</a></p>
-        <h3 class="latest__title">{{ collections.blog[lastBlog].title }}</h3>
-        <img src="{{ collections.blog[lastBlog].imageUrl }}" alt="{{ collections.blog[lastBlog].featuredImage.alt }}" class="latest__image">
-        <p class="latest__body">{{ collections.blog[lastBlog].subtitle }}</p>
-        <a href="../../blog/{{ collections.blog[lastBlog].title | slugify }}/" class="latest__meta">Keep Reading</a>
-    </div>
     <div class="section__col1-3 latest__case">
-        <p class="latest__meta">Latest <a href="/cases">Case Study</a></p>
-        <h3 class="latest__title">{{ collections.caseStudies[lastCase].title }}</h3>
-        <img src="{{ collections.caseStudies[lastCase].featuredImageUrl }}" alt="{{ collections.caseStudies[lastCase].featuredImageAlt }}" class="latest__image">
-        <p class="latest__body">{{ collections.caseStudies[lastCase].problem | richText | safe }}</p>
-        <a href="../../cases/{{ collections.caseStudies[lastCase].title | slugify }}/" class="latest__meta">Keep Reading</a>
-    </div>
-</section>
+        <p class="latest__meta">Latest
+            <a href="/cases">Case Study</a>
+        </p>
+        <h3 class="latest__title">
+            <a href="../../cases/{{ collections.caseStudies[lastCase].title | slugify }}/">{{ collections.caseStudies[lastCase].title }}</a>
+        </h3>
+        <a href="../../cases/{{ collections.caseStudies[lastCase].title | slugify }}/">
+            <img src="{{ collections.caseStudies[lastCase].featuredImageUrl }}" alt="{{ collections.caseStudies[lastCase].featuredImageAlt }}" class="latest__image"></a>
+            <div class="latest__body">{{ collections.caseStudies[lastCase].problem | richText | safe }}</div>
+            <a href="../../cases/{{ collections.caseStudies[lastCase].title | slugify }}/" class="latest__meta">Keep Reading</a>
+        </div>
+        <div class="section__col1-3 latest__blog">
+            <p class="latest__meta">From the
+                <a href="/blog">Blog</a>
+            </p>
+            <ul class="latest__list">
+                {% for post in collections.blog %}
+                    {% if loop.index < 4 %}
+                        <li class="latest__list-item">
+                            <a href="../../blog/{{ post.title | slugify }}">
+                                <h3 class="latest__title">{{ post.title }}</h3>
+                            </a>
+                            <p class="latest__meta">By {{ post.author.name }}</p>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            {# <h3 class="latest__title">{{ collections.blog[lastBlog].title }}</h3>
+                    <img src="{{ collections.blog[lastBlog].imageUrl }}" alt="{{ collections.blog[lastBlog].featuredImage.alt }}" class="latest__image">
+                    <p class="latest__body">{{ collections.blog[lastBlog].subtitle }}</p>
+                    <a href="../../blog/{{ collections.blog[lastBlog].title | slugify }}/" class="latest__meta">Keep Reading</a> #}
+        </div>
+    </section>

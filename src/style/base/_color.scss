@@ -189,9 +189,10 @@ html {
 	//Latest
 	--latest-bg: #{getcolor(light-blue,3)};
 	--latest-heading: #{getcolor(dark-blue,0)};
-	--latest-meta: #{getcolor(dark-orange,0)};
+	--latest-meta: #{getcolor(teal,0)};
 	--latest-title: #{getcolor(dark-blue,0)};
 	--latest-body: #{getcolor(dark-blue,0)};
+	--latest-border: #{getcolor(light-blue,1)};
 
 	//Blog 
 	--blog-tag: #{getcolor(dark-blue,0)};
