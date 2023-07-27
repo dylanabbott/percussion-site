@@ -62,7 +62,24 @@ module.exports = (eleventyConfig) => {
 		return blog;
 	});
 
-	eleventyConfig.addCollection('tagList', require('./src/js/getTagList.js'));
+	eleventyConfig.addCollection('tagList', (collectionApi) => {
+		let tagSet = new Set();
+		tagSet.add("Test");
+		const posts = collectionApi.getAll()[0].data.blog.result;
+		posts.forEach((item) => {
+			if ("tags" in item) {
+				let tags = item.tags;
+				if (typeof tags === "string") {
+					tags = [tags];
+				}
+
+				for (const tag of tags) {
+					tagSet.add(tag);
+				}
+			};
+		});
+		return tagSet;
+	});
 
 	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
 
