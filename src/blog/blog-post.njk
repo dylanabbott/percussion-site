@@ -22,7 +22,7 @@ permalink: "blog/{{ blog.title | slugify }}/index.html"
                     <p class="blog-single__author">by {{ blog.author.name }}<br/>{{ blog.date | shortDate }}</p>
                     <ul class="blog-single__tag-list">
                         {%- for tag in blog.tags -%}
-                            <li class="blog-single__tag">{{ tag }}</li>
+                            <li class="blog-single__tag"><a href="../../blog/tag/{{ tag | slugify }}">{{ tag }}</a></li>
                         {%- endfor -%}
                     </ul>
                 </div>

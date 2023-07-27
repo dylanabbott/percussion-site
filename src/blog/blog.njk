@@ -38,6 +38,7 @@ permalink: "/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1
                 </section>
             {%- endfor -%}
             {% include 'pagination.njk' %}
+            {% include 'tags.njk' %}
         </main>
         {% include 'contact.njk' %}
         {% include 'site-footer.njk' %}

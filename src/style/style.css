@@ -181,6 +181,7 @@ html {
   --latest-body: hsl(190, 100%, 18%);
   --latest-border: hsl(190, 85%, 58%);
   --blog-tag: hsl(190, 100%, 18%);
+  --blog-tag-hover: hsl(190, 60%, 38%);
   --blog-single-title-bg: hsl(10, 80%, 55%);
   --blog-single-title: hsl(0, 0%, 100%);
   --blog-single-content: hsl(190, 50%, 96%);
@@ -1544,9 +1545,17 @@ label {
   margin-inline-start: 1.5rem;
   padding: 0.1rem 1rem;
   border-radius: 0.3rem;
+  transition: background-color 0.3s ease-in;
+}
+.blog-single__tag:hover {
+  background-color: var(--blog-tag-hover);
 }
 .blog-single__tag:first-child {
   margin-inline-start: 0;
+}
+.blog-single__tag a {
+  color: white;
+  text-decoration: none;
 }
 
 .case-single {

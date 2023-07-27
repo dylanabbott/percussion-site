@@ -196,6 +196,7 @@ html {
 
 	//Blog 
 	--blog-tag: #{getcolor(dark-blue,0)};
+	--blog-tag-hover: #{getcolor(dark-blue,2)};
 
 	--blog-single-title-bg: #{getcolor(dark-orange, 0)}; 
 	--blog-single-title: #{getcolor(neutral,4)};

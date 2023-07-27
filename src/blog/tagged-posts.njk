@@ -1,0 +1,23 @@
+---
+pagination:
+    data: collections.tagList
+    size: 1
+permalink: "/blog/tag/{{ pagination.items | slugify }}/index.html"
+---
+
+{% include 'site-head.njk' %}
+{% include 'secondary-navigation.njk' %}
+<main class="site-content">
+    {% set tag = pagination.items %}
+    <h1>Posts Tagged {{ tag }}</h1>
+        <ul>
+            {% for post in collections.blog %}
+                {% for item in post.tags %}
+                    {% if item == tag %}
+                        <li><a href="../../{{ post.title | slugify }}/">{{ post.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </ul>
+</main>
+{% include 'site-footer.njk' %}

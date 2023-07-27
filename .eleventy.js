@@ -64,7 +64,6 @@ module.exports = (eleventyConfig) => {
 
 	eleventyConfig.addCollection('tagList', (collectionApi) => {
 		let tagSet = new Set();
-		tagSet.add("Test");
 		const posts = collectionApi.getAll()[0].data.blog.result;
 		posts.forEach((item) => {
 			if ("tags" in item) {
@@ -72,13 +71,12 @@ module.exports = (eleventyConfig) => {
 				if (typeof tags === "string") {
 					tags = [tags];
 				}
-
 				for (const tag of tags) {
 					tagSet.add(tag);
 				}
 			};
 		});
-		return tagSet;
+		return [...tagSet];
 	});
 
 	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
