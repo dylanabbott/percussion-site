@@ -1,35 +1,17 @@
-<div class="section__col3-3 tags">
-    <h2>Tags</h2>
+<section class="section-layout tag-nav">
+    <div class="section__col3-3">
     {% if collections.tagList %}
-        <ul>
+        <ul class="tag-nav__list">
+            <li class="tag-nav__list-header">Browse by Tags:</li>
             {% for tag in collections.tagList %}
                 {% set tagUrl %}/blog/tag/{{ tag | slugify }}/{% endset %}
-                <li>
+                <li class="tag-nav__list-item">
                     <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
                 </li>
             {% endfor %}
         </ul>
     {% else %}
-        <h3>No Tags</h3>
+        <h3>No Tags Found</h3>
     {% endif %}
-    {# {% for post in collections.blog %}
-        <ul>
-            {% for tag in post.tags %}
-            <li>{{ tag }}</li>
-            {% endfor %}
-            </ul>
-        {% endfor %} #}
-    <hr>
-        {% for tag in collections.tagList %}
-            <h2>Posts tagged {{ tag }}</h2>
-            <ul>
-                {% for post in collections.blog %}
-                    {% for item in post.tags %}
-                        {% if item === tag %}
-                            <li><a href="../../blog/{{ post.title | slugify }}/">{{ post.title }}</a></li>
-                        {% endif %}
-                    {% endfor %}
-                {% endfor %}
-            </ul>
-        {% endfor %}
     </div>
+</section>

@@ -4,20 +4,31 @@ pagination:
     size: 1
 permalink: "/blog/tag/{{ pagination.items | slugify }}/index.html"
 ---
-
+{% set tag = pagination.items %}
 {% include 'site-head.njk' %}
 {% include 'secondary-navigation.njk' %}
 <main class="site-content">
-    {% set tag = pagination.items %}
+    <section class="section-layout">
     <h1>Posts Tagged {{ tag }}</h1>
-        <ul>
-            {% for post in collections.blog %}
-                {% for item in post.tags %}
-                    {% if item == tag %}
-                        <li><a href="../../{{ post.title | slugify }}/">{{ post.title }}</a></li>
+    </section>
+        {% for post in collections.blog %}
+            {% for item in post.tags %}
+                {% if item == tag %}
+                    <section class="blog-listing section-layout">
+                        <div class="section__col1-3">
+                            <a href="../../blog/{{ post.title | slugify }}/">
+                                <img src="{{ post.imageUrl }}" alt="{{ post.featuredImage.alt }}" class="blog-listing__featured"></a>
+                            </div>
+                            <div class="section__col2-3">
+                                <a href="../../blog/{{ post.title | slugify }}/" class="blog-listing__post-title">
+                                    <h2>{{ post.title }}</h2>
+                                </a>
+                                <span class="blog-listing__post-meta">{{ post.date | shortDate }}, by {{ post.author.name }}</span>
+                                <p class="blog-listing__post-subtitle">{{ post.subtitle }}</p>
+                            </div>
+                        </section>
                     {% endif %}
                 {% endfor %}
             {% endfor %}
-        </ul>
-</main>
-{% include 'site-footer.njk' %}
+    </main>
+    {% include 'site-footer.njk' %}

@@ -197,6 +197,7 @@ html {
   --blog-listing-post-title-hover: hsl(10, 80%, 65%);
   --blog-listing-post-subtitle: hsl(190, 100%, 18%);
   --blog-listing-post-meta: hsl(182, 100%, 21%);
+  --tag-nav-bg: hsl(190, 70%, 78%);
   --case-single-icon: hsl(190, 100%, 18%);
   --case-single-overlay: hsl(10, 80%, 75%);
   --case-single-title: hsl(0, 0%, 100%);
@@ -225,7 +226,7 @@ html {
   --case-listing-body-bg: hsl(190, 60%, 88%);
   --case-listing-title: hsl(10, 80%, 55%);
   --case-listing-text: hsl(190, 100%, 18%);
-  --pagination-bg: hsl(190, 70%, 78%);
+  --pagination-bg: hsl(182, 40%, 71%);
   --pagination-text: hsl(190, 100%, 18%);
   --pagination-link: hsl(10, 80%, 30%);
   --pagination-link-hover: hsl(10, 80%, 55%);
@@ -1554,6 +1555,37 @@ label {
   margin-inline-start: 0;
 }
 .blog-single__tag a {
+  color: white;
+  text-decoration: none;
+}
+
+.tag-nav {
+  background-color: var(--tag-nav-bg);
+}
+.tag-nav__list {
+  list-style-type: none;
+  display: inline-block;
+  padding-inline-start: 0;
+}
+.tag-nav__list-header {
+  display: inline-block;
+}
+.tag-nav__list-item {
+  display: inline-block;
+  background-color: var(--blog-tag);
+  color: #fff;
+  margin-inline-start: 1.5rem;
+  padding: 0.1rem 1rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease-in;
+}
+.tag-nav__list-item:hover {
+  background-color: var(--blog-tag-hover);
+}
+.tag-nav__list-item:first-child {
+  margin-inline-start: 0;
+}
+.tag-nav__list-item a {
   color: white;
   text-decoration: none;
 }

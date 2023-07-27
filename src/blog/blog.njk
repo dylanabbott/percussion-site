@@ -29,16 +29,11 @@ permalink: "/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1
                         </a>
                         <span class="blog-listing__post-meta">{{ post.date | shortDate }}, by {{ post.author.name }}</span>
                         <p class="blog-listing__post-subtitle">{{ post.subtitle }}</p>
-                        {# <ul class="blog-listing__tag-list">
-                                                                            {%- for tag in post.tags -%}
-                                                                                <li class="blog-listing__tag">{{ tag }}</li>
-                                                                            {%- endfor -%}
-                                                                        </ul> #}
                     </div>
                 </section>
             {%- endfor -%}
-            {% include 'pagination.njk' %}
             {% include 'tags.njk' %}
+            {% include 'pagination.njk' %}
         </main>
         {% include 'contact.njk' %}
         {% include 'site-footer.njk' %}

@@ -28,8 +28,8 @@ $colors: (
 		0: hsl(182, 100%, 21%),
         1: hsl(182, 80%, 31%),
         2: hsl(182, 60%, 41%),
-        3: hsl(182, 40%, 51%),
-        4: hsl(182, 20%, 61%),
+        3: hsl(182, 40%, 71%),
+        4: hsl(182, 30%, 81%),
 	),
 	dark-orange: (
 		0: hsl(10, 80%, 55%),
@@ -216,6 +216,8 @@ html {
 	--blog-listing-post-subtitle: #{getcolor(dark-blue,0)};
 	--blog-listing-post-meta: #{getcolor(teal,0)};
 
+	--tag-nav-bg: #{getcolor(light-blue,2)};
+
 	//Case Study
 	--case-single-icon: #{getcolor(dark-blue,0)};
 	--case-single-overlay: #{getcolor(dark-orange,2)};
@@ -255,7 +257,7 @@ html {
 	// --case-listing-cite: #{getcolor(dark-blue,0)};
 
 	//Pagination 
-	--pagination-bg: #{getcolor(light-blue,2)};
+	--pagination-bg: #{getcolor(teal,3)};
 	--pagination-text: #{getcolor(dark-blue,0)};
 	--pagination-link: #{getcolor(deep-orange,2)};
 	--pagination-link-hover: #{getcolor(dark-orange,0)};
