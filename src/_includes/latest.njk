@@ -1,4 +1,3 @@
-{% set lastBlog = collections.blog.length - 1 %}
 {% set lastCase = collections.caseStudies.length -1 %}
 <section class="latest section-layout">
     <div class="section__col1-3">
@@ -14,7 +13,7 @@
         <a href="../../cases/{{ collections.caseStudies[lastCase].title | slugify }}/">
             <img src="{{ collections.caseStudies[lastCase].featuredImageUrl }}" alt="{{ collections.caseStudies[lastCase].featuredImageAlt }}" class="latest__image"></a>
             <div class="latest__body">{{ collections.caseStudies[lastCase].problem | richText | safe }}</div>
-            <a href="../../cases/{{ collections.caseStudies[lastCase].title | slugify }}/" class="latest__meta">Keep Reading</a>
+            <p class="latest__meta"><a href="../../cases/{{ collections.caseStudies[lastCase].title | slugify }}/">Keep Reading</a></p>
         </div>
         <div class="section__col1-3 latest__blog">
             <p class="latest__meta">From the
@@ -32,9 +31,5 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            {# <h3 class="latest__title">{{ collections.blog[lastBlog].title }}</h3>
-                    <img src="{{ collections.blog[lastBlog].imageUrl }}" alt="{{ collections.blog[lastBlog].featuredImage.alt }}" class="latest__image">
-                    <p class="latest__body">{{ collections.blog[lastBlog].subtitle }}</p>
-                    <a href="../../blog/{{ collections.blog[lastBlog].title | slugify }}/" class="latest__meta">Keep Reading</a> #}
         </div>
     </section>

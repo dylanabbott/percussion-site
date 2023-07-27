@@ -1,0 +1,23 @@
+<div class="section__col3-3 tags">
+    {{ collections | log }}
+    <h2>Tags</h2>
+    {% if collections.tagList %}
+        <ul>
+        {% for tag in collections.tagList %}
+            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <li>
+                <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+                ({{ collections[tag].length }})</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <h3>No Tags</h3>
+    {% endif %}
+    {# {% for post in collections.blog %}
+    <ul>
+        {% for tag in post.tags %}
+        <li>{{ tag }}</li>
+        {% endfor %}
+        </ul>
+    {% endfor %} #}
+</div>

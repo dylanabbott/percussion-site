@@ -62,6 +62,8 @@ module.exports = (eleventyConfig) => {
 		return blog;
 	});
 
+	eleventyConfig.addCollection('tagList', require('./src/js/getTagList.js'));
+
 	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
 
 	eleventyConfig.addFilter('shortDate', (date) => {

@@ -1285,7 +1285,7 @@ label {
   display: grid;
   grid-template: 1fr/1fr;
   gap: 2rem 2rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 @media screen and (min-width: 576px) {
   .services-revised {
@@ -1775,9 +1775,6 @@ div.case-single__icon + p {
   text-decoration: none;
   margin-block-end: 0.5rem;
   letter-spacing: 0.15em;
-}
-.latest__meta:hover {
-  text-decoration: underline;
 }
 .latest__meta a {
   color: var(--latest-meta);
