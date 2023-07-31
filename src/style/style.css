@@ -115,6 +115,7 @@ html {
   --hero-tagline: hsl(0, 0%, 100%);
   --hero-tagline-lg: hsl(190, 80%, 28%);
   --hero-tag-bg: hsl(10, 80%, 55%);
+  --site-content-bg: hsl(190, 60%, 88%);
   --footer-bg: hsl(190, 100%, 18%);
   --footer-text: hsl(0, 0%, 100%);
   --social-item: hsl(0, 0%, 100%);
@@ -248,6 +249,11 @@ body {
 }
 
 /* Temporary outlines */
+.site-content {
+  min-height: calc(100vh - 200px);
+  background-color: var(--site-content-bg);
+}
+
 .section-layout,
 .site-footer,
 .site-header {

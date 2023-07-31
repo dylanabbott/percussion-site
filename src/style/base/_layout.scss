@@ -29,9 +29,10 @@ body {
 // 	border: 1px solid #999999;
 // }
 
-// .site-content {
-// 	border: 1px solid #999999;
-//}
+.site-content {
+	min-height: calc(100vh - 200px);
+	background-color: var(--site-content-bg);
+}
 
 .section-layout,
 .site-footer,

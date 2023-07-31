@@ -8,8 +8,12 @@ permalink: "/blog/tag/{{ pagination.items | slugify }}/index.html"
 {% include 'site-head.njk' %}
 {% include 'secondary-navigation.njk' %}
 <main class="site-content">
-    <section class="section-layout">
-    <h1>Posts Tagged {{ tag }}</h1>
+    <section class="blog-single section-layout">
+        <a href="/" class="nav__brand-mobile">
+            <img src="/img/perc-logo-horizontal-nt.png" alt="Percussion Strategic logo" height="26" width="165"></a>
+        <div class="blog-single__title">
+    <h1>Posts Tagged "{{ tag }}"</h1>
+    </div>
     </section>
         {% for post in collections.blog %}
             {% for item in post.tags %}
