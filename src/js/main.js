@@ -162,3 +162,21 @@ const observer = new IntersectionObserver(
 
 const listItems = document.querySelectorAll('.services__list__item');
 listItems.forEach((el) => observer.observe(el));
+
+//Services Reveal v2
+
+const newObserver = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry, index) => {
+			setTimeout(function () {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('reveal-2');
+				}
+			}, 300 * index);
+		});
+	},
+	{ rootMargin: '0px', threshold: .75 }
+);
+
+const cardItems = document.querySelectorAll('.services-card');
+cardItems.forEach((el) => newObserver.observe(el));
