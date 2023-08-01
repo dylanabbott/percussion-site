@@ -11,7 +11,7 @@
             <a href="../../cases/{{ collections.caseStudies[lastCase].title | slugify }}/">{{ collections.caseStudies[lastCase].title }}</a>
         </h3>
         <a href="../../cases/{{ collections.caseStudies[lastCase].title | slugify }}/">
-            <img src="{{ collections.caseStudies[lastCase].featuredImageUrl }}" alt="{{ collections.caseStudies[lastCase].featuredImageAlt }}" class="latest__image"></a>
+            <img src="{{ collections.caseStudies[lastCase].featuredImageUrl }}?w=500" alt="{{ collections.caseStudies[lastCase].featuredImageAlt }}" class="latest__image" width="500" height="250"></a>
             <div class="latest__body">{{ collections.caseStudies[lastCase].problem | richText | safe }}</div>
             <p class="latest__meta"><a href="../../cases/{{ collections.caseStudies[lastCase].title | slugify }}/">Keep Reading</a></p>
         </div>

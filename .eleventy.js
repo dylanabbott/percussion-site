@@ -34,9 +34,16 @@ module.exports = (eleventyConfig) => {
 	// });
 
 	eleventyConfig.addCollection('members', (collectionApi) => {
-		const members = collectionApi.items[0].data.members.result.sort(function (a,b) {
-			if (a.name < b.name) { return -1;}
-			if (a.name > b.name) { return 1;}
+		const members = collectionApi.items[0].data.members.result.sort(function (
+			a,
+			b
+		) {
+			if (a.name < b.name) {
+				return -1;
+			}
+			if (a.name > b.name) {
+				return 1;
+			}
 			return 0;
 		});
 		return members;
@@ -66,15 +73,15 @@ module.exports = (eleventyConfig) => {
 		let tagSet = new Set();
 		const posts = collectionApi.getAll()[0].data.blog.result;
 		posts.forEach((item) => {
-			if ("tags" in item) {
+			if ('tags' in item) {
 				let tags = item.tags;
-				if (typeof tags === "string") {
+				if (typeof tags === 'string') {
 					tags = [tags];
 				}
 				for (const tag of tags) {
 					tagSet.add(tag);
 				}
-			};
+			}
 		});
 		return [...tagSet];
 	});
@@ -128,7 +135,7 @@ module.exports = (eleventyConfig) => {
 				span: ({ children, value }) =>
 					html`<span id="${value.spanID}">${children}</span>`,
 				link: ({ children, value }) =>
-					html`<a href="${value.url}">${children}</a>`,
+					html`<a href="${value.url}" target="_blank">${children}</a>`,
 			},
 		};
 		return toHTML(blocks, { components: types });

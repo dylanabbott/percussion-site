@@ -5,6 +5,7 @@ pagination:
 permalink: "/cases/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 
+{% set pageName = 'Case Studies' %}
 {% include 'site-head.njk' %}
 {% include 'secondary-navigation.njk' %}
 <main class="site-content">
@@ -21,7 +22,7 @@ permalink: "/cases/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 
             <section class="case-listing__body section-layout">
                 <div class="section__col1-3 case-listing__img-container">
                     <a href="../../cases/{{ case.title | slugify }}/">
-                        <img src="{{ case.featuredImageUrl }}" alt="{{ case.featuredImageAlt }}" class="case-listing__featured"></a>
+                        <img src="{{ case.featuredImageUrl }}?h=300" alt="{{ case.featuredImageAlt }}" class="case-listing__featured" height="300" width="300"></a>
                     </div>
                     <div class="section__col2-3">
                         <h2 class="case-listing__title">

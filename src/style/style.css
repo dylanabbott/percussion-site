@@ -777,10 +777,13 @@ label {
   background: url("/img/perc-blob-color.svg") 1000% center/0% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("/img/perc-hero-bg-v2.png") center center/cover no-repeat;
 }
 .hero-v2__brand {
-  width: 75%;
   object-fit: contain;
   height: 180px;
+  margin-block-end: 0;
   animation: brand-reveal 2.5s ease-in-out;
+}
+.hero-v2__brand-wrapper {
+  margin-block-end: 0;
 }
 @media screen and (min-width: 768px) {
   .hero-v2__brand {
@@ -800,6 +803,9 @@ label {
 .hero-v2__tagline {
   color: var(--hero-tagline);
   font-weight: 400;
+  font-family: "Big Shoulders Display";
+  font-size: 1.777rem;
+  line-height: 1.2;
   margin-top: 1rem;
   max-width: 80%;
   text-align: center;
@@ -827,9 +833,6 @@ label {
     align-items: center;
     background: url("/img/perc-blob-color.svg") 1000% center/0% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("/img/perc-hero-bg-v2.png") center center/cover no-repeat;
   }
-  .hero-v2__brand {
-    width: 50%;
-  }
   .hero-v2__tagline {
     color: white;
     text-align: left;
@@ -840,6 +843,13 @@ label {
   .hero-v2 {
     background: url("/img/perc-blob-color.svg") 1000% center/0% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url("/img/perc-hero-bg-v2.png") center center/cover no-repeat;
   }
+}
+
+.hidden {
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
 }
 
 @keyframes brand-reveal {
@@ -1644,6 +1654,7 @@ label {
   background-color: var(--blog-tag);
   color: #fff;
   margin-inline-start: 1.5rem;
+  margin-block-end: 1rem;
   padding: 0.1rem 1rem;
   border-radius: 0.3rem;
   transition: background-color 0.3s ease-in;
@@ -1821,16 +1832,13 @@ div.case-single__icon + p {
   min-height: 100%;
   align-items: center;
   padding-block-end: 2rem;
+  padding-inline-end: 2rem;
 }
 .case-listing__featured {
+  object-fit: cover;
+  aspect-ratio: 1/1;
   box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02), 0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035), 0px 13.4px 17.9px rgba(0, 0, 0, 0.042), 0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07);
 }
-@media screen and (min-width: 768px) {
-  .case-listing__featured {
-    max-width: calc(100% - 2rem);
-  }
-}
-
 .pagination {
   background-color: var(--pagination-bg);
 }

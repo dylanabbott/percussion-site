@@ -1,3 +1,4 @@
+{% set pageName = 'home' %}
 {% include 'site-head.njk' %}
 {% include 'home-navigation.njk' %}
 {% include 'hero.njk' %}
@@ -6,7 +7,7 @@
         <section class="{{ section.title | slug }} section-layout">
             <div class="section__col1-3">
                 <h2 class="section__heading">
-                    <a id="{{ section.title | slug }}">{{ section.title }}</a>
+                    <span id="{{ section.title | slug }}">{{ section.title }}</span>
                 </h2>
                 {%- if section.pull_quote -%}
                     <h4 class="section__pullquote">{{ section.pullquote }}</h4>

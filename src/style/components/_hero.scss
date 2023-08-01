@@ -73,10 +73,14 @@
     background: url('/img/perc-blob-color.svg') 1000% center/0% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('/img/perc-hero-bg-v2.png') center center/cover no-repeat;
 
     &__brand {
-        width: 75%;
+        //width: 75%;
         object-fit: contain;
         height: 180px;
+        margin-block-end: 0;
         animation: brand-reveal 2.5s ease-in-out;
+        &-wrapper {
+            margin-block-end: 0;
+        }
         @include large {
             height: 245px;
         }
@@ -91,6 +95,9 @@
     &__tagline {
         color: var(--hero-tagline);
         font-weight: 400;
+        font-family: 'Big Shoulders Display';
+        font-size: 1.777rem;
+        line-height: 1.2;
         margin-top: 1rem;
         max-width: 80%;
         text-align: center;
@@ -117,7 +124,7 @@
         background: url('/img/perc-blob-color.svg') 1000% center/0% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('/img/perc-hero-bg-v2.png') center center/cover no-repeat;
 
         &__brand {
-            width: 50%;
+            //width: 50%;
         }
 
         &__tagline {
@@ -131,6 +138,13 @@
         //padding-bottom: 10%;
         background: url('/img/perc-blob-color.svg') 1000% center/0% no-repeat, linear-gradient(var(--hero-bg), var(--hero-bg)), url('/img/perc-hero-bg-v2.png') center center/cover no-repeat;
     }
+}
+
+.hidden {
+    display: block;
+    height: 0;
+    width: 0;
+    overflow: hidden;
 }
 
 @keyframes brand-reveal {

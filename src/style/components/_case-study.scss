@@ -224,14 +224,16 @@ div.case-single__icon+p {
         min-height: 100%;
         align-items: center;
         padding-block-end: 2rem;
+        padding-inline-end: 2rem;
     }
 
     &__featured {
-        
+        object-fit: cover;
+        aspect-ratio: 1/1;
         @include shadow;
 
         @include large {
-            max-width: calc(100% - 2rem);
+            //max-width: calc(100% - 2rem);
         }
     }
 }
