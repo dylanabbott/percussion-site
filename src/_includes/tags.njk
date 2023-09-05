@@ -1,0 +1,17 @@
+<section class="section-layout tag-nav">
+    <div class="section__col3-3">
+    {% if collections.tagList %}
+        <ul class="tag-nav__list">
+            <li class="tag-nav__list-header">Browse by Tags:</li>
+            {% for tag in collections.tagList %}
+                {% set tagUrl %}/blog/tag/{{ tag | slugify }}/{% endset %}
+                <li class="tag-nav__list-item">
+                    <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>No Tags Found</h3>
+    {% endif %}
+    </div>
+</section>

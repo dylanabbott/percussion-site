@@ -18,6 +18,11 @@ export default {
       title: 'Title',
     },
     {
+      name: 'menuName',
+      type: 'string',
+      title: 'Name in Menu',
+    },
+    {
       name: 'order',
       type: 'number',
       title: 'Order',

@@ -1,5 +1,16 @@
 console.log('Loaded bundled scripts');
 
+// Ensure modal is hidden on page load
+
+function modalUpdate() {
+	modal.style.visibility="visible";
+	modalFrame.visibility="visible";
+};
+
+window.addEventListener("load", (event) => {
+	setTimeout(modalUpdate, 666);
+});
+
 // Show/Hide Mobile Menu
 
 const btnMenu = document.getElementById('menu-button');
@@ -24,10 +35,10 @@ showModalButton.addEventListener('click', () =>
 	modal.classList.toggle('hidden')
 );
 
-showModalLink.addEventListener('click', (e) => {
+if (showModalLink) {showModalLink.addEventListener('click', (e) => {
 	e.preventDefault();
 	modal.classList.toggle('hidden');
-});
+})};
 
 hideModalButton.addEventListener('click', (e) => {
 	e.preventDefault();
@@ -35,7 +46,7 @@ hideModalButton.addEventListener('click', (e) => {
 });
 
 modal.addEventListener('click', (e) => {
-	if (e.path[0] === modal) {
+	if (e.target.id === "modal") {
 		modal.classList.toggle('hidden');
 	}
 });
@@ -151,3 +162,21 @@ const observer = new IntersectionObserver(
 
 const listItems = document.querySelectorAll('.services__list__item');
 listItems.forEach((el) => observer.observe(el));
+
+//Services Reveal v2
+
+const newObserver = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry, index) => {
+			setTimeout(function () {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('reveal-2');
+				}
+			}, 300 * index);
+		});
+	},
+	{ rootMargin: '0px', threshold: .75 }
+);
+
+const cardItems = document.querySelectorAll('.services-card');
+cardItems.forEach((el) => newObserver.observe(el));

@@ -1,0 +1,38 @@
+---
+pagination:
+    data: collections.caseStudies
+    size: 2
+permalink: "/cases/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+{% set pageName = 'Case Studies' %}
+{% include 'site-head.njk' %}
+{% include 'secondary-navigation.njk' %}
+<main class="site-content">
+    <section class="case-listing__hero section-layout">
+        <a href="/" class="nav__brand-mobile">
+            <img src="/img/perc-logo-horizontal-nt.png" alt="Percussion Strategic logo" height="26" width="165"></a>
+            <div class="section__col3-3 case-listing__header">
+                <h1 class="case-listing__heading">Case Studies</h1>
+                <p class="case-listing__intro-text">Dig into some of Percussion’s work with advocacy organizations across the country. Our team works with non-profits, coalitions, and community based orgs to scale and implement strategic earned and digital communications campaigns. From earned strategies to paid media to digital growth campaigns, we work with our clients to accomplish big, mission-driven goals.</p>
+                <p class="case-listing__intro-text">Learn more about Percussion Strategic’s work by reading our case studies:</p>
+            </div>
+        </section>
+        {%- for case in pagination.items -%}
+            <section class="case-listing__body section-layout">
+                <div class="section__col1-3 case-listing__img-container">
+                    <a href="../../cases/{{ case.title | slugify }}/">
+                        <img src="{{ case.featuredImageUrl }}?h=300" alt="{{ case.featuredImageAlt }}" class="case-listing__featured" height="300" width="300"></a>
+                    </div>
+                    <div class="section__col2-3">
+                        <h2 class="case-listing__title">
+                            <a href="../../cases/{{ case.title | slugify }}/">{{ case.title }}</a>
+                        </h2>
+                        {{ case.problem | richText | safe }}
+                        {# <p><a href="../cases/{{ case.title | slugify }}/">Keep Reading...</a></p> #}
+                    </div>
+                </section>
+            {%- endfor -%}
+            {% include 'pagination.njk' %}
+        </main>
+        {% include 'site-footer.njk' %}

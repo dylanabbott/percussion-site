@@ -1,36 +1,37 @@
-<div class="modal__overlay hidden" id="modal">
+<section class="modal__overlay hidden" id="modal" style="visibility:hidden;">
 	<div class="modal" id="contact-form">
-		<a href="#" id="modal__close" class="modal__close">CLOSE</a>
+		<a href="#" id="modal__close" class="modal__close" role="button">CLOSE</a>
 		<form
 			class="contactform"
 			name="contact-form"
+			title="Contact Form"
 			id="form-body"
 			method="POST"
 			data-netlify-recaptcha="true"
 			netlify-honeypot="bots-only"
 			data-netlify="true"
 		>
-			<div class="contactform__section">
+			<div class="contactform__section" role="form" title="Contact Form Part 1">
 				<p class="contactform__heading">
 					Get in touch with us about your next project:
 				</p>
 				<p class="bots-only">
 				<label>
-					Don’t fill this out if you’re human: <input name="bots-only" />
+					Don't fill this out if you're human: <input name="bots-only" />
 				</label>
 			</p>
 				<label for="name">Name*</label>
-				<input type="text" id="name" name="name" required />
+				<input type="text" id="name" name="name" autocomplete="name" required />
 				<label for="email">Email*</label>
-				<input type="email" id="email" name="email" required />
+				<input type="email" id="email" name="email" autocomplete="email" required />
 				<label for="phone">Phone*</label>
-				<input type="tel" id="phone" name="phone" maxlength="12" required />
+				<input type="tel" id="phone" name="phone" maxlength="12" autocomplete="tel" required />
 				<label for="org">Campaign or Organization*</label>
-				<input type="text" id="org" name="org" required />
+				<input type="text" id="org" name="org" autocomplete="organization" required />
 				<label for="deadline">Deadline:</label>
 				<input type="date" id="deadline" name="deadline" />
 			</div>
-			<div class="contactform__section">
+			<div class="contactform__section" role="form" title="Contact Form Part 2">
 				<label for="project">Project Description*</label>
 				<textarea id="project" name="project" cols="30" required></textarea>
 				<div data-netlify-recaptcha="true" class="recaptcha"></div>
@@ -39,4 +40,4 @@
 			</div>
 		</form>
 	</div>
-</div>
+</section>

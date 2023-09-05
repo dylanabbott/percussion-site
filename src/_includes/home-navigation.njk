@@ -1,0 +1,24 @@
+<div class="nav__toggle" role="button">
+    <div id="menu-button">
+        <img src="/img/toggle.svg" alt="+" width="24" height="24"></div>
+    </div>
+    <nav class="nav nav--hidden-on-mobile section-layout section__col3-3" id="nav">
+        <a href="/" title="Home | Percussion Strategic">
+            <img src="/img/perc-logo-horizontal-nt.png" alt="Percussion Strategic logo" height="26" width="165" class="nav__brand"></a>
+            <ul>
+                {% for section in collections.sectionContent %}
+                    <li class="nav__item">
+                        <a href="#{{ section.title | slug }}">{{ section.menuName }}</a>
+                    </li>
+                {% endfor %}
+                {# <li class="nav__item">
+                    <a href="/cases">Case Studies</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/blog">Blog</a>
+                </li> #}
+                <li class="nav__item">
+                    <span id="modal__open">Contact</span>
+                </li>
+            </ul>
+        </nav>

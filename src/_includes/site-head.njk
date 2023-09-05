@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Percussions Strategic is a syndicate of digital and communications professionals.">
+        <meta property="og:title" content="Percussion Strategic">
+        <meta property="og:description" content="A syndicate of digital and communications professionals.">
+        <meta property="og:image" content="/img/perc-og-card.jpg">
+        <meta proerty="og:type" content="website">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:site" content="@percussioncomms">
+        <meta
+        property="twitter:image" content="/img/perc-og-card.jpg">
+        <link rel="preload" as="image" href="/img/perc-hero-bg-v2.png">
+        <link rel="preconnect" href="https://cdn.sanity.io">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://googletagmanager.com">
+        {% include 'gtm.njk' %}
+        {% include 'fonts.njk' %} 
+        {% if pageName == 'home' %}
+        <link rel="preload" href="/img/perc-hero-bg-v2.png">
+        {% endif %}
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="icon" href="/img/favicon.png" type="image/png">
+        <title>{% if blog.title %}{{ blog.title }} | 
+            {% elseif case.title %}{{ case.title }} | 
+            {% elseif tag %}Posts Tagged "{{tag}}" | 
+            {% elseif pageName and pageName !== 'home' %}{{ pageName }} | 
+            {% endif %}Percussion Strategic
+        </title>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V27HBL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->

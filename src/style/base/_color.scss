@@ -28,8 +28,8 @@ $colors: (
 		0: hsl(182, 100%, 21%),
         1: hsl(182, 80%, 31%),
         2: hsl(182, 60%, 41%),
-        3: hsl(182, 40%, 51%),
-        4: hsl(182, 20%, 61%),
+        3: hsl(182, 40%, 71%),
+        4: hsl(182, 30%, 81%),
 	),
 	dark-orange: (
 		0: hsl(10, 80%, 55%),
@@ -108,6 +108,11 @@ html {
 	--hero-tagline: #{getcolor(neutral, 4)};
 	--hero-tagline-lg: #{getcolor(dark-blue,1)};
 
+	--hero-tag-bg: #{getcolor(dark-orange,0)};
+
+	// Site Content
+	--site-content-bg: #{getcolor(light-blue,3)};
+
 	// Footer
 	--footer-bg: #{getcolor(dark-blue, 0)};
 	--footer-text: #{getcolor(neutral, 4)};
@@ -143,8 +148,8 @@ html {
     --members-bg: #{getcolor(light-blue,3)} ;
 	--members-bg-2: #{getcolor(dark-blue,3)};
     --members-text: #{getcolor(dark-blue,0)};
-	--card-link: #{getcolor(dark-orange,0)};
-	--card-link-active: #{getcolor(dark-orange,2)};
+	--card-link: #{getcolor(deep-orange,4)};
+	--card-link-active: #{getcolor(dark-orange,0)};
 
     --cases-bg: #{getcolor(light-orange,4)};
 	--cases-bg-2: #{getcolor(light-orange,3)};
@@ -176,6 +181,90 @@ html {
 	--clients-heading: #{getcolor(dark-blue,0)};
 
 	--services-item: #{getcolor(light-orange,2)};
+
+	//Services (v2)
+
+	--services-card-section-bg: #{getcolor(dark-blue,0)};
+	--services-card-bg: #{getcolor(deep-orange,4)};
+	--services-card-title: #{getcolor(neutral,4)};
+	--services-card-text: #{getcolor(light-gold,2)};
+
+	//Latest
+	--latest-bg: #{getcolor(light-blue,3)};
+	--latest-heading: #{getcolor(dark-blue,0)};
+	--latest-meta: #{getcolor(teal,0)};
+	--latest-title: #{getcolor(dark-blue,0)};
+	--latest-body: #{getcolor(dark-blue,0)};
+	--latest-border: #{getcolor(light-blue,1)};
+
+	//Blog 
+	--blog-tag: #{getcolor(dark-blue,0)};
+	--blog-tag-hover: #{getcolor(dark-blue,2)};
+
+	--blog-single-title-bg: #{getcolor(dark-orange, 0)}; 
+	--blog-single-title: #{getcolor(neutral,4)};
+	--blog-single-content: #{getcolor(light-blue,4)};
+	--blog-single-subtitle: #{getcolor(dark-blue,0)};
+
+	--blog-single-text: #{getcolor(dark-blue,0)};
+	--blog-single-pullquote: #{getcolor(dark-blue,1)};
+	--blog-single-cite: #{getcolor(dark-blue,2)};
+
+	--blog-listing-bg: #{getcolor(light-blue,3)};
+	--blog-listing-heading: #{getcolor(light-gold,0)};
+	--blog-listing-heading-bg: #{getcolor(dark-blue,1)};
+	--blog-listing-subtitle: #{getcolor(neutral,4)};
+	--blog-listing-post-title: #{getcolor(dark-orange,0)};
+	--blog-listing-post-title-hover: #{getcolor(dark-orange,1)};
+	--blog-listing-post-subtitle: #{getcolor(dark-blue,0)};
+	--blog-listing-post-meta: #{getcolor(teal,0)};
+
+	--tag-nav-bg: #{getcolor(light-blue,2)};
+
+	//Case Study
+	--case-single-icon: #{getcolor(dark-blue,0)};
+	--case-single-overlay: #{getcolor(dark-orange,2)};
+	--case-single-title: #{getcolor(neutral,4)};
+	--case-single-title-bg: #{getcolor(dark-orange,0)};
+	--case-single-problem-bg: #{getcolor(dark-blue,0)};
+	--case-single-problem-text: #{getcolor(neutral,4)};
+	--case-single-problem-heading: #{getcolor(dark-orange,2)};
+	--case-single-solution-bg: #{getcolor(teal,0)};
+	--case-single-solution-text: #{getcolor(neutral,4)};
+	--case-single-solution-heading: #{getcolor(light-orange,2)};
+	--case-single-tactics-bg: #{getcolor(light-blue,3)};
+	--case-single-tactics-text: #{getcolor(dark-blue,0)};
+	--case-single-tactics-heading: #{getcolor(dark-blue,0)};
+	--case-single-result-bg: #{getcolor(light-gold,2)};
+	--case-single-result-text: #{getcolor(dark-blue,0)};
+	--case-single-result-heading: #{getcolor(dark-orange,0)};
+	--case-single-conclusion-bg: #{getcolor(deep-orange,3)};
+	--case-single-conclusion-text: #{getcolor(neutral,4)};
+	--case-single-conclusion-heading: #{getcolor(light-gold,2)};
+
+	--duotone-highlight: #{getcolor(light-orange,4)};
+	--duotone-shadow: #{getcolor(dark-orange,0)};
+	--brand-shadow: #{getcolor(dark-blue,0)};
+
+
+	--case-listing-heading: #{getcolor(neutral,4)};
+	--case-listing-intro-text: #{getcolor(neutral,4)};
+	--case-listing-intro-bg: #{getcolor(deep-orange,4)};
+	--case-listing-body-bg: #{getcolor(light-blue,3)};
+
+	// --case-listing-img: #{getcolor(dark-blue,0)};
+	--case-listing-title: #{getcolor(dark-orange,0)};
+	// --case-listing-subtitle: #{getcolor(dark-blue,0)};
+	--case-listing-text: #{getcolor(dark-blue,0)};
+	// --case-listing-quote: #{getcolor(dark-blue,0)};
+	// --case-listing-cite: #{getcolor(dark-blue,0)};
+
+	//Pagination 
+	--pagination-bg: #{getcolor(teal,3)};
+	--pagination-text: #{getcolor(dark-blue,0)};
+	--pagination-link: #{getcolor(deep-orange,2)};
+	--pagination-link-hover: #{getcolor(dark-orange,0)};
+
 }
 
 a {

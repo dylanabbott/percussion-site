@@ -1,0 +1,38 @@
+---
+pagination:
+    data: collections.tagList
+    size: 1
+permalink: "/blog/tag/{{ pagination.items | slugify }}/index.html"
+---
+{% set tag = pagination.items %}
+{% include 'site-head.njk' %}
+{% include 'secondary-navigation.njk' %}
+<main class="site-content">
+    <section class="blog-single section-layout">
+        <a href="/" class="nav__brand-mobile">
+            <img src="/img/perc-logo-horizontal-nt.png" alt="Percussion Strategic logo" height="26" width="165"></a>
+        <div class="blog-single__title">
+    <h1>Posts Tagged "{{ tag }}"</h1>
+    </div>
+    </section>
+        {% for post in collections.blog %}
+            {% for item in post.tags %}
+                {% if item == tag %}
+                    <section class="blog-listing section-layout">
+                        <div class="section__col1-3">
+                            <a href="../../{{ post.title | slugify }}/">
+                                <img src="{{ post.imageUrl }}?h=300" alt="{{ post.featuredImage.alt }}" class="blog-listing__featured" height="300 width="300></a>
+                            </div>
+                            <div class="section__col2-3">
+                                <a href="../../{{ post.title | slugify }}/" class="blog-listing__post-title">
+                                    <h2>{{ post.title }}</h2>
+                                </a>
+                                <span class="blog-listing__post-meta">{{ post.date | shortDate }}, by {{ post.author.name }}</span>
+                                <p class="blog-listing__post-subtitle">{{ post.subtitle }}</p>
+                            </div>
+                        </section>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+    </main>
+    {% include 'site-footer.njk' %}

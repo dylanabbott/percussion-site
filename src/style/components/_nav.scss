@@ -21,11 +21,24 @@
 	}
 	&__brand {
 		display: none;
+		&-mobile {
+			position: absolute;
+			top: 1rem;
+			left: 1rem;
+			filter: drop-shadow(0 0 3px var(--brand-shadow));
+
+			@include large {
+				display: none;
+			}
+		}
 	}
 	> ul {
 		padding-inline-start: 0;
 		margin-top: 0;
 		margin-bottom: 0;
+	}
+	& a {
+		line-height: 1;
 	}
 	// @media screen and (max-width: 768px) {
 

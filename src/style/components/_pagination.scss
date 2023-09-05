@@ -1,0 +1,28 @@
+.pagination {
+    background-color: var(--pagination-bg);
+    & ul {
+        display: flex;
+        list-style-type: none;
+        padding-inline-start: 0;
+        & li {
+            color: var(--pagination-text);
+            &:not(:last-child) {
+                    margin-inline-end: 1rem;
+                }
+            & a {
+                &:link {
+                    color: var(--pagination-link);
+                }
+                &:visited {
+                    color: var(--pagination-link);
+                }
+                &:hover {
+                    color: var(--pagination-link-hover);
+                }
+                &:active {
+                    color: var(--pagination-link-hover);
+                }
+            }
+        }
+    }
+}

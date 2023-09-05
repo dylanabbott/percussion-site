@@ -1,0 +1,36 @@
+---
+pagination:
+    data: collections.blog
+    size: 1
+    alias: blog
+permalink: "blog/{{ blog.title | slugify }}/index.html"
+---
+
+{% include 'site-head.njk' %}
+{% include 'secondary-navigation.njk' %}
+<main>
+    <section class="blog-single section-layout">
+        <a href="/" class="nav__brand-mobile">
+            <img src="/img/perc-logo-horizontal-nt.png" alt="Percussion Strategic logo" height="26" width="165"></a>
+            <div class="blog-single__title section__col3-3">
+                <h1>{{ blog.title }}</h1>
+            </div>
+        </section>
+        <section class="blog-single__content section-layout">
+            <div class="blog-single__meta section__col1-3">
+                <img src="{{ blog.author.portrait.asset.url }}" alt="{{ blog.author.name }}" class="blog-single__author">
+                    <p class="blog-single__author">by {{ blog.author.name }}<br/>{{ blog.date | shortDate }}</p>
+                    <ul class="blog-single__tag-list">
+                        {%- for tag in blog.tags -%}
+                            <li class="blog-single__tag"><a href="../../blog/tag/{{ tag | slugify }}">{{ tag }}</a></li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+                <div class="section__col2-3">
+                    <p class="blog-single__subtitle">{{ blog.subtitle }}</p>
+                    <img src="{{ blog.imageUrl }}" alt="{{ blog.featuredImage.alt }}" class="blog-single__featured">
+                        {{ blog.content | richText | safe }}
+                    </div>
+                </section>
+            </main>
+            {% include 'site-footer.njk' %}

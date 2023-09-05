@@ -32,6 +32,7 @@
     &__info {
         flex-grow: 2;
         width: 100%;
+        line-height: 1.3;
         @include large {
             margin-top: 1rem;
             order: 10;

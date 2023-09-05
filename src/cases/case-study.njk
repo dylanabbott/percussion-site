@@ -1,0 +1,62 @@
+---
+pagination:
+    data: collections.caseStudies
+    size: 1
+    alias: case
+permalink: "cases/{{ case.title | slugify }}/index.html"
+---
+
+{% include 'site-head.njk' %}
+{% include 'secondary-navigation.njk' %}
+<main class="site-content">
+    <section
+        class="case-single case-single__hero section-layout"
+        style="background-image:url({{ case.featuredImageUrl }});">
+        {# <div class="case-single__hero-overlay"></div> #}
+        <a href="/" class="nav__brand-mobile"><img src="/img/perc-logo-horizontal-nt.png" alt="Percussion Strategic logo" height="26" width="165"></a>
+        <div class="case-single__title section__col3-3">
+            <h1>{{ case.title }}</h1>
+        </div>
+    </section>
+    <section class="section-layout problem">
+        <div class="section__col1-3 case-single__content">
+            <h2>The Problem</h2>
+        </div>
+        <div class="section__col2-3">
+            {{ case.problem | richText | safe }}
+        </div>
+    </section>
+    <section class="section-layout solution">
+        <div class="section__col1-3 case-single__content">
+            <h2>The Solution</h2>
+        </div>
+        <div class="section__col2-3 case-single__content">
+            {{ case.solution | richText | safe }}
+        </div>
+    </section>
+    <section class="section-layout tactics">
+        <div class="section__col1-3 case-single__content">
+            <h2>Tactics</h2>
+        </div>
+        <div class="section__col2-3 case-single__content-with-icons">
+            {{ case.tactics| richText | safe }}
+        </div>
+    </section>
+    <section class="section-layout result">
+        <div class="section__col1-3 case-single__content">
+            <h2>Results</h2>
+        </div>
+        <div class="section__col2-3 case-single__content-with-icons">
+            {{ case.results | richText | safe }}
+        </div>
+    </section>
+    {# <section class="section-layout conclusion">
+                <div class="section__col1-3 case-single__content">
+                    <h2>Conclusion</h2>
+                </div>
+                <div class="section__col2-3 case-single__content">
+                    {{ case.conclusion | richText | safe }}
+                </div>
+            </section> #}
+</main>
+{% include 'site-footer.njk' %}

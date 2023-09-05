@@ -34,7 +34,18 @@ module.exports = (eleventyConfig) => {
 	// });
 
 	eleventyConfig.addCollection('members', (collectionApi) => {
-		const members = collectionApi.items[0].data.members.result;
+		const members = collectionApi.items[0].data.members.result.sort(function (
+			a,
+			b
+		) {
+			if (a.name < b.name) {
+				return -1;
+			}
+			if (a.name > b.name) {
+				return 1;
+			}
+			return 0;
+		});
 		return members;
 	});
 
@@ -43,9 +54,48 @@ module.exports = (eleventyConfig) => {
 		return cases;
 	});
 
+	eleventyConfig.addCollection('caseStudies', (collectionApi) => {
+		const caseStudies = collectionApi.items[0].data.caseStudies.result;
+		return caseStudies;
+	});
+
 	eleventyConfig.addCollection('sectionContent', (collectionApi) => {
 		const sectionContent = collectionApi.items[0].data.sectionContent.result;
 		return sectionContent;
+	});
+
+	eleventyConfig.addCollection('blog', (collectionApi) => {
+		const blog = collectionApi.items[0].data.blog.result;
+		return blog;
+	});
+
+	eleventyConfig.addCollection('tagList', (collectionApi) => {
+		let tagSet = new Set();
+		const posts = collectionApi.getAll()[0].data.blog.result;
+		posts.forEach((item) => {
+			if ('tags' in item) {
+				let tags = item.tags;
+				if (typeof tags === 'string') {
+					tags = [tags];
+				}
+				for (const tag of tags) {
+					tagSet.add(tag);
+				}
+			}
+		});
+		return [...tagSet];
+	});
+
+	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
+
+	eleventyConfig.addFilter('shortDate', (date) => {
+		const options = {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+		};
+		const shortDate = new Date(date).toLocaleString('en-US', options);
+		return shortDate;
 	});
 
 	eleventyConfig.addFilter('richText', function (blocks) {
@@ -60,12 +110,32 @@ module.exports = (eleventyConfig) => {
 							value.asset.metadata.dimensions.width) *
 						800}"
 					/>`,
+				pullQuote: ({ value }) =>
+					html`<div class="case-single__pullquote">
+						<blockquote>${value.quote}</blockquote>
+						<cite>${value.cite}</cite>
+					</div>`,
+				textWithIcon: ({ value }) =>
+					html`<div class="case-single__icon">
+						<img
+							src="${value.iconUrl}"
+							alt="${value.alt}"
+							width="50"
+							height="50"
+						/>
+					</div>`,
+				bodyImage: ({ value }) =>
+					html`<img
+						src="${value.asset.url}"
+						alt="${value.alt}"
+						class="image-inline"
+					/>`,
 			},
 			marks: {
 				span: ({ children, value }) =>
 					html`<span id="${value.spanID}">${children}</span>`,
-				link: ({ children, value }) => 
-					html`<a href="${value.url}">${children}</a>`,
+				link: ({ children, value }) =>
+					html`<a href="${value.url}" target="_blank">${children}</a>`,
 			},
 		};
 		return toHTML(blocks, { components: types });
