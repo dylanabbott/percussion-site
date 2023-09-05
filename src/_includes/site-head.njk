@@ -13,9 +13,15 @@
         <meta property="twitter:site" content="@percussioncomms">
         <meta
         property="twitter:image" content="/img/perc-og-card.jpg">
+        <link rel="preload" as="image" href="/img/perc-hero-bg-v2.png">
+        <link rel="preconnect" href="https://cdn.sanity.io">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://googletagmanager.com">
         {% include 'gtm.njk' %}
         {% include 'fonts.njk' %} 
+        {% if pageName == 'home' %}
         <link rel="preload" href="/img/perc-hero-bg-v2.png">
+        {% endif %}
         <link rel="stylesheet" href="/style/style.css">
         <link rel="icon" href="/img/favicon.png" type="image/png">
         <title>{% if blog.title %}{{ blog.title }} | 
